@@ -67,7 +67,7 @@ h1, h2, h3 {
 }
 strong{color:#000000;}
 a, a > code {
-  color: #000000;
+  color: #23395b;
   text-decoration: none;
 }
 .footnote {
@@ -93,8 +93,8 @@ a, a > code {
 }
 .title-slide {
   background-color: #000000;
-  background-image: url(logos-ok.PNG);
-  background-size: 100%;
+  background-image: url(all-ok.PNG);
+  background-size: 95%;
   background-position: bottom;
 }
 .title-slide .remark-slide-number {

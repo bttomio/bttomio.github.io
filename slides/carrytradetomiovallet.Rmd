@@ -1,0 +1,116 @@
+---
+title: "Carry trade and negative interest rates in Switzerland"
+subtitle: 
+author: "<br/>[Bruno Thiago Tomio](https://bttomio.github.io)<br/><br/>[Guillaume Vallet](mailto:guillaume.vallet@univ-grenoble-alpes.fr)"
+institute: "<span style='font-size: 15px'>46th Annual Conference - Eastern Economic Associtation</style>"
+output:
+  xaringan::moon_reader:
+    text-decoration: none
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include = FALSE}
+library(xaringanthemer)
+mono_light(
+  link_color = "#23395b",
+  base_color = "#000000",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Droid Mono"),
+  title_slide_background_image = "all-ok.PNG",
+  title_slide_background_size = "95%",
+  title_slide_background_position = "bottom"
+)
+```
+
+#### **Figure 1** - CT ratio, US policy rate, and Switzerland’s policy rate
+
+```{r F1, echo=FALSE, include=FALSE}
+# GRAPH FOR THE PAPER (FIGURE 1)
+
+library("readxl")
+library("openxlsx")
+
+df <- read_excel("C:/Papier-Guillaume/LATEST DATA AND ESTIMATIONS/CTF/STATA - CHF.xls")
+
+#DATA FOR THE GRAPH 1 (FIG. 1)
+library(dplyr)
+
+G1 <- dplyr::select(df, c(Date, NP, IR, USIR, PI, NI))
+
+G1$Date <- as.Date(G1$Date)
+
+names(G1)[names(G1) == "NP"] <- "CT"
+
+library(ggplot2)
+library(gghighlight)
+library(tidyverse)
+
+gct <- ggplot(data=G1, aes(x=Date)) +
+  geom_line(aes(y = CT, colour = "black"), size=1.2)+
+  scale_x_date(date_labels = "%b-%y", date_breaks = "14 months")+
+  scale_y_continuous(limits = c(0, 12), "CT ratio (Short/Long)")
+gct <- gct + geom_line(aes(x=Date, y=(G1$IR + 0.75) * 2, colour="red"), size=1.2)
+gct <- gct + scale_y_continuous(sec.axis = sec_axis(~./2-0.75))
+gct <- gct + geom_line(aes(x=Date, y=(G1$USIR + 0.75) * 2, colour="blue"), size=1.2)
+gct <- gct + scale_y_continuous(sec.axis = sec_axis(~./2-0.75, name = "Interest rates (%)")) +
+  scale_colour_manual("", values = c("black","blue", "red"), 
+                      labels = c("CT (LHS)", "USIR (RHS)", "IR (RHS)"))
+gct <- gct + theme_light(base_size = 20)
+gct <- gct + theme(legend.position = c(.5, .81), legend.direction = "horizontal",
+                   legend.background = element_rect(linetype="solid", 
+                                 colour ="grey"))
+rect <- data.frame(xmin=as.Date(c("2007-10-02")), xmax=as.Date(c("2019-11-12")), ymin=0, ymax=1)
+gct <- gct + geom_rect(data=rect, aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax),
+                        color=NA,
+                        fill="green4",
+                        alpha=0.1,
+                        inherit.aes = FALSE)
+gct <- gct + labs(y = "CT ratio (Short/Long)")
+rect2 <- data.frame(xmin=as.Date(c("2014-12-23")), xmax=as.Date(c("2019-11-12")), ymin=-Inf, ymax=Inf)
+gct <- gct + geom_rect(data=rect2, aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax),
+                       color=NA,
+                       fill="yellow",
+                       alpha=0.1,
+                       inherit.aes = FALSE)
+gct <- gct + annotate(geom="text", x=as.Date("2017-08-23"), y=11, 
+                      label="NI period", color = "gold4", size = 7)
+gct <- gct + annotate(geom="text", x=as.Date("2010-08-23"), y=11, 
+                      label="PI period", color = "black", size = 7)
+```
+
+```{r gct, echo=FALSE, fig.height=8, fig.width=11, fig.align='center'}
+plot(gct)
+```
+
+---
+
+class: center, middle
+
+# Thanks!
+
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan), with [**xaringanthemer**](https://github.com/gadenbuie/xaringanthemer).
