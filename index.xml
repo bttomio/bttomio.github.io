@@ -93,12 +93,13 @@
       <link>/slides/example/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
       <guid>/slides/example/</guid>
-      <description>&lt;h1 id=&#34;create-slides-in-markdown-with-academic&#34;&gt;Create slides in Markdown with Academic&lt;/h1&gt;
+      <description>&lt;h2 id=&#34;carry-trade-and-negative-interest-rates-in-switzerland&#34;&gt;Carry trade and negative interest rates in Switzerland&lt;/h2&gt;
 &lt;p&gt;
-&lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic&lt;/a&gt;
+&lt;a href=&#34;https://bttomio.github.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bruno Thiago Tomio&lt;/a&gt;
  | 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;
+&lt;a href=&#34;mailto:guillaume.vallet@univ-grenoble-alpes.fr&#34;&gt;Guillaume Vallet&lt;/a&gt;
 &lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;all.PNG&#34; alt=&#34;alt text&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
 &lt;ul&gt;
@@ -242,6 +243,14 @@ Three
       <guid>/terms/</guid>
       <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/carrytradenit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/carrytradenit/</guid>
+      <description></description>
     </item>
     
     <item>

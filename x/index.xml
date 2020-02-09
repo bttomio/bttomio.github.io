@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xs | bttomio</title>
+    <link>/x/</link>
+      <atom:link href="/x/index.xml" rel="self" type="application/rss+xml" />
+    <description>Xs</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Xs</title>
+      <link>/x/</link>
+    </image>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/x/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/x/test/</guid>
+      <description>
+
+
+&lt;div id=&#34;r-markdown&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;R Markdown&lt;/h2&gt;
+&lt;p&gt;This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;When you click the &lt;strong&gt;Knit&lt;/strong&gt; button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;slide-with-bullets&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slide with Bullets&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Bullet 1&lt;/li&gt;
+&lt;li&gt;Bullet 2&lt;/li&gt;
+&lt;li&gt;Bullet 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;slide-with-r-output&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slide with R Output&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;slide-with-plot&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slide with Plot&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;/x/test_files/figure-html/pressure-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
