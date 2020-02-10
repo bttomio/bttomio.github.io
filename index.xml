@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>bttomio</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>bttomio</title>
@@ -13,10 +13,392 @@
     </image>
     
     <item>
+      <title>Courses</title>
+      <link>/portfolio/courses/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/portfolio/courses/</guid>
+      <description>&lt;br&gt;
+Here are the courses I attended during my PhD (in French):
+&lt;br&gt;
+&lt;h2 id=&#34;1-formations-scientifiques-sciences-economiques&#34;&gt;1. Formations scientifiques (Sciences Economiques)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Introduction à la modélisation : les modèles DSGE]
+Enseignant : M. GUILLAUMIN
+Date : 15 mai 2018
+Nombre d’heures : 12 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Microéconométrie Appliquée]
+Enseignant : M. URDANIVIA
+Date : 04 mai 2018
+Nombre d’heures : 8 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[The experimental method in economics]
+Enseignant : M. CROSETTO
+Date : 23 avril 2018
+Nombre d’heures : 8 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Writing in the Sciences]
+Enseignante : Mme GAUDEUL
+Date : 26 mars 2018
+Nombre d’heures : 6 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2-outils-numériques-et-méthodologiques-pour-la-recherche&#34;&gt;2. Outils numériques et méthodologiques pour la recherche&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Analyser des Données Quantitatives Avec Le Logiciel Stata - Initiation]
+Enseignante : Mme FADHUILE
+Date : 12 novembre 2018
+Nombre d’heures : 12 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Introduction à la Modélisation Statistique Bayésienne]
+Enseignant : M. NALBORCZYK, M. PHENIX
+Date : 28 mai 2018
+Nombre d’heures : 18 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;3-formations-transversales&#34;&gt;3. Formations transversales&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Stock-Flow Consistent (SFC) Modelling]
+Enseignant : M. GODIN
+Date : 03 juin 2019
+Nombre d’heures : 12 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;4-stage-label-res-autrans&#34;&gt;4. Stage Label RES (Autrans)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[AUTRANS-18 : Introduction au métier d&#39;enseignant-chercheur]
+Date : 12 décembre 2018
+Nombre d’heures : 21 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;5-pratiques-de-lenseignement&#34;&gt;5. Pratiques de l&amp;rsquo;enseignement&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Perform - Atelier]
+Date : 9 mai 2019
+Nombre d’heures : 4 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Analyse de difficultés pédagogiques]
+Date : 31 janvier 2020
+Nombre d’heures : 3 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;6-summer-school&#34;&gt;6. Summer school&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[UNCTAD Summer School]
+Date : 9 mai 2019
+Date : 3-7 septembre 2018
+Lieu : Palais de Nations, Geneva (Suisse)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;7-r-in-grenoble&#34;&gt;7. R-in-Grenoble&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[1st working session 2018/2019]
+Intervenant : F. Privé
+Présentation : What can R do for you?
+Date : 13 septembre 2018
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[2nd working session 2018/2019]
+Intervenant : S. Barthelmé
+Présentation : Image processing with package {imager}
+Date : 18 octobre 2018
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[4th working session 2019/2020]
+Intervenant : M. Richard, F. Chuffart
+Présentation : Organizing a data challenge in R
+Date : 30 janvier 2020
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>/portfolio/research/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/portfolio/research/</guid>
+      <description>&lt;br&gt;
+&lt;p&gt;Here are my advances related to research during my PhD:
+&lt;br&gt;&lt;/p&gt;
+&lt;h2 id=&#34;1-statistical-software&#34;&gt;1. Statistical software&lt;/h2&gt;
+&lt;h3 id=&#34;rimgrpng&#34;&gt;&lt;img src=&#34;/img/R.png&#34; alt=&#34;R&#34;&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Retrieving data]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using the packages 
+&lt;a href=&#34;https://quandl.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;quandl&lt;/code&gt;&lt;/a&gt;
+ and 
+&lt;a href=&#34;https://github.com/expersso/BIS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;BIS&lt;/code&gt;,&lt;/a&gt;
+ I&amp;rsquo;ve learned techniques to retrieve data online. The first is used to collect financial markets data, while the second offers a direct connection to the data supplied by the 
+&lt;a href=&#34;https://www.bis.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bank for International Settlements.&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Example of code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;library(quantmod)
+library(dplyr)
+
+# DATA FROM YAHOO FINANCE
+# IBOVESPA (^BVSP)
+
+getSymbols(&amp;quot;^BVSP&amp;quot;,src=&amp;quot;yahoo&amp;quot;, from=&amp;quot;1900-01-01&amp;quot;)
+BVSP.DF &amp;lt;- data.frame(Date=index(BVSP),coredata(BVSP))
+BVSP.DF &amp;lt;- dplyr::select(BVSP.DF,Date, BVSP.Close)
+plot(BVSP.DF)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/img/Rplot.jpeg&#34; alt=&#34;plot&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;library(devtools)
+library(BIS)
+library(dplyr)
+library(ggplot2)
+
+# DATA FROM BIS
+# POLICY RATES (INTEREST RATES)
+
+datasets &amp;lt;- get_datasets()
+head(datasets, 23)
+prates &amp;lt;- get_bis(datasets$url[23], quiet = TRUE)
+BRLIR &amp;lt;- subset(prates, ref_area == &amp;quot;BR&amp;quot;)
+BRLIR &amp;lt;- dplyr::select(BRLIR, date, obs_value)
+names(BRLIR)[names(BRLIR) == &amp;quot;obs_value&amp;quot;] &amp;lt;- &amp;quot;BRLIR&amp;quot;
+BRLIR &amp;lt;- BRLIR[BRLIR$date &amp;gt;= &amp;quot;2000-01-01&amp;quot; &amp;amp; BRLIR$date &amp;lt;= &amp;quot;2020-02-03&amp;quot;,]
+BIR &amp;lt;- ggplot(BRLIR, aes(x=date, y=BRLIR)) +
+  geom_line() + 
+  xlab(&amp;quot;&amp;quot;)
+BIR
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/img/BIR.jpeg&#34; alt=&#34;plot&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Time series econometrics]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I&amp;rsquo;ve studied the following topics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Panel data&lt;/li&gt;
+&lt;li&gt;Vector-autogressive models (VAR)&lt;/li&gt;
+&lt;li&gt;Structural Vector-autogressive models (SVAR)&lt;/li&gt;
+&lt;li&gt;Granger-causality&lt;/li&gt;
+&lt;li&gt;Unit-roots testing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;stataimgstatapng&#34;&gt;&lt;img src=&#34;/img/stata.png&#34; alt=&#34;Stata&#34;&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Programming]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I&amp;rsquo;ve learned to code &lt;code&gt;.do&lt;/code&gt; files, like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;clear all
+log using &amp;quot;resultats_`c(current_date)&#39;.log&amp;quot;, replace
+capture log
+set more off
+global data &amp;quot;C:\Data\&amp;quot;
+cd &amp;quot;$data\&amp;quot;
+import excel &amp;quot;C:\Data\CHF.data.xlsx&amp;quot;, firstrow
+format Obs %tw
+tsset Obs
+
+*** Generate new variables
+
+g CT = Short/Long
+mvencode CT, mv(0)
+g IRD = IR - USIR
+
+*** Generate variables in first differences
+
+gen dER = d.ER
+
+*** Generate variables in log
+
+g lER = log(ER)
+
+*** Data manipulation
+
+drop if Obs==1
+
+*** Group of variables
+
+global levelvar ER CT IRD VIX SM SMUS
+global logvar lER lCT IRD lVIX lSM lSMUS
+
+*** Graphics
+
+foreach var of varlist $levelvar {
+quietly: line `var&#39; Obs, saving(level`var&#39;, replace)
+quietly: graph export &amp;quot;`var&#39;-level.pdf&amp;quot;, replace
+}
+quietly: gr combine levelER.gph levelCT.gph levelIRD.gph levelVIX.gph levelSM.gph levelSMUS.gph, saving(level_all, replace)
+quietly: graph export &amp;quot;level_all.pdf&amp;quot;, replace
+
+*** Generate time dummy, following changes in IR (Switzerland, SNB)
+
+*** PI dummy is equal to one in the period of positive interest rates
+
+gen PI=(Obs&amp;lt;=378)
+
+*** NI dummy is equal to one in the period of negative interest rates (23 December 
+*&amp;gt; 2014, onwards).
+
+gen NI=(Obs&amp;gt;=379)
+
+*** QE2 dummy is equal to one to the recent QE in the U.S.
+
+gen QE2=(Obs&amp;gt;=620)
+
+*** Unit root tests
+
+clemao1 ER
+putexcel B2=rscalars using results, sheet(&amp;quot;CLEMAO&amp;quot;) modify
+clemao1 CT
+putexcel C2=rscalars using results, sheet(&amp;quot;CLEMAO&amp;quot;) modify
+
+*** Correlation matrix
+
+pwcorr $logvar, sig
+
+*** Histogram graphs
+
+foreach var of varlist $logvar {
+quietly: histogram `var&#39;, freq normal saving(`var&#39;, replace)
+quietly: graph export &amp;quot;l`var&#39;.pdf&amp;quot;, replace
+}
+
+*** Combine graphs
+
+quietly: gr combine lCT.gph lER.gph IRD.gph lVIX.gph lSM.gph lSMUS.gph, saving(histogram_log_all, replace)
+quietly: graph export &amp;quot;histogram_log_all.pdf&amp;quot;, replace
+
+*** Closing log
+
+save Granger.dta, replace
+
+saveold Granger_stata13.dta, replace
+
+save &amp;quot;$data\Granger.dta&amp;quot;, replace
+
+log close
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Time series econometrics]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I&amp;rsquo;ve also studied the following topics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Panel data&lt;/li&gt;
+&lt;li&gt;Vector-autogressive models (VAR)&lt;/li&gt;
+&lt;li&gt;Structural Vector-autogressive models (SVAR)&lt;/li&gt;
+&lt;li&gt;Granger-causality&lt;/li&gt;
+&lt;li&gt;Unit-roots testing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-paper-presentations&#34;&gt;2. Paper Presentations&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Currency Carry Trade Effects in Developed and Developing Countries:
+The cases of Switzerland and Brazil]
+
+Event: Atelier Doctorant - Centre de Recherche en Economie de Grenoble (CREG)
+Date: 29 November 2018
+Place: Université Grenoble Alpes, Grenoble, France
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Carry trade in developing and developed countries: 
+A Granger causality analysis with the Toda-Yamamoto approach]
+
+Event: YSI North America Convening 2019
+Date: 22-24 February 2019
+Place: University of Southern California Dornsife, Los Angeles, USA
+
+Event: 10ème Journée Doctorale d’Economie (JDE)
+Date: 10 April 2019
+Place: Université Grenoble Alpes, Grenoble, France
+Discussant: Cyriac Guillaumin
+
+Event: 11th Annual PhD Student Conference – Post Keynesian Economics Society
+Date: 28 May 2019
+Place: Goldsmiths, University of London, Londres, United Kingdom
+Discussant: Annina Kaltenbrunner
+
+Event: 16th International Conference Developments in Economic Theory and Policy
+Date: 27-28 June 2019
+Place: University of the Basque Country, Bilbao, Spain
+
+Event: 23rd Forum for Macroeconomics and Macroeconomic Policies (FMM)
+Date: 24-26 October 2019
+Place: Berlin, Germany
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Carry trade and negative interest rates in Switzerland]
+
+Event: 46th Annual Conference - Eastern Economic Association
+Date: 27 February - 1 March 2020 (forthcoming)
+Place: Boston, USA
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;3-publishing-toolkit&#34;&gt;3. Publishing Toolkit&lt;/h2&gt;
+&lt;p&gt;rticles / Hugo Academic / xaringan&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Student Life</title>
+      <link>/portfolio/studentlife/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/portfolio/studentlife/</guid>
+      <description>&lt;br&gt;
+Here are the courses I attended during my PhD (in French):
+&lt;br&gt;
+&lt;h2 id=&#34;1-formations-scientifiques-sciences-economiques&#34;&gt;1. Formations scientifiques (Sciences Economiques)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Introduction à la modélisation : les modèles DSGE]
+Enseignant : M. GUILLAUMIN
+Date : 15 mai 2018
+Nombre d’heures : 12 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Microéconométrie Appliquée]
+Enseignant : M. URDANIVIA
+Date : 04 mai 2018
+Nombre d’heures : 8 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[The experimental method in economics]
+Enseignant : M. CROSETTO
+Date : 23 avril 2018
+Nombre d’heures : 8 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Writing in the Sciences]
+Enseignante : Mme GAUDEUL
+Date : 26 mars 2018
+Nombre d’heures : 6 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2-outils-numériques-et-méthodologiques-pour-la-recherche&#34;&gt;2. Outils numériques et méthodologiques pour la recherche&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Analyser des Données Quantitatives Avec Le Logiciel Stata - Initiation]
+Enseignante : Mme FADHUILE
+Date : 12 novembre 2018
+Nombre d’heures : 12 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Introduction à la Modélisation Statistique Bayésienne]
+Enseignant : M. NALBORCZYK, M. PHENIX
+Date : 28 mai 2018
+Nombre d’heures : 18 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;3-formations-transversales&#34;&gt;3. Formations transversales&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Stock-Flow Consistent (SFC) Modelling]
+Enseignant : M. GODIN
+Date : 03 juin 2019
+Nombre d’heures : 12 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;4-stage-label-res-autrans&#34;&gt;4. Stage Label RES (Autrans)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[AUTRANS-18 : Introduction au métier d&#39;enseignant-chercheur]
+Date : 12 décembre 2018
+Nombre d’heures : 21 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;5-pratiques-de-lenseignement&#34;&gt;5. Pratiques de l&amp;rsquo;enseignement&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Perform - Atelier]
+Date : 9 mai 2019
+Nombre d’heures : 4 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Analyse de difficultés pédagogiques]
+Date : 31 janvier 2020
+Nombre d’heures : 3 heures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;6-summer-school&#34;&gt;6. Summer school&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[UNCTAD Summer School]
+Date : 9 mai 2019
+Date : 3-7 septembre 2018
+Lieu : Palais de Nations, Geneva (Suisse)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;7-r-in-grenoble&#34;&gt;7. R-in-Grenoble&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[1st working session 2018/2019]
+Intervenant : F. Privé
+Présentation : What can R do for you?
+Date : 13 septembre 2018
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[2nd working session 2018/2019]
+Intervenant : S. Barthelmé
+Présentation : Image processing with package {imager}
+Date : 18 octobre 2018
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[4th working session 2019/2020]
+Intervenant : M. Richard, F. Chuffart
+Présentation : Organizing a data challenge in R
+Date : 30 janvier 2020
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Teaching</title>
-      <link>/portfolio/example1/</link>
+      <link>/portfolio/teaching/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/portfolio/example1/</guid>
+      <guid>/portfolio/teaching/</guid>
       <description>&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
 &lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
@@ -25,53 +407,6 @@
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
 &lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Research</title>
-      <link>/portfolio/example2/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/portfolio/example2/</guid>
-      <description>&lt;p&gt;Here are some more tips for getting started with Academic:&lt;/p&gt;
-&lt;h2 id=&#34;tip-3&#34;&gt;Tip 3&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[[main]]
-  name = &amp;quot;Courses&amp;quot;
-  url = &amp;quot;courses/&amp;quot;
-  weight = 50
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-&lt;h2 id=&#34;tip-4&#34;&gt;Tip 4&lt;/h2&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Courses</title>
-      <link>/portfolio/example3/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/portfolio/example3/</guid>
-      <description>&lt;p&gt;Here are some more tips for getting started with Academic:&lt;/p&gt;
-&lt;h2 id=&#34;tip-3&#34;&gt;Tip 3&lt;/h2&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-&lt;h2 id=&#34;tip-4&#34;&gt;Tip 4&lt;/h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 &lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
 &lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;

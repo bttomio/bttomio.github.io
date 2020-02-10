@@ -4,22 +4,32 @@
   
   <url>
     <loc>/portfolio/</loc>
-    <lastmod>2020-02-05T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/portfolio/example1/</loc>
+    <loc>/portfolio/courses/</loc>
+    <lastmod>2020-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/portfolio/research/</loc>
+    <lastmod>2020-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/portfolio/studentlife/</loc>
+    <lastmod>2020-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/portfolio/teaching/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/portfolio/example2/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/portfolio/example3/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2020-02-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -34,11 +44,6 @@
   
   <url>
     <loc>/authors/</loc>
-    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
     <lastmod>2020-02-01T00:00:00+00:00</lastmod>
   </url>
   
