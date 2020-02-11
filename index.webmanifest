@@ -2,8 +2,8 @@
   "name": "bttomio",
   "short_name": "bttomio",
   "lang": "en-us",
-  "theme_color": "#2962ff",
-  "background_color": "#2962ff",
+  "theme_color": "#649fd3",
+  "background_color": "#649fd3",
   "icons": [{
     "src": "/images/icon_hucb8e37ed3f4b5d3b2942a6339102868f_25478_192x192_fill_lanczos_center_2.png",
     "sizes": "192x192",
