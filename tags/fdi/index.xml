@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>FDI | bttomio</title>
+    <title>FDI | Bruno Thiago Tomio</title>
     <link>/tags/fdi/</link>
       <atom:link href="/tags/fdi/index.xml" rel="self" type="application/rss+xml" />
     <description>FDI</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 02 Feb 2015 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Bruno Thiago Tomio, 2020</copyright><lastBuildDate>Mon, 02 Feb 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>FDI</title>
