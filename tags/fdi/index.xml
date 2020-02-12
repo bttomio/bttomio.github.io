@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FDI | bttomio</title>
+    <link>/tags/fdi/</link>
+      <atom:link href="/tags/fdi/index.xml" rel="self" type="application/rss+xml" />
+    <description>FDI</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 02 Feb 2015 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>FDI</title>
+      <link>/tags/fdi/</link>
+    </image>
+    
+    <item>
+      <title>Institutional Determinants of Outward Foreign Direct Investment from Emerging Economies: A Home-Country Perspective</title>
+      <link>/publication/bookchapter/</link>
+      <pubDate>Mon, 02 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>/publication/bookchapter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Institutional Distance and Brazilian Outward Foreign Direct Investment</title>
+      <link>/publication/article4/</link>
+      <pubDate>Mon, 02 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>/publication/article4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Determinants of foreign direct investment in Latin America</title>
+      <link>/publication/article5/</link>
+      <pubDate>Tue, 02 Feb 2010 00:00:00 +0000</pubDate>
+      <guid>/publication/article5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Strategies and Determinants of Foreign Direct Investment (FDI) from Developing Countries: Case Study of Latin America</title>
+      <link>/publication/article6/</link>
+      <pubDate>Mon, 02 Feb 2009 00:00:00 +0000</pubDate>
+      <guid>/publication/article6/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

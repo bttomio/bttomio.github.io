@@ -20,5 +20,37 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Veille</title>
+      <link>/tags/veille/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/veille/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Personal finance</title>
+      <link>/tags/personal-finance/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/personal-finance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Macroeconomics</title>
+      <link>/tags/macroeconomics/</link>
+      <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
+      <guid>/tags/macroeconomics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FDI</title>
+      <link>/tags/fdi/</link>
+      <pubDate>Mon, 02 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/fdi/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
