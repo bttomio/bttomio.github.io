@@ -31,7 +31,7 @@ pubs <- map_df(pubs, ~gsub("\\.$", "", .x))
 
 
 ```{r}
-PDF <- TRUE # Set to TRUE when rendering to PDF via pagedown::chrome_print()
+PDF <- FALSE # Set to TRUE when rendering to PDF via pagedown::chrome_print()
 if(PDF) {
   header <- '
   View online
