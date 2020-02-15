@@ -6,13 +6,30 @@ institute: "<span style='font-size: 15px'>46th Annual Conference - Eastern Econo
 output:
   xaringan::moon_reader:
     text-decoration: none
-    css: xaringan-themer.css
+    css: ["xaringan-themer.css", "custom.css"]
     lib_dir: libs
     nature:
+      countdown: 120000
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
+
+# Definition of carry trade
+
+> The carry trade is the name of the strategy of going  short  (betting  the  foreign  exchange value will fall) in a low-interest rate currency like  the  Japanese  yen,  while  simultaneously going  long  (betting  the  foreign  exchange value will rise) in a high-interest rate currency like the New Zealand dollar.
+
+> --- Frankel (2008)<sup>1</sup>
+
+.footnote[
+[1] Frankel, J. (2008), 'Carried away: everything you always wanted to know about the carry trade, and perhaps much more', *Milken Institute Review*, 10(1), 38.
+]
+
+---
+
+class: center
+
+count: false
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -21,7 +38,7 @@ options(htmltools.dir.version = FALSE)
 ```{r xaringan-themer, include = FALSE}
 library(xaringanthemer)
 mono_light(
-  link_color = "#649fd3",
+  link_color = "#64b9d3",
   base_color = "#000000",
   header_font_google = google_font("Josefin Sans"),
   text_font_google   = google_font("Montserrat", "300", "300i"),
@@ -94,23 +111,76 @@ plot(gct)
 
 ---
 
-class: center, middle
+class: center
 
+#### **Table 1** - Description of variables
+
+```{r Table1, echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
+
+df <- data.frame(Variables = c("CT", "ER", "IRD", "VIX", "SM", "SMUS"),
+                 Text_1 = c("Ratio of short positions over long positions (Short/Long)", 
+                                "Nominal exchange rates, USDCHF", "Difference between the policy interest rate in 
+                                Switzerland and the policy interest rate in the United States", "Market sentiment, CBOE 
+                                DJIA Volatility Index", "Swiss Market Index, ^SSMI (Swiss stock market)", "S&P 500, 
+                                ^GSPC (US stock market)"),
+                 Text_2 = c("CFTC", "BIS", "BIS", "FRED", "Yahoo Finance", "Yahoo Finance"))
+knitr::kable(df, "html", linesep = "", align = "clc",
+  col.names = c("Variable", "Definition", "Source")) %>%
+  kable_styling(full_width = F) %>%
+  row_spec(0:0, align = "c")
+```
+
+---
+
+# Caveats for using CFTC data
+
+>First,  while  non-commercial  traders  are  generally  associated  with speculative  activity,  it  is  possible  that  some  commercial  traders  also  take speculative  positions.  
+
+> Second,  the  trades  identified  as  speculative  may  not result  from  carry  trades. 
+
+> Finally,  a  comparison  with  statistics  from  the  BIS Triennial  Central  Bank  Survey  of  Foreign  Exchange  and  Derivatives  Market Activity  shows  that  only  a  very  small  proportion  of  foreign  exchange  market activity is executed through exchanges.
+
+> --- Galati et al. (2007)<sup>2</sup>
+
+.footnote[
+[2] Galati, G., A. Heath and P. McGuire (2007), ‘Evidence of carry trade activity’, *BIS Quarterly Review*.
+]
+
+---
+
+# Aim of the paper
+
+As mentioned by market participants, CFTC data tends to be indicative of the trend of carry trade activity (Bank for International Settlements 2015)<sup>3</sup>.
+
+We address two questions: 
+
+The .blue[first] refers to the determination of the financial factors that hold important roles in explaining the Swiss franc carry trade.
+
+.footnote[
+[3] Bank for International Settlements (2015), *Currency Carry Trades in Latin America*, Bank for International Settlements.
+]
+
+--
+
+.blue[Second], we reflect on the consequences of the unwind of Swiss franc carry trade activities. Specifically, we are interested in how carry trade shocks the related financial variables.
+
+---
+
+# Methodology
+
+---
+
+count: false
+
+class: inverse, center
+
+<br><br><br><br><br><br><br>
+
+.center[
 # Thanks!
+]
 
+<br><br><br><br><br><br><br>Slides created via the R package [xaringan](https://github.com/yihui/xaringan), with [xaringanthemer](https://github.com/gadenbuie/xaringanthemer).
 
-
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan), with [**xaringanthemer**](https://github.com/gadenbuie/xaringanthemer).
+<br>![Logos](all-ok.PNG)

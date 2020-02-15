@@ -4,7 +4,9 @@
     <title>Carry trade and negative interest rates in Switzerland</title>
     <meta charset="utf-8" />
     <meta name="author" content=" Bruno Thiago Tomio  Guillaume Vallet" />
+    <script src="libs/kePrint/kePrint.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -18,6 +20,22 @@ class: center, middle, inverse, title-slide
 ---
 
 
+# Definition of carry trade
+
+&gt; The carry trade is the name of the strategy of going  short  (betting  the  foreign  exchange value will fall) in a low-interest rate currency like  the  Japanese  yen,  while  simultaneously going  long  (betting  the  foreign  exchange value will rise) in a high-interest rate currency like the New Zealand dollar.
+
+&gt; --- Frankel (2008)&lt;sup&gt;1&lt;/sup&gt;
+
+.footnote[
+[1] Frankel, J. (2008), 'Carried away: everything you always wanted to know about the carry trade, and perhaps much more', *Milken Institute Review*, 10(1), 38.
+]
+
+---
+
+class: center
+
+count: false
+
 
 
 
@@ -30,26 +48,108 @@ class: center, middle, inverse, title-slide
 
 ---
 
-class: center, middle
+class: center
 
+#### **Table 1** - Description of variables
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;text-align: center;"&gt; Variable &lt;/th&gt;
+   &lt;th style="text-align:left;text-align: center;"&gt; Definition &lt;/th&gt;
+   &lt;th style="text-align:center;text-align: center;"&gt; Source &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; CT &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Ratio of short positions over long positions (Short/Long) &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; CFTC &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; ER &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Nominal exchange rates, USDCHF &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; BIS &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; IRD &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Difference between the policy interest rate in 
+                                Switzerland and the policy interest rate in the United States &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; BIS &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; VIX &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Market sentiment, CBOE 
+                                DJIA Volatility Index &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; FRED &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; SM &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Swiss Market Index, ^SSMI (Swiss stock market) &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Yahoo Finance &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; SMUS &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; S&amp;amp;P 500, 
+                                ^GSPC (US stock market) &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Yahoo Finance &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Caveats for using CFTC data
+
+&gt;First,  while  non-commercial  traders  are  generally  associated  with speculative  activity,  it  is  possible  that  some  commercial  traders  also  take speculative  positions.  
+
+&gt; Second,  the  trades  identified  as  speculative  may  not result  from  carry  trades. 
+
+&gt; Finally,  a  comparison  with  statistics  from  the  BIS Triennial  Central  Bank  Survey  of  Foreign  Exchange  and  Derivatives  Market Activity  shows  that  only  a  very  small  proportion  of  foreign  exchange  market activity is executed through exchanges.
+
+&gt; --- Galati et al. (2007)&lt;sup&gt;2&lt;/sup&gt;
+
+.footnote[
+[2] Galati, G., A. Heath and P. McGuire (2007), ‘Evidence of carry trade activity’, *BIS Quarterly Review*.
+]
+
+---
+
+# Aim of the paper
+
+As mentioned by market participants, CFTC data tends to be indicative of the trend of carry trade activity (Bank for International Settlements 2015)&lt;sup&gt;3&lt;/sup&gt;.
+
+We address two questions: 
+
+The .blue[first] refers to the determination of the financial factors that hold important roles in explaining the Swiss franc carry trade.
+
+.footnote[
+[3] Bank for International Settlements (2015), *Currency Carry Trades in Latin America*, Bank for International Settlements.
+]
+
+--
+
+.blue[Second], we reflect on the consequences of the unwind of Swiss franc carry trade activities. Specifically, we are interested in how carry trade shocks the related financial variables.
+
+---
+
+# Methodology
+
+---
+
+count: false
+
+class: inverse, center
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+.center[
 # Thanks!
+]
 
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Slides created via the R package [xaringan](https://github.com/yihui/xaringan), with [xaringanthemer](https://github.com/gadenbuie/xaringanthemer).
 
-
-&lt;/br&gt;
-&lt;/br&gt;
-&lt;/br&gt;
-&lt;/br&gt;
-&lt;/br&gt;
-&lt;/br&gt;
-&lt;/br&gt;
-&lt;/br&gt;
-&lt;/br&gt;
-&lt;/br&gt;
-&lt;/br&gt;
-&lt;/br&gt;
-&lt;/br&gt;
-&lt;/br&gt;Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan), with [**xaringanthemer**](https://github.com/gadenbuie/xaringanthemer).
+&lt;br&gt;![Logos](all-ok.PNG)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -97,6 +197,51 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+(function(time) {
+  var d2 = function(number) {
+    return ('0' + number).slice(-2); // left-pad 0 to minutes/seconds
+  },
+
+  time_format = function(total) {
+    var secs = Math.abs(total) / 1000;
+    var h = Math.floor(secs / 3600);
+    var m = Math.floor(secs % 3600 / 60);
+    var s = Math.round(secs % 60);
+    var res = d2(m) + ':' + d2(s);
+    if (h > 0) res = h + ':' + res;
+    return res;  // [hh:]mm:ss
+  },
+
+  slide_number_div = function(i) {
+    return document.getElementsByClassName('remark-slide-number').item(i);
+  },
+
+  current_page_number = function(i) {
+    return slide_number_div(i).firstChild.textContent;  // text "i / N"
+  };
+
+  var timer = document.createElement('span'); timer.id = 'slide-time-left';
+  var time_left = time, k = slideshow.getCurrentSlideIndex(),
+      last_page_number = current_page_number(k);
+
+  setInterval(function() {
+    time_left = time_left - 1000;
+    timer.innerHTML = ' ' + time_format(time_left);
+    if (time_left < 0) timer.style.color = 'red';
+  }, 1000);
+
+  slide_number_div(k).appendChild(timer);
+
+  slideshow.on('showSlide', function(slide) {
+    var i = slide.getSlideIndex(), n = current_page_number(i);
+    // reset timer when a new slide is shown and the page number is changed
+    if (last_page_number !== n) {
+      time_left = time; last_page_number = n;
+      timer.innerHTML = ' ' + time_format(time); timer.style.color = null;
+    }
+    slide_number_div(i).appendChild(timer);
+  });
+})(120000);
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
