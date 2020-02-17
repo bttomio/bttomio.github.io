@@ -2,7 +2,7 @@
 title: "Carry trade and negative interest rates in Switzerland"
 subtitle: 
 author: "<br/>[Bruno Thiago Tomio](https://bttomio.github.io)<br/><br/>[Guillaume Vallet](mailto:guillaume.vallet@univ-grenoble-alpes.fr)"
-institute: "<span style='font-size: 15px'>46th Annual Conference - Eastern Economic Associtation</style>"
+institute: "<span style='font-size: 15px'>46th Annual Conference - Eastern Economic Associtation<br>Boston (MA), USA</style>"
 output:
   xaringan::moon_reader:
     text-decoration: none
@@ -25,11 +25,13 @@ output:
 [1] Frankel, J. (2008), 'Carried away: everything you always wanted to know about the carry trade, and perhaps much more', *Milken Institute Review*, 10(1), 38.
 ]
 
+???
+
+Start by giving a broad definition of carry trade.
+
 ---
 
 class: center
-
-count: false
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -147,19 +149,22 @@ knitr::kable(df, "html", linesep = "", align = "clc",
 [2] Galati, G., A. Heath and P. McGuire (2007), ‘Evidence of carry trade activity’, *BIS Quarterly Review*.
 ]
 
----
-
-# Aim of the paper
+???
 
 As mentioned by market participants, CFTC data tends to be indicative of the trend of carry trade activity (Bank for International Settlements 2015)<sup>3</sup>.
-
-We address two questions: 
-
-The .blue[first] refers to the determination of the financial factors that hold important roles in explaining the Swiss franc carry trade.
 
 .footnote[
 [3] Bank for International Settlements (2015), *Currency Carry Trades in Latin America*, Bank for International Settlements.
 ]
+
+
+---
+
+# Aim of the paper
+
+We address two questions: 
+
+The .blue[first] refers to the determination of the financial factors that hold important roles in explaining the Swiss franc carry trade.
 
 --
 
@@ -167,7 +172,325 @@ The .blue[first] refers to the determination of the financial factors that hold 
 
 ---
 
-# Methodology
+# .center[Methodology]
+
+### Data specification
+
+- CT ratio: weekly released (each Tuesday)
+
+- Other variables: daily (Tuesday)
+
+--
+
+### Econometric method
+
+- Structural vector-autoregressive (SVAR) model to infer strong causation
+
+- Toda-Yamamoto approach to avoid unit root testing biases
+
+--
+
+<br><br><br>
+.right[*PDF, slides, dataset, and code (do-file, Stata) are available at [https://bttomio.github.io](https://bttomio.github.io)*.]
+
+---
+
+# .center[Results]
+
+### Forecast-error variance decompositions (FEVDs)
+
+- How much of the carry trade fluctuations are explained by the financial variables?
+
+### Graphics of impulse reponse funtions (IRFs)
+
+- How the carry trade responds to shocks in the financial variables?
+
+- How the financial variables respond to shocks in the carry trade activity?
+
+---
+
+class: center
+
+#### FEVDs - Responses of the carry trade to one std. dev. shocks 
+```{css, echo=F}
+    /* Table width = 100% max-width */
+
+    .remark-slide table{
+        width: 100%;
+    }
+```
+
+```{r results="asis", echo=F}
+cat("
+<style>
+caption {
+      color: black;
+      font-weight: bold;
+      font-size: 1.0em;
+    }
+</style>
+")
+```
+
+```{r Table1PI, echo=FALSE, message=FALSE, warning=FALSE}
+library("readxl")
+library("kableExtra")
+library("dplyr")
+
+tab1PI <- read.table("c:/Portfolio/my site/public/slides/Table1PI.csv", header = TRUE, sep = ";")
+
+tab1PI [ , ] %>%
+  mutate(
+    Step = ifelse(Step > 200,
+                cell_spec(Step, "html", color = "#64b9d3", bold = T, background = "black"),
+                cell_spec(Step, "html", color = "black")),
+    IRD = ifelse(IRD > 8,
+                 cell_spec(IRD, "html", color = "#64b9d3", bold = T, background = "black"),
+                 cell_spec(IRD, "html", color = "black")),
+    VIX = ifelse(VIX > 8,
+                 cell_spec(VIX, "html", color = "#64b9d3", bold = T, background = "black"),
+                 cell_spec(VIX, "html", color = "black")),
+    CT = ifelse(CT > 200,
+                cell_spec(CT, "html", color = "#64b9d3", bold = T, background = "black"),
+                cell_spec(CT, "html", color = "black")),
+    ER = ifelse(ER > 8,
+                cell_spec(ER, "html", color = "#64b9d3", bold = T, background = "black"),
+                cell_spec(ER, "html", color = "black")),
+    SMUS = ifelse(SMUS > 8,
+                  cell_spec(SMUS, "html", color = "#64b9d3", bold = T, background = "black"),
+                  cell_spec(SMUS, "html", color = "black")),
+    SM = ifelse(SM > 8,
+                cell_spec(SM, "html", color = "#64b9d3", bold = T, background = "black"),
+                cell_spec(SM, "html", color = "black"))
+  ) %>%
+  select(Step, everything()) %>%
+  kable("html", linesep = "", align = "c", caption = "PI period", escape = F) %>%
+  row_spec(0, color = "white", background = "black")
+```
+
+--
+<br>
+
+```{r Table1NI, echo=FALSE, message=FALSE, warning=FALSE}
+library("readxl")
+library("kableExtra")
+
+tab1NI <- read.table("c:/Portfolio/my site/public/slides/Table1NI.csv", header = TRUE, sep = ";")
+
+tab1NI [ , ] %>%
+  mutate(
+    Step = ifelse(Step > 200,
+                cell_spec(Step, "html", color = "#64b9d3", bold = T, background = "black"),
+                cell_spec(Step, "html", color = "black")),
+    IRD = ifelse(IRD > 8,
+                 cell_spec(IRD, "html", color = "#64b9d3", bold = T, background = "black"),
+                 cell_spec(IRD, "html", color = "black")),
+    VIX = ifelse(VIX > 8,
+                 cell_spec(VIX, "html", color = "#64b9d3", bold = T, background = "black"),
+                 cell_spec(VIX, "html", color = "black")),
+    CT = ifelse(CT > 200,
+                cell_spec(CT, "html", color = "#64b9d3", bold = T, background = "black"),
+                cell_spec(CT, "html", color = "black")),
+    ER = ifelse(ER > 8,
+                cell_spec(ER, "html", color = "#64b9d3", bold = T, background = "black"),
+                cell_spec(ER, "html", color = "black")),
+    SMUS = ifelse(SMUS > 8,
+                  cell_spec(SMUS, "html", color = "#64b9d3", bold = T, background = "black"),
+                  cell_spec(SMUS, "html", color = "black")),
+    SM = ifelse(SM > 8,
+                cell_spec(SM, "html", color = "#64b9d3", bold = T, background = "black"),
+                cell_spec(SM, "html", color = "black"))
+  ) %>%
+  select(Step, everything()) %>%
+  kable("html", linesep = "", align = "c", caption = "NI period", escape = F) %>%
+  row_spec(0, color = "white", background = "black")
+```
+
+---
+
+class: top
+
+.center[.small[Structural Impulse Responses of CT]
+
+The financial variables impact the carry trade...]
+
+.pull-left[
+.center[.small[Figure 2 - PI period]]
+```{r, cache=FALSE, echo=FALSE}
+knitr::include_graphics("./Figure2.jpg")
+```
+
+$+$ ER
+
+$-$ SMUS
+
+$+$ VIX
+
+]
+
+--
+
+.pull-right[
+.center[.small[Figure 3 - NI period]]
+```{r, cache=FALSE, echo=FALSE}
+knitr::include_graphics("./Figure3.jpg")
+```
+
+$+$ ER (0-12 weeks)
+
+$+$ IRD (1 week), $-$ (12-20 weeks)
+
+$+$ SMUS (8-... weeks)
+
+$-$ SM (8-... weeks)
+
+]
+
+---
+
+class: center
+
+#### FEVDs - Responses of the financial variables to one std. dev. shocks 
+
+```{css, echo=F}
+    /* Table width = 100% max-width */
+
+    .remark-slide table{
+        width: 100%;
+    }
+```
+
+```{r results="asis", echo=F}
+cat("
+<style>
+caption {
+      color: black;
+      font-weight: bold;
+      font-size: 1.0em;
+    }
+</style>
+")
+```
+
+```{r Table2PI, echo=FALSE, message=FALSE, warning=FALSE}
+library("readxl")
+library("kableExtra")
+library("dplyr")
+
+tab2PI <- read.table("c:/Portfolio/my site/public/slides/Table2PI.csv", header = TRUE, sep = ";")
+
+tab2PI [ , ] %>%
+  mutate(
+    Step = ifelse(Step > 200,
+                cell_spec(Step, "html", color = "#64b9d3", bold = T, background = "black"),
+                cell_spec(Step, "html", color = "black")),
+    IRD = ifelse(IRD > 8,
+                 cell_spec(IRD, "html", color = "#64b9d3", bold = T, background = "black"),
+                 cell_spec(IRD, "html", color = "black")),
+    VIX = ifelse(VIX > 8,
+                 cell_spec(VIX, "html", color = "#64b9d3", bold = T, background = "black"),
+                 cell_spec(VIX, "html", color = "black")),
+    CT = ifelse(CT > 200,
+                cell_spec(CT, "html", color = "#64b9d3", bold = T, background = "black"),
+                cell_spec(CT, "html", color = "black")),
+    ER = ifelse(ER > 8,
+                cell_spec(ER, "html", color = "#64b9d3", bold = T, background = "black"),
+                cell_spec(ER, "html", color = "black")),
+    SMUS = ifelse(SMUS > 8,
+                  cell_spec(SMUS, "html", color = "#64b9d3", bold = T, background = "black"),
+                  cell_spec(SMUS, "html", color = "black")),
+    SM = ifelse(SM > 8,
+                cell_spec(SM, "html", color = "#64b9d3", bold = T, background = "black"),
+                cell_spec(SM, "html", color = "black"))
+  ) %>%
+  select(Step, everything()) %>%
+  kable("html", linesep = "", align = "c", caption = "PI period", escape = F) %>%
+  row_spec(0, color = "white", background = "black")
+```
+
+--
+<br>
+
+```{r Table2NI, echo=FALSE, message=FALSE, warning=FALSE}
+library("readxl")
+library("kableExtra")
+
+tab2NI <- read.table("c:/Portfolio/my site/public/slides/Table2NI.csv", header = TRUE, sep = ";")
+
+tab2NI [ , ] %>%
+  mutate(
+    Step = ifelse(Step > 200,
+                cell_spec(Step, "html", color = "#64b9d3", bold = T, background = "black"),
+                cell_spec(Step, "html", color = "black")),
+    IRD = ifelse(IRD > 8,
+                 cell_spec(IRD, "html", color = "#64b9d3", bold = T, background = "black"),
+                 cell_spec(IRD, "html", color = "black")),
+    VIX = ifelse(VIX > 8,
+                 cell_spec(VIX, "html", color = "#64b9d3", bold = T, background = "black"),
+                 cell_spec(VIX, "html", color = "black")),
+    CT = ifelse(CT > 200,
+                cell_spec(CT, "html", color = "#64b9d3", bold = T, background = "black"),
+                cell_spec(CT, "html", color = "black")),
+    ER = ifelse(ER > 8,
+                cell_spec(ER, "html", color = "#64b9d3", bold = T, background = "black"),
+                cell_spec(ER, "html", color = "black")),
+    SMUS = ifelse(SMUS > 8,
+                  cell_spec(SMUS, "html", color = "#64b9d3", bold = T, background = "black"),
+                  cell_spec(SMUS, "html", color = "black")),
+    SM = ifelse(SM > 8,
+                cell_spec(SM, "html", color = "#64b9d3", bold = T, background = "black"),
+                cell_spec(SM, "html", color = "black"))
+  ) %>%
+  select(Step, everything()) %>%
+  kable("html", linesep = "", align = "c", caption = "NI period", escape = F) %>%
+  row_spec(0, color = "white", background = "black")
+```
+
+---
+
+class: top
+
+.center[.small[Structural Impulse Responses to the CT shocks]
+
+The carry trade impacts the financial variables...]
+
+.pull-left[
+.center[.small[Figure 4 - PI period]]
+```{r, cache=FALSE, echo=FALSE}
+knitr::include_graphics("./Figure4.jpg")
+```
+
+$+$ ER
+
+$+$ SMUS (2-16 weeks)
+
+$+$ SM (4-... weeks)
+
+]
+
+.pull-right[
+.center[.small[Figure 5 - NI period]]
+```{r, cache=FALSE, echo=FALSE}
+knitr::include_graphics("./Figure5.jpg")
+```
+
+$+$ IRD (10-... weeks)
+
+$+$ SMUS (4-12 weeks)
+
+$+$ SM (2-6 weeks)
+
+]
+
+---
+
+# Conclusions
+
+- NIRP (Negative interest rate policy) seems to be strengthening the Swiss carry trade activity. 
+
+- 
+
+- 
 
 ---
 

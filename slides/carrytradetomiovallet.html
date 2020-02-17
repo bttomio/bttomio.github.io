@@ -14,7 +14,7 @@ class: center, middle, inverse, title-slide
 
 # Carry trade and negative interest rates in Switzerland
 ### <br/><a href="https://bttomio.github.io">Bruno Thiago Tomio</a><br/><br/><a href="mailto:guillaume.vallet@univ-grenoble-alpes.fr">Guillaume Vallet</a>
-### <span style='font-size: 15px'>46th Annual Conference - Eastern Economic Associtation
+### <span style='font-size: 15px'>46th Annual Conference - Eastern Economic Associtation<br>Boston (MA), USA
 </style>
 
 ---
@@ -30,11 +30,13 @@ class: center, middle, inverse, title-slide
 [1] Frankel, J. (2008), 'Carried away: everything you always wanted to know about the carry trade, and perhaps much more', *Milken Institute Review*, 10(1), 38.
 ]
 
+???
+
+Start by giving a broad definition of carry trade.
+
 ---
 
 class: center
-
-count: false
 
 
 
@@ -113,19 +115,22 @@ class: center
 [2] Galati, G., A. Heath and P. McGuire (2007), ‘Evidence of carry trade activity’, *BIS Quarterly Review*.
 ]
 
----
-
-# Aim of the paper
+???
 
 As mentioned by market participants, CFTC data tends to be indicative of the trend of carry trade activity (Bank for International Settlements 2015)&lt;sup&gt;3&lt;/sup&gt;.
-
-We address two questions: 
-
-The .blue[first] refers to the determination of the financial factors that hold important roles in explaining the Swiss franc carry trade.
 
 .footnote[
 [3] Bank for International Settlements (2015), *Currency Carry Trades in Latin America*, Bank for International Settlements.
 ]
+
+
+---
+
+# Aim of the paper
+
+We address two questions: 
+
+The .blue[first] refers to the determination of the financial factors that hold important roles in explaining the Swiss franc carry trade.
 
 --
 
@@ -133,7 +138,417 @@ The .blue[first] refers to the determination of the financial factors that hold 
 
 ---
 
-# Methodology
+# .center[Methodology]
+
+### Data specification
+
+- CT ratio: weekly released (each Tuesday)
+
+- Other variables: daily (Tuesday)
+
+--
+
+### Econometric method
+
+- Structural vector-autoregressive (SVAR) model to infer strong causation
+
+- Toda-Yamamoto approach to avoid unit root testing biases
+
+--
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+.right[*PDF, slides, dataset, and code (do-file, Stata) are available at [https://bttomio.github.io](https://bttomio.github.io)*.]
+
+---
+
+# .center[Results]
+
+### Forecast-error variance decompositions (FEVDs)
+
+- How much of the carry trade fluctuations are explained by the financial variables?
+
+### Graphics of impulse reponse funtions (IRFs)
+
+- How the carry trade responds to shocks in the financial variables?
+
+- How the financial variables respond to shocks in the carry trade activity?
+
+---
+
+class: center
+
+#### FEVDs - Responses of the carry trade to one std. dev. shocks 
+&lt;style type="text/css"&gt;
+    /* Table width = 100% max-width */
+
+    .remark-slide table{
+        width: 100%;
+    }
+&lt;/style&gt;
+
+
+&lt;style&gt;
+caption {
+      color: black;
+      font-weight: bold;
+      font-size: 1.0em;
+    }
+&lt;/style&gt;
+
+&lt;table&gt;
+&lt;caption&gt;PI period&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; Step &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; IRD &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; VIX &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; CT &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; ER &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; SMUS &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; SM &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.55&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;3.42&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;90.54&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.23&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.12&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.14&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;8&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.08&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;8.45&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;77.54&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4.98&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;6.29&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.66&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;12&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.07&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;11.93&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;67.85&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;8.6&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;8.36&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.19&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;16&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.35&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;13.61&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;62.38&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;11.28&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;8.87&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.51&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;20&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.75&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;14.3&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;59.36&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;13.13&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;8.82&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.64&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+--
+&lt;br&gt;
+
+&lt;table&gt;
+&lt;caption&gt;NI period&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; Step &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; IRD &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; VIX &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; CT &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; ER &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; SMUS &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; SM &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4.35&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.12&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;87.44&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;6.5&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.02&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.56&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;8&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;5.51&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.28&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;76.28&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;14.6&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.48&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.86&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;12&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;8.66&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.37&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;66.25&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;15.56&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;5.44&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;3.71&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;16&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;10.01&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.6&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;57.14&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;13.91&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;12.28&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;6.07&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;20&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;9.7&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.13&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;48.96&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;11.79&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;19.71&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;8.71&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+class: top
+
+.center[.small[Structural Impulse Responses of CT]
+
+The financial variables impact the carry trade...]
+
+.pull-left[
+.center[.small[Figure 2 - PI period]]
+&lt;img src="./Figure2.jpg" width="704" /&gt;
+
+`\(+\)` ER
+
+`\(-\)` SMUS
+
+`\(+\)` VIX
+
+]
+
+--
+
+.pull-right[
+.center[.small[Figure 3 - NI period]]
+&lt;img src="./Figure3.jpg" width="704" /&gt;
+
+`\(+\)` ER (0-12 weeks)
+
+`\(+\)` IRD (1 week), `\(-\)` (12-20 weeks)
+
+`\(+\)` SMUS (8-... weeks)
+
+`\(-\)` SM (8-... weeks)
+
+]
+
+---
+
+class: center
+
+#### FEVDs - Responses of the financial variables to one std. dev. shocks 
+
+&lt;style type="text/css"&gt;
+    /* Table width = 100% max-width */
+
+    .remark-slide table{
+        width: 100%;
+    }
+&lt;/style&gt;
+
+
+&lt;style&gt;
+caption {
+      color: black;
+      font-weight: bold;
+      font-size: 1.0em;
+    }
+&lt;/style&gt;
+
+&lt;table&gt;
+&lt;caption&gt;PI period&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; Step &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; IRD &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; VIX &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; CT &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; ER &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; SMUS &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; SM &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.26&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.04&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;90.54&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;6.58&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.62&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.92&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;8&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.51&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.82&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;77.54&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;7.04&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;5.35&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4.9&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;12&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.43&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.83&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;67.85&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;7.1&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;7.69&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;8.7&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;16&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.66&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.31&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;62.38&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;7.21&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;8.7&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;11.05&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;20&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.54&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.43&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;59.36&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;7.39&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;9.01&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;12.24&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+--
+&lt;br&gt;
+
+&lt;table&gt;
+&lt;caption&gt;NI period&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; Step &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; IRD &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; VIX &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; CT &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; ER &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; SMUS &lt;/th&gt;
+   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; SM &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.34&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.16&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;87.44&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.41&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.7&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;3.1&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;8&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.76&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.31&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;76.28&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.49&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;3.19&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;5.41&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;12&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;3.15&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.62&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;66.25&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.48&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4.28&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;5.37&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;16&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4.3&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.5&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;57.14&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.6&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4.5&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4.93&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;20&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;5.13&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.35&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;48.96&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.84&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4.51&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4.66&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+class: top
+
+.center[.small[Structural Impulse Responses to the CT shocks]
+
+The carry trade impacts the financial variables...]
+
+.pull-left[
+.center[.small[Figure 4 - PI period]]
+&lt;img src="./Figure4.jpg" width="704" /&gt;
+
+`\(+\)` ER
+
+`\(+\)` SMUS (2-16 weeks)
+
+`\(+\)` SM (4-... weeks)
+
+]
+
+.pull-right[
+.center[.small[Figure 5 - NI period]]
+&lt;img src="./Figure5.jpg" width="704" /&gt;
+
+`\(+\)` IRD (10-... weeks)
+
+`\(+\)` SMUS (4-12 weeks)
+
+`\(+\)` SM (2-6 weeks)
+
+]
+
+---
+
+# Conclusions
+
+- NIRP (Negative interest rate policy) seems to be strengthening the Swiss carry trade activity. 
+
+- How the carry trade responds to shocks in the financial variables?
+
+- How the financial variables respond to shocks in the carry trade activity?
 
 ---
 

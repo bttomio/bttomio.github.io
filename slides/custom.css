@@ -2,8 +2,19 @@
 .blue {
   color: #6490d3;
 }
+.green {
+  color: #0fd261;
+}
+.red {
+  color:  #e74c3c;
+}
+.small {
+  font-size: 80%;
+  font-weight: bold;
+}
 .large {
-  font-size: 130%;
+  font-size: 200%;
+  font-weight: bold;
 }
 .full-width {
   display: flex;
