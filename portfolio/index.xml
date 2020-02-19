@@ -499,44 +499,5 @@ Université Grenoble Alpes, France
 </description>
     </item>
     
-    <item>
-      <title>Teaching</title>
-      <link>/portfolio/teaching/</link>
-      <pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/portfolio/teaching/</guid>
-      <description>&lt;h2 id=&#34;travaux-dirigés-td&#34;&gt;Travaux dirigés (TD)&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Monnaie et Finances 1]
-Enseignant : M. PROSCHE
-Niveau : L2
-Date : Premier semestre, année universitaire 2018-2019
-Nombre de groupes : 3 groupes
-Nombre d&#39;heures : 36 heures
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Monnaie et Finances 2]
-Enseignant : M. GUILLAUMIN, M. LAURENT
-Niveau : L2
-Date : Second semestre, année universitaire 2018-2019
-Nombre de groupes : 1 groupe
-Nombre d&#39;heures : 12 heures
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Economie Internationale 2]
-Enseignant : M. PONSOT
-Niveau : L3
-Date : Second semestre, année universitaire 2018-2019
-Nombre de groupes : 2 groupes
-Nombre d&#39;heures : 28 heures
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;cours-de-langues-vivantes-portugais&#34;&gt;Cours de langues vivantes (Portugais)&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Portugais - License]
-Date : Premier semestre, année universitaire 2018-2019
-Nombre d&#39;heures : 24 heures
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Portugais débutant - Institut d&#39;administration des entreprises de Grenoble]
-Date : Second semestre, année universitaire 2018-2019
-Nombre d&#39;heures : 24 heures
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
   </channel>
 </rss>
