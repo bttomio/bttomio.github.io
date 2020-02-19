@@ -15,6 +15,24 @@ output:
       countIncrementalSlides: false
 ---
 
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include = FALSE}
+library(xaringanthemer)
+mono_light(
+  link_color = "#64b9d3",
+  base_color = "#000000",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Source Code Pro"),
+  title_slide_background_image = "all-ok.PNG",
+  title_slide_background_size = "95%",
+  title_slide_background_position = "bottom"
+)
+```
+
 # Definition of carry trade
 
 > The carry trade is the name of the strategy of going  short  (betting  the  foreign  exchange value will fall) in a low-interest rate currency like  the  Japanese  yen,  while  simultaneously going  long  (betting  the  foreign  exchange value will rise) in a high-interest rate currency like the New Zealand dollar.
@@ -32,24 +50,6 @@ Start by giving a broad definition of carry trade.
 ---
 
 class: center
-
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
-```
-
-```{r xaringan-themer, include = FALSE}
-library(xaringanthemer)
-mono_light(
-  link_color = "#64b9d3",
-  base_color = "#000000",
-  header_font_google = google_font("Josefin Sans"),
-  text_font_google   = google_font("Montserrat", "300", "300i"),
-  code_font_google   = google_font("Droid Mono"),
-  title_slide_background_image = "all-ok.PNG",
-  title_slide_background_size = "95%",
-  title_slide_background_position = "bottom"
-)
-```
 
 #### **Figure 1** - CT ratio, US policy rate, and Switzerland’s policy rate
 
@@ -488,9 +488,13 @@ $+$ SM (2-6 weeks)
 
 - NIRP (Negative interest rate policy) seems to be strengthening the Swiss carry trade activity. 
 
-- 
+- The contribution of IRD is more substantial in the NI period.
 
-- 
+- Weak evidence of the impact of carry trade in the financial variables. Nonetheless, in the NI period, the unwind of carry trade activity would impact negatively VIX and stock markets (US and Swiss).
+
+- It seems to be a source of systemic risk
+
+- For the Swiss National Bank (SNB), increased macro-prudential supervision is needed (through new instruments that take into account the evolution of financial varialbes into its monetary reaction function).
 
 ---
 
