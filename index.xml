@@ -109,13 +109,13 @@ Date : 30 janvier 2020
 &lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Retrieving data]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Using the packages 
-&lt;a href=&#34;https://quandl.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;quandl&lt;/code&gt;&lt;/a&gt;
+&lt;a href=&#34;https://www.quantmod.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;quantmod&lt;/code&gt;&lt;/a&gt;
  and 
 &lt;a href=&#34;https://github.com/expersso/BIS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;BIS&lt;/code&gt;,&lt;/a&gt;
  I&amp;rsquo;ve learned techniques to retrieve data online. The first is used to collect financial markets data, while the second offers a direct connection to the data supplied by the 
 &lt;a href=&#34;https://www.bis.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bank for International Settlements.&lt;/a&gt;
 &lt;/p&gt;
-&lt;p&gt;Example of code with &lt;code&gt;quandl&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Example of code with &lt;code&gt;quantmod&lt;/code&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;library(quantmod)
 library(dplyr)
 
