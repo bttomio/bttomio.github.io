@@ -233,7 +233,7 @@ make_cite <- function(authors,	year,	title,	journal = NULL,	volume = NULL,
       else {
         conference <- paste0("Paper presented at the ", 
                              conference, 
-                             ",", 
+                             ", ", 
                              conf_loc,
                             ".") 
       }
