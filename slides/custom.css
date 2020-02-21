@@ -21,3 +21,9 @@
   width: 100%;
   flex: 1 1 auto;
 }
+.highlight {
+  color: #64b9d3;
+  background: black;
+  font-weight: bold;
+  border-radius: 5px;
+}
