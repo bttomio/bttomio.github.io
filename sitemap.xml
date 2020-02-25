@@ -208,12 +208,11 @@
   </url>
   
   <url>
-    <loc>/cv/</loc>
-    <priority>0</priority>
+    <loc>/categories/</loc>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>/cv/</loc>
   </url>
   
 </urlset>
