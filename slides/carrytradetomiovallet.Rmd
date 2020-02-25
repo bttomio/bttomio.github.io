@@ -490,8 +490,8 @@ knitr::include_graphics("./Figure5.jpg")
 ```{r R4, echo=FALSE, message=FALSE, warning=FALSE}
 library(kableExtra)
 
-r4 <- data.frame(mathexpr = c("\\(-\\)", "\\(+\\)", "\\(+\\)"),
-                 Text_1 = c("IRD (10-... weeks)", "VIX (10-... weeks)", "SM (2-6 weeks)"))
+r4 <- data.frame(mathexpr = c("\\(-\\)", "\\(+\\)", "\\(+\\)", "\\(+\\)"),
+                 Text_1 = c("IRD (10-... weeks)", "SMUS (4-12 weeks)", "SM (2-6 weeks)", "VIX (14-... weeks)"))
 knitr::kable(r4, "html", align = "c",
   col.names = c(".small[Impact]", ".small[Response]"))%>%
   row_spec(0, color = "white", background = "black")
