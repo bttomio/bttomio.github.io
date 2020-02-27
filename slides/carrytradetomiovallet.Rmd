@@ -9,7 +9,7 @@ output:
     css: ["xaringan-themer.css", "custom.css"]
     lib_dir: libs
     nature:
-      countdown: 120000
+      countdown: 60000
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
