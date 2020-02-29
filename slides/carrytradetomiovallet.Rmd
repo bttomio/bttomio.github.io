@@ -130,7 +130,8 @@ df <- data.frame(Variables = c("CT", "ER", "IRD", "VIX", "SM", "SMUS"),
 knitr::kable(df, "html", linesep = "", align = "clc",
   col.names = c("Variable", "Definition", "Source")) %>%
   kable_styling(full_width = F) %>%
-  row_spec(0:0, align = "c")
+  row_spec(0:0, align = "c") %>%
+  row_spec(0, color = "white", background = "black")
 ```
 
 ---
@@ -191,7 +192,7 @@ The .blue[first] refers to the determination of the financial factors that hold 
 --
 
 <br><br><br>
-.right[*PDF, slides, dataset, and code (do-file, Stata) are available at [https://bttomio.github.io](https://bttomio.github.io)*.]
+.right[*PDF, slides, dataset, and code (do-file, Stata) are available at* .highlight[[https://bttomio.github.io](https://bttomio.github.io).]]
 
 ---
 
