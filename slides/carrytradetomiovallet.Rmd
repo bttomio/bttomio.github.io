@@ -121,7 +121,7 @@ class: center
 library(kableExtra)
 
 df <- data.frame(Variables = c("CT", "ER", "IRD", "VIX", "SM", "SMUS"),
-                 Text_1 = c("Ratio of short positions over long positions (Short/Long)", 
+                 Text_1 = c("Ratio of short positions over long positions (Short/Long) - noncommercial traders", 
                                 "Nominal exchange rates, USDCHF", "Difference between the policy interest rate in 
                                 Switzerland and the policy interest rate in the United States", "Market sentiment, CBOE 
                                 DJIA Volatility Index", "Swiss Market Index, ^SSMI (Swiss stock market)", "S&P 500, 
@@ -192,7 +192,7 @@ The .blue[first] refers to the determination of the financial factors that hold 
 --
 
 <br><br><br>
-.right[*PDF, slides, dataset, and code (do-file, Stata) are available at* .highlight[[https://bttomio.github.io](https://bttomio.github.io).]]
+.right[*PDF, slides, dataset, and code (do-file, Stata) are available at* .highlight[[https://bttomio.github.io](https://bttomio.github.io)].]
 
 ---
 
