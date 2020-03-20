@@ -6,7 +6,7 @@
     content: element(footer);
   }
   @bottom-right {
-    content: counter(page);
+    content: counter(page) "/" counter(pages);
   }
   @bottom-left {
     content: element(date);
@@ -20,7 +20,7 @@
     content: none;
   }
   @bottom-right {
-    content: none;
+    content: content: counter(page) "/" counter(pages);
   }
   @bottom-left {
     content: none;
@@ -380,7 +380,7 @@ td {
 }
 
 .adhoc table {
-  margin-top:-10px;
+  margin-top:-2px;
   width:100%;
   border-bottom: 1px dashed #5F6A6A;
   border-top: 1px dashed #5F6A6A;

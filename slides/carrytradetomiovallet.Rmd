@@ -78,9 +78,9 @@ gct <- ggplot(data=G1, aes(x=Date)) +
   geom_line(aes(y = CT, colour = "black"), size=1.2)+
   scale_x_date(date_labels = "%b-%y", date_breaks = "14 months")+
   scale_y_continuous(limits = c(0, 12), "CT ratio (Short/Long)")
-gct <- gct + geom_line(aes(x=Date, y=(G1$IR + 0.75) * 2, colour="red"), size=1.2)
+gct <- gct + geom_line(aes(x=Date, y=(IR + 0.75) * 2, colour="red"), size=1.2)
 gct <- gct + scale_y_continuous(sec.axis = sec_axis(~./2-0.75))
-gct <- gct + geom_line(aes(x=Date, y=(G1$USIR + 0.75) * 2, colour="blue"), size=1.2)
+gct <- gct + geom_line(aes(x=Date, y=(USIR + 0.75) * 2, colour="blue"), size=1.2)
 gct <- gct + scale_y_continuous(sec.axis = sec_axis(~./2-0.75, name = "Interest rates (%)")) +
   scale_colour_manual("", values = c("black","blue", "red"), 
                       labels = c("CT (LHS)", "USIR (RHS)", "IR (RHS)"))
