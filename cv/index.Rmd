@@ -57,6 +57,28 @@ cat(header)
 
 </div>
 
+```{r}
+back <- FALSE # Set to TRUE when rendering to PDF via pagedown::chrome_print()
+if(back) {
+  backto <- ''
+} else {
+  backto <- '
+  <a href="https://bttomio.github.io" class="icon-block">
+      <i class="fas fafooter fa-arrow-circle-left"></i> 
+  </a>
+  Back to main page
+  '
+}
+```
+
+<div class = "backtomain">
+```{r results = "asis"}
+cat(backto)
+```
+
+</div>
+
+
 <div class = "footer",>
   <a href="mailto:bttomio@furb.br" class="icon-block">
       <i class="fas fafooter fa-envelope"> </i>
@@ -330,7 +352,7 @@ kable(chapters_tbl)
 
 </div>
 
-## Working Papers {.wp .nohead}
+## Working Papers {.nohead}
 
 <div class = "hangingindent">
 

@@ -16,6 +16,9 @@
   @top-right {
     content: element(download);
   }
+  @top-left {
+    content: element(backtomain);
+  }
   @bottom-center {
     content: none;
   }
@@ -39,6 +42,10 @@ div.footer {
 
 div.download {
   position: running(download);
+}
+
+div.backtomain {
+  position: running(backtomain);
 }
 
 h2.date {
