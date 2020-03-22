@@ -112,7 +112,7 @@ Date : 30 janvier 2020
 &lt;a href=&#34;https://www.quantmod.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;quantmod&lt;/code&gt;&lt;/a&gt;
  and 
 &lt;a href=&#34;https://github.com/expersso/BIS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;BIS&lt;/code&gt;,&lt;/a&gt;
- I&amp;rsquo;ve learned techniques to retrieve data online. The first is used to collect financial markets data, while the second offers a direct connection to the data supplied by the 
+, I have learned techniques to retrieve data online. The first is used to collect financial markets data, while the second offers a direct connection to the data supplied by the 
 &lt;a href=&#34;https://www.bis.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bank for International Settlements.&lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;Example of code with &lt;code&gt;quantmod&lt;/code&gt;:&lt;/p&gt;
@@ -152,11 +152,11 @@ BIR
 &lt;p&gt;&lt;img src=&#34;/img/BIR.jpeg&#34; alt=&#34;plot&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Time series econometrics]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I&amp;rsquo;ve studied the following topics:&lt;/p&gt;
+&lt;p&gt;I have studied the following topics:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Panel data&lt;/li&gt;
-&lt;li&gt;Vector-autogressive models (VAR)&lt;/li&gt;
-&lt;li&gt;Structural Vector-autogressive models (SVAR)&lt;/li&gt;
+&lt;li&gt;Vector-autoregressive models (VAR)&lt;/li&gt;
+&lt;li&gt;Structural Vector-autoregressive models (SVAR)&lt;/li&gt;
 &lt;li&gt;Granger-causality&lt;/li&gt;
 &lt;li&gt;Unit-roots testing&lt;/li&gt;
 &lt;/ul&gt;
@@ -493,7 +493,7 @@ University of Ottawa, Canada
 Université Grenoble Alpes, France
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;thesis-supervisor&#34;&gt;Thesis Supervisor&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Guiallume Vallet]
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[Guillaume Vallet]
 Université Grenoble Alpes, France
 &lt;/code&gt;&lt;/pre&gt;
 </description>
