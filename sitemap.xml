@@ -28,6 +28,11 @@
   </url>
   
   <url>
+    <loc>/publication_types/2/</loc>
+    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/publication_types/3/</loc>
     <lastmod>2020-02-01T00:00:00+00:00</lastmod>
   </url>
@@ -53,6 +58,11 @@
   </url>
   
   <url>
+    <loc>/tags/macroeconomics/</loc>
+    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/publication_types/</loc>
     <lastmod>2020-02-01T00:00:00+00:00</lastmod>
   </url>
@@ -64,6 +74,11 @@
   
   <url>
     <loc>/tags/</loc>
+    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/article7/</loc>
     <lastmod>2020-02-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -118,11 +133,6 @@
   </url>
   
   <url>
-    <loc>/publication_types/2/</loc>
-    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/publication/article1/</loc>
     <lastmod>2018-02-01T00:00:00+00:00</lastmod>
   </url>
@@ -154,11 +164,6 @@
   
   <url>
     <loc>/authors/johnny-w.-monteiro/</loc>
-    <lastmod>2017-02-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/macroeconomics/</loc>
     <lastmod>2017-02-02T00:00:00+00:00</lastmod>
   </url>
   
