@@ -21,7 +21,7 @@ options(knitr.kable.NA = '')
 cv_entries <- readxl::read_xlsx(here::here("data", "cv_entries.xlsx"))
 
 #### publications #####
-pubs <- readxl::read_xlsx(here::here("data", "pubs.xlsx")) %>% 
+pubs <- readxl::read_xlsx(here::here("data", "pubsall.xlsx")) %>% 
   arrange(order) %>% 
   select(-order)
 
@@ -30,35 +30,11 @@ pubs <- map_df(pubs, ~gsub("\\.$", "", .x))
 ```
 
 
-```{r}
-PDF <- FALSE # Set to TRUE when rendering to PDF via pagedown::chrome_print('C:/New CV/index.html', format="pdf")
-if(PDF) {
-  header <- '
-  View online
-  <a href="https://bttomio.github.io/cv/" class="icon-block">
-      <i class="fas fafooter fa-globe"></i>
-  </a>
-  '
-} else {
-  header <- '
-  Download PDF
-  <a href="https://bitly.com/bttomiocv" class="icon-block">
-      <i class="fas fafooter fa-download"></i>
-  </a>
-  '
-}
-```
-
-
-<div class = "download">
-```{r results = "asis"}
-cat(header)
-```
 
 </div>
 
 ```{r}
-back <- FALSE # Set to TRUE when rendering to PDF via pagedown::chrome_print('C:/New CV/index.html', format="pdf")
+back <- TRUE # Set to TRUE when rendering to PDF via pagedown::chrome_print()
 if(back) {
   backto <- ''
 } else {
@@ -123,64 +99,13 @@ cat(backto)
 
 </div>
 
-## Education {.education .nohead}
-
-```{r}
-cv_entries %>% 
-  filter(type == 'education') %>% 
-  mutate(what = paste0(what, ", ", where),
-         what = gsub("NA", "", what),
-         what = gsub(", $", "", what),
-         what = ifelse(!is.na(url), 
-                       paste0("[", what, "](", url, ")"), 
-                       what)
-         ) %>% 
-  mutate(year = str_c(year_begin, " --- ", year_end)) %>% 
-  select(year, what) %>% 
-  kable()
-```
-
-## Brief Professional History {.history .nohead}
-
-```{r}
-cv_entries %>% 
-  filter(type == 'history') %>% 
-  mutate(what = paste0("<span style= 'font-weight: 500'>",
-                       what, 
-                       "</span>"),
-    what = paste0(what, ", ", where),
-         what = gsub("NA", "", what),
-         what = gsub(", $", "", what)) %>% 
-  mutate(year = str_c(year_begin, 
-                      " ", 
-                      ifelse(is.na(year_end), "", year_end))) %>% 
-  select(year, what) %>% 
-  kable()
-```
-
-## Skills {.nohead}
-
-```{r message=FALSE}
-options(kableExtra.auto_format = F)
-library(kableExtra)
-df <- data.frame(Text_0 = c("Languages", "English: Fluent/advanced (C1-C2)", "French: Fluent/advanced (C1-C2)", "Portuguese: Native speaker", "German/Spanish: Basic knowledge"),
-                 Text_2 = c("Econometrics", "Stata", "EViews", "R", "gretl"),
-                 Text_1 = c("Programming", "Stata", "R", "", ""))
-df %>%
-  kable(format = "html", align = c("l")) %>%
-  row_spec(1:1, bold = T) %>%
-  column_spec(1, width = "10cm") %>%
-  column_spec(2, width = "6cm") %>%
-  column_spec(3, width = "5cm")
-```
-
 # Research
 
 <div class = "inote">
 Icons link to additional content  
 </div>
 
-## Peer-Reviewed Publications (Selected) {.prpa .nohead}
+## Publications {.prpa .nohead}
 
 <div class = "hangingindent">
 
@@ -321,7 +246,7 @@ pubs_tbl <- pubs_tbl %>%
 
 pubs_tbl <- dplyr::select(pubs_tbl, cites)
   
-knitr::kable(pubs_tbl[1:4, ])
+knitr::kable(pubs_tbl[1:10, ])
 ```
 
 </div>
@@ -497,102 +422,3 @@ knitr::kable(pubs_wp[1:4, ])
 ```
 
 </div>
-
-## Conference Presentations (Selected) {.prpa .nohead}
-
-<div class = "hangingindent">
-
-```{r}
-confs <- pubs %>% 
-  filter(type == "conference") %>% 
-  select(-type)
-
-fa_doc <- ifelse(
-  !is.na(confs$full_paper_link), 
-  paste0('[<i class="fas falink2 fa-file-alt"></i>](', 
-         confs$full_paper_link, 
-         ")"
-         ),
-  ""
-  )
-
-fa_git <- ifelse(
-  !is.na(confs$git_repo), 
-  paste0('[<i class="fab falink2 fa-github"></i>](', 
-         confs$git_repo, 
-         ")"
-         ),
-  ""
-  )
-
-fa_pres <- ifelse(
-  !is.na(confs$slides_link), 
-  paste0('[<i class="fas falink3 fa-chalkboard-teacher"></i>](', 
-         confs$slides_link, 
-         ")"
-         ),
-  ""
-  )
-
-
-each_cite <- split(confs, seq_len(nrow(confs)))
-empties <- map(each_cite, ~map_lgl(.x, is.na))
-
-cites <- map2(each_cite, empties, ~.x[ ,!.y])
-formatted_cites <- map(cites, ~do.call(make_cite, .x)) 
-
-conf_tbl <- tibble(year = confs$year,
-                   count = paste0(seq(length(formatted_cites), 1), "."),
-                   cites = paste(unlist(formatted_cites), 
-                                 fa_doc, 
-                                 fa_pres, 
-                                 fa_git)
-)
-  
-
-conf_tbl <- conf_tbl %>% 
-  mutate(year = parse_number(year)) %>% 
-  group_by(year) %>%
-  mutate(count_within_year = 1:n()) %>% 
-  ungroup() %>% 
-  mutate(year = ifelse(count_within_year == 1, year, "")) %>% 
-  select(-count_within_year)
-
-conf_tbl <- dplyr::select(conf_tbl, cites)
-
-knitr::kable(conf_tbl[seq(1, 4), ])
-```
-
-</div>
-
-## Ad hoc reviewer {.nohead}
-
-<span style= 'color: #5F6A6A;'>I have served as a peer reviewer for the following journals:</span>
-
-<div class = "adhoc">
-
-```{r}
-reviewer <- cv_entries %>%
-  filter(type == "peer-reviewer") %>%
-  select(what) 
-
-jou1 <- reviewer$what
-
-data.frame(jou1) %>%
-  kable()
-```
-
-</div>
-
-## References {.nohead}
-
-```{r echo=FALSE, message=FALSE}
-library(kableExtra)
-df <- data.frame(Text_0 = c("Guillaume Vallet", "Université Grenoble Alpes, France", "guillaume.vallet@univ-grenoble-alpes.fr"),
-                 Text_1 = c("Eckhard Hein", "Berlin School of Economics and Law, Germany", "eckhard.hein@hwr-berlin.de"),
-                 Text_2 = c("Mohamed Amal", "Universidade de Blumenau, Brazil", "amal@furb.br"))
-df %>%
-  kable(format = "html",align = c("l")) %>%
-  row_spec(1:1, bold = T) %>%
-  kable_styling(font_size = 12) 
-```
