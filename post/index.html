@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="Professor of Economics">
+  <meta name="description" content="Personal website of Bruno Thiago Tomio. $$10$">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/">
@@ -39,7 +39,7 @@
   
   
   
-  <meta name="theme-color" content="#2962ff">
+  <meta name="theme-color" content="#649fd3">
   
 
   
@@ -206,16 +206,54 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163822207-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-163822207-1', { 'anonymize_ip': true });
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
   
-  <link rel="alternate" href="/post/index.xml" type="application/rss+xml" title="bttomio">
+  <link rel="alternate" href="/post/index.xml" type="application/rss+xml" title="Bruno Thiago Tomio">
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hucb8e37ed3f4b5d3b2942a6339102868f_25478_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hucb8e37ed3f4b5d3b2942a6339102868f_25478_192x192_fill_lanczos_center_2.png">
 
   <link rel="canonical" href="/post/">
 
@@ -230,13 +268,16 @@
   
   <meta property="twitter:card" content="summary">
   
-  <meta property="og:site_name" content="bttomio">
+  <meta property="twitter:site" content="@bttomio">
+  <meta property="twitter:creator" content="@bttomio">
+  
+  <meta property="og:site_name" content="Bruno Thiago Tomio">
   <meta property="og:url" content="/post/">
-  <meta property="og:title" content="Posts | bttomio">
-  <meta property="og:description" content="Professor of Economics"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:title" content="Posts | Bruno Thiago Tomio">
+  <meta property="og:description" content="Personal website of Bruno Thiago Tomio. $$10$"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
-    
+    <meta property="og:updated_time" content="2019-07-12T00:00:00&#43;00:00">
   
 
   
@@ -257,12 +298,12 @@
     window.cookieconsent.initialise({
       "palette": {
         "popup": {
-          "background": "#2962ff",
+          "background": "#649fd3",
           "text": "#fff"
         },
         "button": {
           "background": "#fff",
-          "text": "#2962ff"
+          "text": "#649fd3"
         }
       },
       "theme": "classic",
@@ -283,7 +324,7 @@
 
 
 
-  <title>Posts | bttomio</title>
+  <title>Posts | Bruno Thiago Tomio</title>
 
 </head>
 
@@ -304,8 +345,7 @@
 
       <div id="search-box">
         
-        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
         
       </div>
 
@@ -334,7 +374,7 @@
 
     
     <div class="d-none d-lg-inline-flex">
-      <a class="navbar-brand" href="/">bttomio</a>
+      <a class="navbar-brand" href="/">Bruno Thiago Tomio</a>
     </div>
     
 
@@ -347,13 +387,13 @@
 
     
     <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-      <a class="navbar-brand" href="/">bttomio</a>
+      <a class="navbar-brand" href="/">Bruno Thiago Tomio</a>
     </div>
     
 
     
     
-    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
 
       
       <ul class="navbar-nav d-md-inline-flex">
@@ -375,7 +415,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/publication/"><span>Publications</span></a>
+          <a class="nav-link " href="/publication/"><span>PUBLICATIONS</span></a>
         </li>
 
         
@@ -386,8 +426,6 @@
         
         
         
-          
-        
 
         
         
@@ -397,29 +435,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/project/"><span>Portfolio</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/files/CV.pdf"><span>CV</span></a>
+          <a class="nav-link " href="/cv/"><span>CV</span></a>
         </li>
 
         
@@ -432,10 +448,6 @@
     </div>
 
     <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
-      
-      <li class="nav-item">
-        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
-      </li>
       
 
       
@@ -485,8 +497,304 @@
 <div class="universal-wrapper">
 
   
+  <div class="article-style"><body>
+    {{ partial "header.html" . }}
+    <div class="twitter">
+            <a class="twitter-timeline" data-height="400" href="https://twitter.com/liuhackse?ref_src=twsrc%5Etfw">Tweets by liuhackse</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    <div class="container wrapper"></div>
+  
 
   
+  
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/post/writing-technical-content/" >Writing technical content in Academic</a>
+    </h3>
+
+    
+    <div class="article-style">
+      Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the …
+    </div>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+        
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jul 12, 2019
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+      
+    </div>
+
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+    
+    <a href="/post/writing-technical-content/" >
+      <img src="/post/writing-technical-content/featured_huc72159e0fc0d14b85f60d34436a630f0_266353_150x0_resize_q90_lanczos.jpg" alt="">
+    </a>
+    
+  </div>
+</div>
+
+    
+  
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/post/jupyter/" >Display Jupyter Notebooks with Academic</a>
+    </h3>
+
+    
+    <div class="article-style">
+      Learn how to blog in Academic using Jupyter notebooks
+    </div>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+        
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span>Bruno Thiago Tomio</span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Sep 5, 2019
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+      
+    </div>
+
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+    
+    <a href="/post/jupyter/" >
+      <img src="/post/jupyter/featured_hub1daa031c2af6888ff37bd93eb033a1a_71549_150x0_resize_lanczos_2.png" alt="">
+    </a>
+    
+  </div>
+</div>
+
+    
+  
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/post/getting-started/" >Academic: the website builder for Hugo</a>
+    </h3>
+
+    
+    <div class="article-style">
+      Create a beautifully simple website in under 10 minutes.
+    </div>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+        
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span>Bruno Thiago Tomio</span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Apr 17, 2019
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/demo/">Demo</a></span>
+  
+
+</div>
+
+      
+    </div>
+
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+    
+    <a href="/post/getting-started/" >
+      <img src="/post/getting-started/featured_hub9ee31969f44a6711206a2baf9f065b4_241861_150x0_resize_q90_lanczos.jpg" alt="">
+    </a>
+    
+  </div>
+</div>
+
+    
   
 
   
@@ -527,45 +835,13 @@
     
 
     
-    
-    
-    
-    
-    
-    <script>
-      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
-      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
-      const content_type = {
-        'post': "Posts",
-        'project': "Projects",
-        'publication' : "Publications",
-        'talk' : "Talks"
-        };
-    </script>
-    
 
     
     
 
     
-    
-    <script id="search-hit-fuse-template" type="text/x-template">
-      <div class="search-hit" id="summary-{{key}}">
-      <div class="search-hit-content">
-        <div class="search-hit-name">
-          <a href="{{relpermalink}}">{{title}}</a>
-          <div class="article-metadata search-hit-type">{{type}}</div>
-          <p class="search-hit-description">{{snippet}}</p>
-        </div>
-      </div>
-      </div>
-    </script>
-    
 
     
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
     
 
     
@@ -583,12 +859,10 @@
     
     
     
-      
     
     
     
-    
-    <script src="/js/academic.min.0630fec5958cb075a5a38f042b3ddde6.js"></script>
+    <script src="/js/academic.min.b03c341a9a02bb3d0133df72033e26a2.js"></script>
 
     
 
@@ -614,7 +888,7 @@
   
 
   <p class="powered-by">
-    
+    © Bruno Thiago Tomio, 2020 &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
