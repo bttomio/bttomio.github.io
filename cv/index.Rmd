@@ -12,8 +12,6 @@ output:
 links-to-footnotes: false
 ---
 
-<link rel="stylesheet" href="/path/to/folder/css/academicons.min.css"/>
-
 ```{r setup, include=FALSE}
 library(tidyverse)
 library(lubridate)
@@ -327,32 +325,6 @@ knitr::kable(pubs_tbl[1:5, ])
 
 </div>
 
-## Book chapter {.submitted .nohead}
-
-<div class = "hangingindent">
-
-```{r}
-chapters <- pubs %>% 
-  filter(type == "book-chapter") %>% 
-  select(-type)
-
-each_cite <- split(chapters, seq_len(nrow(chapters)))
-empties <- map(each_cite, ~map_lgl(.x, is.na))
-
-cites <- map2(each_cite, empties, ~.x[ ,!.y])
-formatted_cites <- map(cites, ~do.call(make_cite, .x)) 
-
-chapters_tbl <- tibble(count = paste0(seq(length(formatted_cites), 1), "."),
-                        cites = unlist(formatted_cites)) 
-
-chapters_tbl <- dplyr::select(chapters_tbl, cites)
-  
-kable(chapters_tbl)
-
-```
-
-</div>
-
 ## Working Paper {.nohead}
 
 <div class = "hangingindent">
@@ -497,6 +469,34 @@ pubs_wp <- dplyr::select(pubs_wp, cites)
 knitr::kable(pubs_wp[1:4, ])
 ```
 
+\pagebreak
+
+</div>
+
+## Book chapter {.submitted .nohead}
+
+<div class = "hangingindent">
+
+```{r}
+chapters <- pubs %>% 
+  filter(type == "book-chapter") %>% 
+  select(-type)
+
+each_cite <- split(chapters, seq_len(nrow(chapters)))
+empties <- map(each_cite, ~map_lgl(.x, is.na))
+
+cites <- map2(each_cite, empties, ~.x[ ,!.y])
+formatted_cites <- map(cites, ~do.call(make_cite, .x)) 
+
+chapters_tbl <- tibble(count = paste0(seq(length(formatted_cites), 1), "."),
+                        cites = unlist(formatted_cites)) 
+
+chapters_tbl <- dplyr::select(chapters_tbl, cites)
+  
+kable(chapters_tbl)
+
+```
+
 </div>
 
 ## Conference Presentations (Selected) {.prpa .nohead}
@@ -568,20 +568,7 @@ knitr::kable(conf_tbl[seq(1, 4), ])
 
 ## Ad hoc reviewer {.nohead}
 
-<span style= 'color: #5F6A6A;'>I have served as a peer reviewer for the following journals:</span>
-
-<div class = "adhoc">
-
-```{r}
-reviewer <- cv_entries %>%
-  filter(type == "peer-reviewer") %>%
-  select(what) 
-
-jou1 <- reviewer$what
-
-data.frame(jou1) %>%
-  kable()
-```
+<span style= 'color: #5F6A6A;'>I have served as a peer reviewer for the following journals: Review of Keynesian Economics, Emerging Markets Finance and Trade, Revista de Economia Contemporânea, and Revista Brasileira de Desenvolvimento Regional.</span>
 
 </div>
 
@@ -589,11 +576,15 @@ data.frame(jou1) %>%
 
 ```{r echo=FALSE, message=FALSE}
 library(kableExtra)
-df <- data.frame(Text_0 = c("Guillaume Vallet", "Université Grenoble Alpes, France", "guillaume.vallet@univ-grenoble-alpes.fr"),
-                 Text_1 = c("Eckhard Hein", "Berlin School of Economics and Law, Germany", "eckhard.hein@hwr-berlin.de"),
-                 Text_2 = c("Mohamed Amal", "Universidade de Blumenau, Brazil", "amal@furb.br"))
+df <- data.frame(Text_0 = c("Guillaume Vallet", "Université Grenoble Alpes, France", "guillaume.vallet@univ-grenoble-alpes.fr", " ", " ", "Aleksandr V. Gevorkyan", "St. John’s University, USA", "            gevorkya@stjohns.edu"),
+                 Text_spaece = c(" ", " ", " ", " ", " ", " ", " ", " "),
+                 Text_spaece_2 = c(" ", " ", " ", " ", " ", " ", " ", " "),
+                 Text_spaece_3 = c(" ", " ", " ", " ", " ", " ", " ", " "),
+                 Text_spaece_4 = c(" ", " ", " ", " ", " ", " ", " ", " "),
+                 Text_spaece_5 = c(" ", " ", " ", " ", " ", " ", " ", " "),
+                 Text_1 = c("Eckhard Hein", "Berlin School of Economics and Law, Germany", "eckhard.hein@hwr-berlin.de", " ", " ", "Mohamed Amal", "Universidade de Blumenau, Brazil", "amal@furb.br"))
+
 df %>%
   kable(format = "html",align = c("l")) %>%
-  row_spec(1:1, bold = T) %>%
-  kable_styling(font_size = 12) 
+  row_spec(c(1:1, 6:6), bold = T)
 ```
