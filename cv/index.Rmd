@@ -568,7 +568,7 @@ knitr::kable(conf_tbl[seq(1, 4), ])
 
 ## Ad hoc reviewer {.nohead}
 
-<span style= 'color: #5F6A6A;'>I have served as a peer reviewer for the following journals: Review of Keynesian Economics, Emerging Markets Finance and Trade, Revista de Economia Contemporânea, and Revista Brasileira de Desenvolvimento Regional.</span>
+<span style= 'color: #5F6A6A;'>I have served as a peer reviewer for the following journals:</span> Review of Keynesian Economics, Emerging Markets Finance and Trade, Revista de Economia Contemporânea, and Revista Brasileira de Desenvolvimento Regional.
 
 </div>
 
