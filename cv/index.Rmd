@@ -325,6 +325,34 @@ knitr::kable(pubs_tbl[1:5, ])
 
 </div>
 
+## Book Chapter {.submitted .nohead}
+
+<div class = "hangingindent">
+
+```{r}
+chapters <- pubs %>% 
+  filter(type == "book-chapter") %>% 
+  select(-type)
+
+each_cite <- split(chapters, seq_len(nrow(chapters)))
+empties <- map(each_cite, ~map_lgl(.x, is.na))
+
+cites <- map2(each_cite, empties, ~.x[ ,!.y])
+formatted_cites <- map(cites, ~do.call(make_cite, .x)) 
+
+chapters_tbl <- tibble(count = paste0(seq(length(formatted_cites), 1), "."),
+                        cites = unlist(formatted_cites)) 
+
+chapters_tbl <- dplyr::select(chapters_tbl, cites)
+  
+kable(chapters_tbl)
+
+```
+
+\pagebreak
+
+</div>
+
 ## Working Papers {.nohead}
 
 <div class = "hangingindent">
@@ -467,34 +495,6 @@ pubs_wp <- pubs_wp %>%
 pubs_wp <- dplyr::select(pubs_wp, cites)
   
 knitr::kable(pubs_wp[1:4, ])
-```
-
-\pagebreak
-
-</div>
-
-## Book Chapter {.submitted .nohead}
-
-<div class = "hangingindent">
-
-```{r}
-chapters <- pubs %>% 
-  filter(type == "book-chapter") %>% 
-  select(-type)
-
-each_cite <- split(chapters, seq_len(nrow(chapters)))
-empties <- map(each_cite, ~map_lgl(.x, is.na))
-
-cites <- map2(each_cite, empties, ~.x[ ,!.y])
-formatted_cites <- map(cites, ~do.call(make_cite, .x)) 
-
-chapters_tbl <- tibble(count = paste0(seq(length(formatted_cites), 1), "."),
-                        cites = unlist(formatted_cites)) 
-
-chapters_tbl <- dplyr::select(chapters_tbl, cites)
-  
-kable(chapters_tbl)
-
 ```
 
 </div>
