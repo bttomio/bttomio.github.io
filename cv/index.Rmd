@@ -121,13 +121,6 @@ cat(backto)
 | <a href="https://bttomio.github.io"> <span style="color: #454545"><i class="fas fa-globe"></i></span> <span style= 'color: #5F6A6A'>https://bttomio.github.io </a></span>
 </div>
 
-
-
-<div class="grid-container">
-
-
-</div>
-
 ## Education {.education .nohead}
 
 ```{r}
@@ -179,7 +172,7 @@ df %>%
   column_spec(3, width = "10cm")
 ```
 
-## Peer-Reviewed Publications (Selected) {.prpa .nohead}
+## Peer-Reviewed Publications (Selected) {.nohead}
 
 <div class = "hangingindent">
 
@@ -325,7 +318,7 @@ knitr::kable(pubs_tbl[1:5, ])
 
 </div>
 
-## Book Chapter {.submitted .nohead}
+## Book Chapter {.nohead}
 
 <div class = "hangingindent">
 
@@ -349,9 +342,9 @@ kable(chapters_tbl)
 
 ```
 
-\pagebreak
-
 </div>
+
+\pagebreak
 
 ## Working Papers {.nohead}
 
@@ -569,8 +562,6 @@ knitr::kable(conf_tbl[seq(1, 4), ])
 ## Peer Reviewer {.nohead}
 
 <span style= 'color: #5F6A6A;'>I have served as a peer reviewer for the following journals:</span> Review of Keynesian Economics, Emerging Markets Finance and Trade, Revista de Economia Contemporânea, and Revista Brasileira de Desenvolvimento Regional.
-
-</div>
 
 ## References {.nohead}
 
