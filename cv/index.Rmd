@@ -101,8 +101,8 @@ cat(backto)
       <i class="fab fafooter fa-github"> </i>
   </a>
   |
-  <a href="https://www.twitter.com/bttomio" class="icon-block">
-      <i class="fab fafooter fa-twitter"> </i>
+  <a href="https://www.researchgate.net/profile/Bruno_Tomio" class="icon-block">
+      <i class="ai fafooter ai-researchgate-square"> </i>
   </a>
   
 </div>
@@ -116,9 +116,9 @@ cat(backto)
 </div>
 
 <div id = "position", class = "position">
-<a href="https://goo.gl/maps/AMsFNFoCnSwF7ymu6"> <span style="color: #454545"><i class="fas fa-map-marker-alt"></i></span> Grenoble, France </a>
-| <a href="mailto:bttomio@furb.br"> <span style="color: #454545"><i class="fas fa-envelope"></i></span> bttomio@furb.br </a>
-| <a href="https://bttomio.github.io"> <span style="color: #454545"><i class="fas fa-globe"></i></span> https://bttomio.github.io </a>
+<a href="https://goo.gl/maps/AMsFNFoCnSwF7ymu6"> <span style="color: #454545"><i class="fas fa-map-marker-alt"></i></span> <span style= 'color: #5F6A6A'> Grenoble, France </a></span>
+| <a href="mailto:bttomio@furb.br"> <span style="color: #454545"><i class="fas fa-envelope"></i></span> <span style= 'color: #5F6A6A'>bttomio@furb.br </a></span>
+| <a href="https://bttomio.github.io"> <span style="color: #454545"><i class="fas fa-globe"></i></span> <span style= 'color: #5F6A6A'>https://bttomio.github.io </a></span>
 </div>
 
 
@@ -169,14 +169,14 @@ cv_entries %>%
 options(kableExtra.auto_format = F)
 library(kableExtra)
 df <- data.frame(Text_0 = c("Languages", "English: Fluent/advanced (C1-C2)", "French: Fluent/advanced (C1-C2)", "Portuguese: Native speaker", "German/Spanish: Basic knowledge"),
-                 Text_2 = c("Econometrics", "Stata", "EViews", "R", "gretl"),
-                 Text_1 = c("Programming", "Stata", "R", "", ""))
+                 Text_2 = c("", "", "", "", ""),
+                 Text_1 = c("Programming and Econometrics", "R", "Stata", "EViews", ""))
 df %>%
   kable(format = "html", align = c("l")) %>%
   row_spec(1:1, bold = T) %>%
   column_spec(1, width = "10cm") %>%
-  column_spec(2, width = "6cm") %>%
-  column_spec(3, width = "5cm")
+  column_spec(2, width = "4cm") %>%
+  column_spec(3, width = "10cm")
 ```
 
 ## Peer-Reviewed Publications (Selected) {.prpa .nohead}
@@ -325,7 +325,7 @@ knitr::kable(pubs_tbl[1:5, ])
 
 </div>
 
-## Working Paper {.nohead}
+## Working Papers {.nohead}
 
 <div class = "hangingindent">
 
@@ -473,7 +473,7 @@ knitr::kable(pubs_wp[1:4, ])
 
 </div>
 
-## Book chapter {.submitted .nohead}
+## Book Chapter {.submitted .nohead}
 
 <div class = "hangingindent">
 
@@ -566,7 +566,7 @@ knitr::kable(conf_tbl[seq(1, 4), ])
 
 </div>
 
-## Ad hoc reviewer {.nohead}
+## Peer Reviewer {.nohead}
 
 <span style= 'color: #5F6A6A;'>I have served as a peer reviewer for the following journals:</span> Review of Keynesian Economics, Emerging Markets Finance and Trade, Revista de Economia Contemporânea, and Revista Brasileira de Desenvolvimento Regional.
 
