@@ -156,22 +156,6 @@ cv_entries %>%
   kable()
 ```
 
-## Skills {.nohead}
-
-```{r message=FALSE}
-options(kableExtra.auto_format = F)
-library(kableExtra)
-df <- data.frame(Text_0 = c("Languages", "English: Fluent/advanced (C1-C2)", "French: Fluent/advanced (C1-C2)", "Portuguese: Native speaker", "German/Spanish: Basic knowledge"),
-                 Text_2 = c("", "", "", "", ""),
-                 Text_1 = c("Programming and Econometrics", "R", "Stata", "EViews", ""))
-df %>%
-  kable(format = "html", align = c("l")) %>%
-  row_spec(1:1, bold = T) %>%
-  column_spec(1, width = "10cm") %>%
-  column_spec(2, width = "4cm") %>%
-  column_spec(3, width = "10cm")
-```
-
 ## Peer-Reviewed Publications (Selected) {.nohead}
 
 <div class = "hangingindent">
@@ -339,12 +323,9 @@ chapters_tbl <- tibble(count = paste0(seq(length(formatted_cites), 1), "."),
 chapters_tbl <- dplyr::select(chapters_tbl, cites)
   
 kable(chapters_tbl)
-
 ```
 
 </div>
-
-\pagebreak
 
 ## Working Papers {.nohead}
 
@@ -492,6 +473,8 @@ knitr::kable(pubs_wp[1:4, ])
 
 </div>
 
+\pagebreak
+
 ## Conference Presentations (Selected) {.prpa .nohead}
 
 <div class = "hangingindent">
@@ -561,7 +544,23 @@ knitr::kable(conf_tbl[seq(1, 4), ])
 
 ## Peer Reviewer {.nohead}
 
-<span style= 'color: #5F6A6A;'>I have served as a peer reviewer for the following journals:</span> Review of Keynesian Economics, Emerging Markets Finance and Trade, Revista de Economia Contemporânea, and Revista Brasileira de Desenvolvimento Regional.
+<span style= 'color: #5F6A6A;'>I have served as an <i>ad hoc</i> peer reviewer for the following journals:</span> Review of Keynesian Economics, Emerging Markets Finance and Trade, Revista de Economia Contemporânea, and Revista Brasileira de Desenvolvimento Regional.
+
+## Skills {.nohead}
+
+```{r message=FALSE}
+options(kableExtra.auto_format = F)
+library(kableExtra)
+df <- data.frame(Text_0 = c("Languages", "English: Fluent/advanced (C1-C2)", "French: Fluent/advanced (C1-C2)", "Portuguese: Native speaker", "German/Spanish: Basic knowledge"),
+                 Text_2 = c("", "", "", "", ""),
+                 Text_1 = c("Programming and Econometrics", "R", "Stata", "EViews", ""))
+df %>%
+  kable(format = "html", align = c("l")) %>%
+  row_spec(1:1, bold = T) %>%
+  column_spec(1, width = "10cm") %>%
+  column_spec(2, width = "4cm") %>%
+  column_spec(3, width = "10cm")
+```
 
 ## References {.nohead}
 
