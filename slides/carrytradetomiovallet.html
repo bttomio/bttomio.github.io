@@ -6,6 +6,7 @@
     <meta name="author" content=" Bruno Thiago Tomio  Guillaume Vallet" />
     <script src="libs/kePrint/kePrint.js"></script>
     <link href="libs/lightable/lightable.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="custom.css" type="text/css" />
   </head>
@@ -15,47 +16,107 @@ class: center, middle, inverse, title-slide
 
 # Carry trade and negative policy rates in Switzerland
 ### <br/><a href="https://bttomio.github.io">Bruno Thiago Tomio</a><br/><br/><a href="mailto:guillaume.vallet@univ-grenoble-alpes.fr">Guillaume Vallet</a>
-### <span style='font-size: 15px'>32nd Annual EAEPE Conference
+### <span style='font-size: 20px'>YSI Virtual Plenary (2020)
 </style>
 
 ---
 
 
+count: false
 
 
 
 
-# Definition of carry trade
 
-&gt; The carry trade is the name of the strategy of going  short  (betting  the  foreign  exchange value will fall) in a low-interest rate currency like  the  Japanese  yen,  while  simultaneously going  long  (betting  the  foreign  exchange value will rise) in a high-interest rate currency like the New Zealand dollar.
+# Motivation
 
-&gt; --- Frankel (2008)&lt;sup&gt;1&lt;/sup&gt;
+- International spillovers of negative interest rate policy (NIRP) is a very recent strand in the literature (e.g. Arteta, Kose, Stocker and Taskin 2016&lt;sup&gt;1&lt;/sup&gt;)
 
+- Twofold interest in the Swiss franc:
+
+  1. In times of turmoil, it is a major safe heaven currency
+
+  2. Due to the "interest rate bonus" (Kugler and Weder 2002&lt;sup&gt;2&lt;/sup&gt;) and the NIRP, the impacts of the Swiss National Bank's actions resonate far beyond Switzerland
+
+.smallok[
 .footnote[
-[1] Frankel, J. (2008), 'Carried away: everything you always wanted to know about the carry trade, and perhaps much more', *Milken Institute Review*, 10(1), 38.
+[1] Arteta, Carlos, Ayhan Kose, Marc Stocker, and Temel Taskin. 2016. “Negative Interest Rate Policies: Sources and Implications.” Policy Research Working Paper Series 7791. The World Bank.
+
+[2] Kugler, Peter, and Beatrice Weder. 2002. “The Puzzle of the Swiss Interest Rate Island: Stylized Facts and a New Interpretation.” Aussenwirtschafhet 57 (01): 49–64.
 ]
+]
+
+- Lack of robust empirical papers criticizing the carry trade activity
 
 ???
 
-Start by giving a broad definition of carry trade.
+&gt; The carry trade is the name of the strategy of going  short  (betting  the  foreign  exchange value will fall) in a low-interest rate currency like  the  Japanese  yen,  while  simultaneously going  long  (betting  the  foreign  exchange value will rise) in a high-interest rate currency like the New Zealand dollar.
+
+&gt; --- Frankel (2008)
 
 ---
 
-class: center
+# What do we do?
 
-#### **Figure 1** - CT ratio, US policy rate, and Switzerland’s policy rate
+In the context of the NIRP in Switzerland...
 
+1. We analyse the **determinants** of the Swiss franc carry trade
 
+  + Financial variables: interest rate differential between Switzerland and major currency, global market sentiment, nominal exchange rates, Swiss stock market index, and major currency stock market index
+  
+  .highlight[Hypothesis 1] The Swiss franc carry trade is impacted differently by the major currencies
+  
+--
 
-&lt;img src="carrytradetomiovallet_files/figure-html/gct-1.png" style="display: block; margin: auto;" /&gt;
+2. How the carry trade activity in Swiss francs **impact** the financial variables in the model?
+
+  .highlight[Hypothesis 2] The exchange rate is depreciating with an increased Swiss franc carry trade activity
+  
+--
+
+3. Analysis setting 
+
+  + Weekly data; December 23, 2014 to September 15, 2020
+
+  + Four major currencies: US dollar, euro, Japanese yen, and British pound
+
+???
+
+Talk about the intuition behind the questions. Notably, the SNB seeks to foster domestic economic growth with the NIRP and the search for a weak Swiss franc, in order to help Swiss firms to compete globally.
+---
+
+# What do we find?
+
+1. We analyse the **determinants** of the Swiss franc carry trade
+
+  .highlight[Hypothesis 1] is **partially confirmed**
+  
+  + Only two mutual results: 
+  
+  I. Negative impact of the market sentiment shock (US dollar, euro and Japanese yen models)
+
+  II. Positive impact of the US and Japanese stock markets (US dollar and Japanese yen models)
+  
+--
+
+2. How the carry trade activity in Swiss francs **impact** the financial variables in the model?
+
+  .highlight[Hypothesis 2] **cannot** be confirmed
+
+  + Euro model produces the only statistically significant result with an appreciation of the Swiss franc after an increase in the Swiss franc carry trade activity
 
 ---
 
-class: center
+count: false
 
-#### **Table 1** - Description of variables
+class: inverse, center, middle
+
+# Data and SVAR model
+
+---
 
 &lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption&gt;Table 1. Description of variables&lt;/caption&gt;
  &lt;thead&gt;
   &lt;tr&gt;
    &lt;th style="text-align:center;text-align: center;color: white !important;background-color: black !important;"&gt; Variable &lt;/th&gt;
@@ -65,575 +126,244 @@ class: center
  &lt;/thead&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; CT &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Ratio of short positions over long positions (Short/Long) - noncommercial traders &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     font-size: medium;"&gt;\(CT\)&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Ratio of short positions over long positions of non-commercial traders &lt;/td&gt;
    &lt;td style="text-align:center;"&gt; CFTC &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; ER &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Nominal exchange rates, USDCHF &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; BIS &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; IRD &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Difference between the policy interest rate in 
-                                Switzerland and the policy interest rate in the United States &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; BIS &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; VIX &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Market sentiment, CBOE 
-                                DJIA Volatility Index &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     font-size: medium;"&gt;\(VIX\)&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Market sentiment (CBOE DJIA Volatility Index) &lt;/td&gt;
    &lt;td style="text-align:center;"&gt; FRED &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; SM &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Swiss Market Index, ^SSMI (Swiss stock market) &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     font-size: medium;"&gt;\(SM\)&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Domestic stock market: Swiss Market Index ^SSMI &lt;/td&gt;
    &lt;td style="text-align:center;"&gt; Yahoo Finance &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; SMUS &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; S&amp;amp;P 500, 
-                                ^GSPC (US stock market) &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     font-size: medium;"&gt;\(ER_i\)&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Nominal exchange rates: USD/CHF, EUR/CHF, CHF/JPY, GBP/CHF &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Yahoo Finance &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     font-size: medium;"&gt;\(IRD_i\)&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Interest rate differential using the spot Next London interbank
+ offered rate (LIBOR): CHF minus major currency (USD, EUR, JPY, and GBP) &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; FRED &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     font-size: medium;"&gt;\(FSM_i\)&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Foreign stock markets: S&amp;amp;P 500 ^GSPC - USD, EURONEXT 100 ^N100 - EUR, Nikkei 225 ^N225 - JPY, FTSE 100 ^FTSE &lt;/td&gt;
    &lt;td style="text-align:center;"&gt; Yahoo Finance &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
+--
+
+- All variables are in natural logarithms, except the interest rate differentials. 
+
+- Yahoo Finance data was obtained and checked/cleaned with <i class="fab  fa-r-project " style="color:#384CB7;"></i> packages `quantmod` and `BatchGetSymbols` 
+
 ---
 
-# Caveats for using CFTC data
+# CFTC data
 
-&gt;First,  while  non-commercial  traders  are  generally  associated  with speculative  activity,  it  is  possible  that  some  commercial  traders  also  take speculative  positions.  
+- Some caveats: 
 
-&gt; Second,  the  trades  identified  as  speculative  may  not result  from  carry  trades. 
+&gt; I. Bias in the classification of the traders
 
-&gt; Finally,  a  comparison  with  statistics  from  the  BIS Triennial  Central  Bank  Survey  of  Foreign  Exchange  and  Derivatives  Market Activity  shows  that  only  a  very  small  proportion  of  foreign  exchange  market activity is executed through exchanges.
+&gt; II. Trades identified as speculative may not result from carry trades
 
-&gt; --- Galati et al. (2007)&lt;sup&gt;2&lt;/sup&gt;
+&gt; III. Only a small proportion of foreign exchange market activity is executed through exchanges (mostly OTC).
 
+&gt; --- Galati, Heath and McGuire (2007)&lt;sup&gt;3&lt;/sup&gt;
+
+- Nevertheless, as mentioned by market participants, CFTC data tends to be indicative of the **trend** of carry trade activity (Bank for International Settlements 2015)&lt;sup&gt;4&lt;/sup&gt;.
+
+.smallok[
 .footnote[
-[2] Galati, G., A. Heath and P. McGuire (2007), ‘Evidence of carry trade activity’, *BIS Quarterly Review*.
+[3] Galati, G., A. Heath and P. McGuire (2007), ‘Evidence of carry trade activity’, *BIS Quarterly Review*.
+
+[4] Bank for International Settlements (2015), *Currency Carry Trades in Latin America*, Bank for International Settlements.
+]
 ]
 
-???
-
-As mentioned by market participants, CFTC data tends to be indicative of the trend of carry trade activity (Bank for International Settlements 2015)&lt;sup&gt;3&lt;/sup&gt;.
-
-.footnote[
-[3] Bank for International Settlements (2015), *Currency Carry Trades in Latin America*, Bank for International Settlements.
-]
-
-
 ---
 
-# Aim of the paper
+# Econometric model
 
-We address two questions, by comparing both PI and NI periods: 
+- Structural vector-autoregressive (SVAR) model with Cholesky identification
 
-The .blue[first] refers to the determination of the financial factors that hold important roles in explaining the Swiss franc carry trade.
+  + Ordering: &lt;span style=" font-size: medium;" &gt; `\(IRD_{i}\)` `\(\rightarrow\)` `\(VIX\)` `\(\rightarrow\)` `\(CT\)` `\(\rightarrow\)` `\(ER_{i}\)` `\(\rightarrow\)` `\(FSM_{i}\)` `\(\rightarrow\)` `\(SM\)` &lt;/span&gt;
 
 --
 
-.blue[Second], we reflect on the consequences of the unwind of Swiss franc carry trade activities. Specifically, we are interested in how carry trade shocks the related financial variables.
+- Toda-Yamamoto approach to capture long-term effects (non-stationary variables stay in levels)
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption&gt;Table 2. Exogenous variables for each model&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;text-align: center;color: white !important;background-color: black !important;"&gt; Model &lt;/th&gt;
+   &lt;th style="text-align:center;text-align: center;color: white !important;background-color: black !important;"&gt; VAR lag length &lt;/th&gt;
+   &lt;th style="text-align:center;text-align: center;color: white !important;background-color: black !important;"&gt; Exogenous variables &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; USD &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     font-size: medium;"&gt;\(USME\), \(IRD^{USD}_{t-3}\), \(CT_{t-3}\), \(FSM^{USD}_{t-3}\), \(SM_{t-3}\)&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; EUR &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     font-size: medium;"&gt;\(IRD^{EUR}_{t-3}\), \(CT_{t-3}\), \(ER^{EUR}_{t-3}\), \(FSM^{EUR}_{t-3}\), \(SM_{t-3}\)&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; JPY &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     font-size: medium;"&gt;\(NIJPY\), \(IRD^{JPY}_{t-3}\), \(CT_{t-3}\), \(ER^{JPY}_{t-3}\), \(FSM^{JPY}_{t-3}\), \(SM_{t-3}\)&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; GBP &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; &lt;span style="     font-size: medium;"&gt;\(BREXIT\), \(CT_{t-2}\), \(FSM^{GBP}_{t-2}\), \(SM_{t-2}\)&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;br&gt;
+.right[*PDF and slides (ASAP also dataset and Stata do-file):* .highlight[[https://bttomio.github.io](https://bttomio.github.io)]]
 
 ---
 
-# .center[Methodology]
+count: false
 
-### Data specification
+class: inverse, center, middle
 
-- CT ratio: weekly released (each Tuesday)
-
-- Other variables: daily (Tuesday)
-
---
-
-### Econometric method
-
-- Structural vector-autoregressive (SVAR) model to infer strong causation
-
-- Toda-Yamamoto approach to capture long-term effects and to avoid unit root testing biases
-
---
-
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
-.right[*PDF, slides, dataset, and code (do-file, Stata) are available at* .highlight[[https://bttomio.github.io](https://bttomio.github.io)].]
-
----
-
-# .center[Results]
-
-### Forecast-error variance decompositions (FEVDs)
-
-- How much of the carry trade fluctuations are explained by the financial variables?
-
-### Graphics of impulse response functions (IRFs)
-
-- How the carry trade responds to shocks in the financial variables?
-
-- How the financial variables respond to shocks in the carry trade activity?
+# Results for the Impulse Response Functions (IRFs)
 
 ---
 
 class: center
 
-#### FEVDs - Responses of the .highlight[carry trade] to one std. dev. shocks 
-&lt;style type="text/css"&gt;
-    /* Table width = 100% max-width */
+**Swiss franc carry trade activity is .highlight[impacted]...**
 
-    .remark-slide table{
-        width: 100%;
-    }
-&lt;/style&gt;
-
-
-&lt;style&gt;
-caption {
-      color: black;
-      font-weight: bold;
-      font-size: 1.0em;
-    }
-&lt;/style&gt;
-
-&lt;table&gt;
-&lt;caption&gt;PI period&lt;/caption&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; Step &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; IRD &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; VIX &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; CT &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; ER &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; SMUS &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; SM &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.55&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;3.42&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;90.54&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.23&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.12&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.14&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;8&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.08&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;8.45&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;77.54&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4.98&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;6.29&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.66&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;12&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.07&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;11.93&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;67.85&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;8.6&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;8.36&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.19&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;16&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.35&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;13.61&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;62.38&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;11.28&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;8.87&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.51&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;20&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.75&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;14.3&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;59.36&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;13.13&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;8.82&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.64&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
---
-&lt;br&gt;
-
-&lt;table&gt;
-&lt;caption&gt;NI period&lt;/caption&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; Step &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; IRD &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; VIX &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; CT &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; ER &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; SMUS &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; SM &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4.35&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.12&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;87.44&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;6.5&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.02&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.56&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;8&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;5.51&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.28&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;76.28&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;14.6&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.48&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.86&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;12&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;8.66&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.37&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;66.25&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;15.56&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;5.44&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;3.71&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;16&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;10.01&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.6&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;57.14&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;13.91&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;12.28&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;6.07&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;20&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;9.7&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.13&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;48.96&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;11.79&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;19.71&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;8.71&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
----
-
-class: top
-
-.center[.small[Structural Impulse Responses of CT]
-
-.highlight[ The financial variables impact the carry trade... ]]
-
-.pull-left[
-.center[.small[Figure 2 - PI period]]
-&lt;img src="./Figure2.jpg" width="704" /&gt;
-
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; .small[Impact] &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; .small[Shock/Impulse] &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; \(+\) &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; ER &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; \(-\) &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; SMUS &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; \(+\) &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; VIX &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-]
+&lt;img src="./gCOIRF40_RESP40_PRESENTATION.png" width="8000" /&gt;
+.center[.small[Figure 1. Cumulative structural carry trade (*CT*) responses to variables impulses in each model]]
 
 --
 
-.pull-right[
-.center[.small[Figure 3 - NI period]]
-&lt;img src="./Figure3.jpg" width="704" /&gt;
-
-&lt;table&gt;
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
  &lt;thead&gt;
   &lt;tr&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; .small[Impact] &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; .small[Shock/Impulse] &lt;/th&gt;
+   &lt;th style="text-align:center;text-align: center;color: white !important;background-color: black !important;"&gt; &lt;span style="     font-size: small;"&gt;\(IRD_i\)&lt;/span&gt; &lt;/th&gt;
+   &lt;th style="text-align:center;text-align: center;color: white !important;background-color: black !important;"&gt; &lt;span style="     font-size: small;"&gt;\(VIX\)&lt;/span&gt; &lt;/th&gt;
+   &lt;th style="text-align:center;text-align: center;color: white !important;background-color: black !important;"&gt; &lt;span style="     font-size: small;"&gt;\(ER_i\)&lt;/span&gt; &lt;/th&gt;
+   &lt;th style="text-align:center;text-align: center;color: white !important;background-color: black !important;"&gt; &lt;span style="     font-size: small;"&gt;\(FSM_i\)&lt;/span&gt; &lt;/th&gt;
+   &lt;th style="text-align:center;text-align: center;color: white !important;background-color: black !important;"&gt; &lt;span style="     font-size: small;"&gt;\(SM\)&lt;/span&gt; &lt;/th&gt;
   &lt;/tr&gt;
  &lt;/thead&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; \(+\) &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; ER (0-12 weeks) &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red !important;"&gt;&lt;span style="     font-size: small;"&gt;EUR (-)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: green !important;"&gt;&lt;span style="     font-size: small;"&gt;EUR (+)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: green !important;"&gt;&lt;span style="     font-size: small;"&gt;EUR (+)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: green !important;"&gt;&lt;span style="     font-size: small;"&gt;EUR (+, SR)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     font-size: small;"&gt;&lt;/span&gt; &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; \(+\) &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; IRD (1 week) &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: #E5E5E5 !important;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: green !important;"&gt;&lt;span style="     font-size: small;"&gt;JPY (+)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: #E5E5E5 !important;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: green !important;"&gt;&lt;span style="     font-size: small;"&gt;JPY (+)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: #E5E5E5 !important;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red !important;"&gt;&lt;span style="     font-size: small;"&gt;JPY (-)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: #E5E5E5 !important;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: green !important;"&gt;&lt;span style="     font-size: small;"&gt;JPY (+)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: #E5E5E5 !important;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red !important;"&gt;&lt;span style="     font-size: small;"&gt;JPY (-)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; \(-\) &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; IRD (12-20 weeks) &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; \(+\) &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; SMUS (8-... weeks) &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; \(-\) &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; SM (8-... weeks) &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-]
-
----
-
-class: center
-
-#### FEVDs - Responses of the .highlight[financial variables] to one std. dev. shocks 
-
-&lt;style type="text/css"&gt;
-    /* Table width = 100% max-width */
-
-    .remark-slide table{
-        width: 100%;
-    }
-&lt;/style&gt;
-
-
-&lt;style&gt;
-caption {
-      color: black;
-      font-weight: bold;
-      font-size: 1.0em;
-    }
-&lt;/style&gt;
-
-&lt;table&gt;
-&lt;caption&gt;PI period&lt;/caption&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; Step &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; IRD &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; VIX &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; CT &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; ER &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; SMUS &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; SM &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.26&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.04&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;90.54&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;6.58&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.62&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.92&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;8&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.51&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.82&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;77.54&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;7.04&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;5.35&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4.9&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;12&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.43&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.83&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;67.85&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;7.1&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;7.69&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;8.7&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;16&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.66&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.31&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;62.38&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;7.21&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;8.7&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;11.05&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;20&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.54&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.43&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;59.36&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;7.39&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;9.01&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style=" font-weight: bold;    color: #64b9d3 !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: black !important;"&gt;12.24&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
---
-&lt;br&gt;
-
-&lt;table&gt;
-&lt;caption&gt;NI period&lt;/caption&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; Step &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; IRD &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; VIX &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; CT &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; ER &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; SMUS &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; SM &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.34&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.16&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;87.44&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.41&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.7&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;3.1&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;8&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.76&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.31&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;76.28&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.49&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;3.19&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;5.41&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;12&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;3.15&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.62&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;66.25&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.48&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4.28&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;5.37&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;16&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4.3&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;1.5&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;57.14&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.6&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4.5&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4.93&lt;/span&gt; &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;20&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;5.13&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;2.35&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;48.96&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;0.84&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4.51&lt;/span&gt; &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; &lt;span style="     color: black !important;"&gt;4.66&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     font-size: small;"&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: green !important;"&gt;&lt;span style="     font-size: small;"&gt;USD (+)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: green !important;"&gt;&lt;span style="     font-size: small;"&gt;USD (+)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: green !important;"&gt;&lt;span style="     font-size: small;"&gt;USD (+)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     font-size: small;"&gt;&lt;/span&gt; &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
 ---
 
-class: top
+class: center
 
-.center[.small[Structural Impulse Responses to the CT shocks]
+**An .highlight[increased] Swiss franc carry trade activity...**
 
-.highlight[The carry trade impacts the financial variables...]]
-
-.pull-left[
-.center[.small[Figure 4 - PI period]]
-&lt;img src="./Figure4.jpg" width="704" /&gt;
-
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; .small[Impact] &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; .small[Response] &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; \(+\) &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; ER &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; \(+\) &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; SMUS (2-16 weeks) &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; \(+\) &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; SM (4-... weeks) &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-]
+&lt;img src="./gCOIRF40_PRESENTATION.png" width="8000" /&gt;
+.center[.small[Figure 2. Cumulative structural variables responses to carry trade (*CT*) impulses in each model]]
 
 --
 
-.pull-right[
-.center[.small[Figure 5 - NI period]]
-&lt;img src="./Figure5.jpg" width="704" /&gt;
-
-&lt;table&gt;
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
  &lt;thead&gt;
   &lt;tr&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; .small[Impact] &lt;/th&gt;
-   &lt;th style="text-align:center;color: white !important;background-color: black !important;"&gt; .small[Response] &lt;/th&gt;
+   &lt;th style="text-align:center;text-align: center;color: white !important;background-color: black !important;"&gt; &lt;span style="     font-size: small;"&gt;\(IRD_i\)&lt;/span&gt; &lt;/th&gt;
+   &lt;th style="text-align:center;text-align: center;color: white !important;background-color: black !important;"&gt; &lt;span style="     font-size: small;"&gt;\(VIX\)&lt;/span&gt; &lt;/th&gt;
+   &lt;th style="text-align:center;text-align: center;color: white !important;background-color: black !important;"&gt; &lt;span style="     font-size: small;"&gt;\(ER_i\)&lt;/span&gt; &lt;/th&gt;
+   &lt;th style="text-align:center;text-align: center;color: white !important;background-color: black !important;"&gt; &lt;span style="     font-size: small;"&gt;\(FSM_i\)&lt;/span&gt; &lt;/th&gt;
+   &lt;th style="text-align:center;text-align: center;color: white !important;background-color: black !important;"&gt; &lt;span style="     font-size: small;"&gt;\(SM\)&lt;/span&gt; &lt;/th&gt;
   &lt;/tr&gt;
  &lt;/thead&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; \(-\) &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; IRD (10-... weeks) &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red !important;"&gt;&lt;span style="     font-size: small;"&gt;EUR (-)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: green !important;"&gt;&lt;span style="     font-size: small;"&gt;EUR (+)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red !important;"&gt;&lt;span style="     font-size: small;"&gt;EUR (-)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red !important;"&gt;&lt;span style="     font-size: small;"&gt;EUR (-)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red !important;"&gt;&lt;span style="     font-size: small;"&gt;EUR (-)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; \(+\) &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; SMUS (4-12 weeks) &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: #E5E5E5 !important;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red !important;"&gt;&lt;span style="     font-size: small;"&gt;JPY (-)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: #E5E5E5 !important;font-weight: bold;"&gt; &lt;span style="     font-size: small;"&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: #E5E5E5 !important;font-weight: bold;"&gt; &lt;span style="     font-size: small;"&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: #E5E5E5 !important;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red !important;"&gt;&lt;span style="     font-size: small;"&gt;JPY (-)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: #E5E5E5 !important;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red !important;"&gt;&lt;span style="     font-size: small;"&gt;JPY (-)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; \(+\) &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; SM (2-6 weeks) &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:center;"&gt; \(+\) &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; VIX (14-... weeks) &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     font-size: small;"&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     font-size: small;"&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     font-size: small;"&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red !important;"&gt;&lt;span style="     font-size: small;"&gt;USD (-)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; &lt;span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red !important;"&gt;&lt;span style="     font-size: small;"&gt;USD (-)&lt;/span&gt;&lt;/span&gt; &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-]
+---
+
+count: false
+
+class: inverse, center, middle
+
+# Concluding remarks
 
 ---
 
-# Conclusions
+.large[Contribution]
 
-- NIRP (Negative interest rate policy) seems to be strengthening the Swiss carry trade activity. 
+- The paper extends the carry trade literature by investigating the effects of the Swiss NIRP 
 
-- The contribution of IRD is more substantial in the NI period.
+- Four Swiss-major currency models are explored ($, €, ¥, £)
 
-- Weak evidence of the impact of carry trade in the financial variables. Nonetheless, in the NI period, the unwind of carry trade activity would impact negatively VIX and stock markets (US and Swiss).
+- With an **increased** carry trade activity in Switzerland (due to NIRP), the **CHF** is **appreciating** (€ model) and **financial markets activities** (domestic, abroad) is being **harmed**
 
-- It seems to be a source of systemic risk (caution: small contribution - FEVDs).
+--
 
-- For the Swiss National Bank (SNB), increased macro-prudential supervision is needed (through new instruments that take into account the evolution of financial variables into its monetary reaction function).
+.large[Policy implications]
+
+- We find evidence of an appreciation of the EURCHF (drawback of the NIRP) and an increased systemic risk (VIX and stock market)
+
+- Massive asset-purchasing programs, targeting government bonds in particular, participate in the reduction of the “safe asset trap” between bond yields
+
+- Central banks' non-coordinated/cooperative measures could make things worse (increased uncertainty generated by the COVID-crisis)
 
 ---
 
@@ -645,9 +375,12 @@ class: inverse, center
 
 .center[
 # Thank you!
+<i class="fas  fa-cog fa-spin " style="color:white;"></i> [bttomio@furb.br](bttomio@furb.br)
+
+<i class="fab  fa-twitter " style="color:white;"></i> [@bttomio](https://twitter.com/bttomio)
 ]
 
-&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Slides created with [xaringan](https://github.com/yihui/xaringan) and [xaringanthemer](https://github.com/gadenbuie/xaringanthemer).
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Slides created with [{xaringan}](https://github.com/yihui/xaringan) and [{xaringanthemer}](https://github.com/gadenbuie/xaringanthemer).
 
 &lt;br&gt;![Logos](all-ok.PNG)
     </textarea>
@@ -765,7 +498,7 @@ slideshow._releaseMath(document);
 (function () {
   var script = document.createElement('script');
   script.type = 'text/javascript';
-  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML';
   if (location.protocol !== 'file:' && /^https?:/.test(script.src))
     script.src  = script.src.replace(/^https?:/, '');
   document.getElementsByTagName('head')[0].appendChild(script);

@@ -2,9 +2,10 @@
 title: "Carry trade and negative policy rates in Switzerland"
 subtitle: 
 author: "<br/>[Bruno Thiago Tomio](https://bttomio.github.io)<br/><br/>[Guillaume Vallet](mailto:guillaume.vallet@univ-grenoble-alpes.fr)"
-institute: "<span style='font-size: 15px'>32nd Annual EAEPE Conference</style>"
+institute: "<span style='font-size: 20px'>YSI Virtual Plenary (2020)</style>"
 output:
   xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML"
     text-decoration: none
     css: ["xaringan-themer.css", "custom.css"]
     lib_dir: libs
@@ -13,11 +14,36 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+# PRINT OK = xaringan::decktape("C:/Portfolio/my site/public/slides/carrytradetomiovallet.html", "C:/Portfolio/my site/public/slides/test.pdf", docker = F)
 # PRINT = pagedown::chrome_print("C:/Portfolio/my site/public/slides/carrytradetomiovallet.html")
+header-includes:
+- \usepackage{subfig}
+- \usepackage{booktabs}
+- \usepackage{longtable}
+- \usepackage{array}
+- \usepackage{multirow}
+- \usepackage{wrapfig}
+- \usepackage{float}
+- \usepackage{colortbl}
+- \usepackage{pdflscape}
+- \usepackage{tabu}
+- \usepackage{threeparttable}
+- \usepackage{threeparttablex}
+- \usepackage[normalem]{ulem}
+- \usepackage{makecell}
+- \usepackage{xcolor}
+- \usepackage{caption}
+- \usepackage{soul}
+- \usepackage{multirow}
 ---
+
+count: false
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+library(dplyr)
+library(kableExtra)
+library(knitr)
 ```
 
 ```{r xaringan-themer, include = FALSE}
@@ -34,487 +60,308 @@ mono_light(
 )
 ```
 
-# Definition of carry trade
+# Motivation
 
-> The carry trade is the name of the strategy of going  short  (betting  the  foreign  exchange value will fall) in a low-interest rate currency like  the  Japanese  yen,  while  simultaneously going  long  (betting  the  foreign  exchange value will rise) in a high-interest rate currency like the New Zealand dollar.
+- International spillovers of negative interest rate policy (NIRP) is a very recent strand in the literature (e.g. Arteta, Kose, Stocker and Taskin 2016<sup>1</sup>)
 
-> --- Frankel (2008)<sup>1</sup>
+- Twofold interest in the Swiss franc:
 
+  1. In times of turmoil, it is a major safe heaven currency
+
+  2. Due to the "interest rate bonus" (Kugler and Weder 2002<sup>2</sup>) and the NIRP, the impacts of the Swiss National Bank's actions resonate far beyond Switzerland
+
+.smallok[
 .footnote[
-[1] Frankel, J. (2008), 'Carried away: everything you always wanted to know about the carry trade, and perhaps much more', *Milken Institute Review*, 10(1), 38.
+[1] Arteta, Carlos, Ayhan Kose, Marc Stocker, and Temel Taskin. 2016. “Negative Interest Rate Policies: Sources and Implications.” Policy Research Working Paper Series 7791. The World Bank.
+
+[2] Kugler, Peter, and Beatrice Weder. 2002. “The Puzzle of the Swiss Interest Rate Island: Stylized Facts and a New Interpretation.” Aussenwirtschafhet 57 (01): 49–64.
 ]
+]
+
+- Lack of robust empirical papers criticizing the carry trade activity
 
 ???
 
-Start by giving a broad definition of carry trade.
+> The carry trade is the name of the strategy of going  short  (betting  the  foreign  exchange value will fall) in a low-interest rate currency like  the  Japanese  yen,  while  simultaneously going  long  (betting  the  foreign  exchange value will rise) in a high-interest rate currency like the New Zealand dollar.
+
+> --- Frankel (2008)
 
 ---
 
-class: center
+# What do we do?
 
-#### **Figure 1** - CT ratio, US policy rate, and Switzerland’s policy rate
+In the context of the NIRP in Switzerland...
 
-```{r F1, include=FALSE}
-# GRAPH FOR THE PAPER (FIGURE 1)
+1. We analyse the **determinants** of the Swiss franc carry trade
 
-library("readxl")
-library("openxlsx")
-library(dplyr)
-library(ggplot2)
+  + Financial variables: interest rate differential between Switzerland and major currency, global market sentiment, nominal exchange rates, Swiss stock market index, and major currency stock market index
+  
+  .highlight[Hypothesis 1] The Swiss franc carry trade is impacted differently by the major currencies
+  
+--
 
-df <- read_excel("C:/Papier-Guillaume/LATEST DATA AND ESTIMATIONS/CTF/STATA - CHF.xls")
+2. How the carry trade activity in Swiss francs **impact** the financial variables in the model?
 
-#DATA FOR THE GRAPH 1 (FIG. 1)
+  .highlight[Hypothesis 2] The exchange rate is depreciating with an increased Swiss franc carry trade activity
+  
+--
 
-G1 <- dplyr::select(df, c(Date, NP, IR, USIR, PI, NI))
+3. Analysis setting 
 
-G1$Date <- as.Date(G1$Date)
+  + Weekly data; December 23, 2014 to September 15, 2020
 
-names(G1)[names(G1) == "NP"] <- "CT"
+  + Four major currencies: US dollar, euro, Japanese yen, and British pound
 
-gct <- ggplot(data=G1, aes(x=Date)) +
-  geom_line(aes(y = CT, colour = "black"))+
-  scale_x_date(date_labels = "%b-%y", date_breaks = "14 months", expand = c(0, 0))
-gct <- gct + geom_line(aes(x=Date, y=IR*2, colour="red"))
-gct <- gct + geom_line(aes(x=Date, y=USIR*2, colour="blue"))
-gct <- gct + scale_y_continuous(breaks=seq(0,12,1), "Carry trade ratio (Short/Long)", 
-                                sec.axis = sec_axis(~./2, name = "Interest rates (%)", breaks = seq(-0.75, 5.25, 0.75))) +
-  scale_colour_manual("", values = c("black","blue", "red"), 
-                      labels = c(
-                        (expression(paste(italic("CT "), "(LHS)"))),
-                        (expression(paste(italic("USIR "), "(RHS)"))),
-                        (expression(paste(italic("IR "), "(RHS)")))))
-gct <- gct + theme_light()
-gct <- gct + theme(legend.position = c(.5, .83), legend.direction = "horizontal",
-                   legend.background = element_rect(linetype="solid", 
-                                 colour ="grey"),
-                   panel.grid.major = element_blank(),
-                   panel.grid.minor = element_blank())
-rect <- data.frame(xmin=as.Date(c("2007-10-02")), xmax=as.Date(c("2019-11-12")), ymin=0, ymax=1)
-gct <- gct + geom_rect(data=rect, aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax),
-                        color=NA,
-                        fill="green4",
-                        alpha=0.1,
-                        inherit.aes = FALSE)
-gct <- gct + labs(y = "Carry trade ratio (Short/Long)")
-rect2 <- data.frame(xmin=as.Date(c("2014-12-23")), xmax=as.Date(c("2019-11-12")), ymin=-Inf, ymax=Inf)
-gct <- gct + geom_rect(data=rect2, aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax),
-                       color=NA,
-                       fill="yellow",
-                       alpha=0.1,
-                       inherit.aes = FALSE)
-gct <- gct + annotate(geom="text", x=as.Date("2017-08-23"), y=11, 
-                      label="Negative interest rate (NI) period", color = "gold4")
-gct <- gct + annotate(geom="text", x=as.Date("2010-08-23"), y=11, 
-                      label="Positive interest rate (PI) period", color = "black")
-```
+???
 
-```{r gct, echo=FALSE, fig.height=7, fig.width=10, fig.align='center'}
-plot(gct)
-```
+Talk about the intuition behind the questions. Notably, the SNB seeks to foster domestic economic growth with the NIRP and the search for a weak Swiss franc, in order to help Swiss firms to compete globally.
+---
+
+# What do we find?
+
+1. We analyse the **determinants** of the Swiss franc carry trade
+
+  .highlight[Hypothesis 1] is **partially confirmed**
+  
+  + Only two mutual results: 
+  
+  I. Negative impact of the market sentiment shock (US dollar, euro and Japanese yen models)
+
+  II. Positive impact of the US and Japanese stock markets (US dollar and Japanese yen models)
+  
+--
+
+2. How the carry trade activity in Swiss francs **impact** the financial variables in the model?
+
+  .highlight[Hypothesis 2] **cannot** be confirmed
+
+  + Euro model produces the only statistically significant result with an appreciation of the Swiss franc after an increase in the Swiss franc carry trade activity
 
 ---
 
-class: center
+count: false
 
-#### **Table 1** - Description of variables
+class: inverse, center, middle
+
+# Data and SVAR model
+
+---
 
 ```{r Table1, echo=FALSE, message=FALSE, warning=FALSE}
-library(kableExtra)
 
-df <- data.frame(Variables = c("CT", "ER", "IRD", "VIX", "SM", "SMUS"),
-                 Text_1 = c("Ratio of short positions over long positions (Short/Long) - noncommercial traders", 
-                                "Nominal exchange rates, USDCHF", "Difference between the policy interest rate in 
-                                Switzerland and the policy interest rate in the United States", "Market sentiment, CBOE 
-                                DJIA Volatility Index", "Swiss Market Index, ^SSMI (Swiss stock market)", "S&P 500, 
-                                ^GSPC (US stock market)"),
-                 Text_2 = c("CFTC", "BIS", "BIS", "FRED", "Yahoo Finance", "Yahoo Finance"))
-knitr::kable(df, "html", linesep = "", align = "clc",
+df <- data.frame(Variables = c("\\(CT\\)", "\\(VIX\\)", "\\(SM\\)", "\\(ER_i\\)", "\\(IRD_i\\)", "\\(FSM_i\\)"),
+                 Text_1 = c("Ratio of short positions over long positions of non-commercial traders",
+                            "Market sentiment (CBOE DJIA Volatility Index)",
+                            "Domestic stock market: Swiss Market Index ^SSMI",
+                            "Nominal exchange rates: USD/CHF, EUR/CHF, CHF/JPY, GBP/CHF",
+                            "Interest rate differential using the spot Next London interbank\n offered rate (LIBOR): CHF minus major currency (USD, EUR, JPY, and GBP)",
+                            "Foreign stock markets: S&P 500 ^GSPC - USD, EURONEXT 100 ^N100 - EUR, Nikkei 225 ^N225 - JPY, FTSE 100 ^FTSE"),
+                 Text_2 = c("CFTC", "FRED", "Yahoo Finance", "Yahoo Finance", "FRED", "Yahoo Finance"))
+
+df %>%
+  mutate(
+    Variables = cell_spec(Variables, "html", font_size = "medium", escape = F)
+  ) %>%
+  kable("html", caption = "Table 1. Description of variables", linesep = "", align = "clc", escape = F,
   col.names = c("Variable", "Definition", "Source")) %>%
   kable_styling(full_width = F) %>%
   row_spec(0:0, align = "c") %>%
   row_spec(0, color = "white", background = "black")
 ```
 
+--
+
+- All variables are in natural logarithms, except the interest rate differentials. 
+
+- Yahoo Finance data was obtained and checked/cleaned with `r  icon::fa_r_project(colour = "#384CB7")` packages `quantmod` and `BatchGetSymbols` 
+
 ---
 
-# Caveats for using CFTC data
+# CFTC data
 
->First,  while  non-commercial  traders  are  generally  associated  with speculative  activity,  it  is  possible  that  some  commercial  traders  also  take speculative  positions.  
+- Some caveats: 
 
-> Second,  the  trades  identified  as  speculative  may  not result  from  carry  trades. 
+> I. Bias in the classification of the traders
 
-> Finally,  a  comparison  with  statistics  from  the  BIS Triennial  Central  Bank  Survey  of  Foreign  Exchange  and  Derivatives  Market Activity  shows  that  only  a  very  small  proportion  of  foreign  exchange  market activity is executed through exchanges.
+> II. Trades identified as speculative may not result from carry trades
 
-> --- Galati et al. (2007)<sup>2</sup>
+> III. Only a small proportion of foreign exchange market activity is executed through exchanges (mostly OTC).
 
+> --- Galati, Heath and McGuire (2007)<sup>3</sup>
+
+- Nevertheless, as mentioned by market participants, CFTC data tends to be indicative of the **trend** of carry trade activity (Bank for International Settlements 2015)<sup>4</sup>.
+
+.smallok[
 .footnote[
-[2] Galati, G., A. Heath and P. McGuire (2007), ‘Evidence of carry trade activity’, *BIS Quarterly Review*.
+[3] Galati, G., A. Heath and P. McGuire (2007), ‘Evidence of carry trade activity’, *BIS Quarterly Review*.
+
+[4] Bank for International Settlements (2015), *Currency Carry Trades in Latin America*, Bank for International Settlements.
+]
 ]
 
-???
-
-As mentioned by market participants, CFTC data tends to be indicative of the trend of carry trade activity (Bank for International Settlements 2015)<sup>3</sup>.
-
-.footnote[
-[3] Bank for International Settlements (2015), *Currency Carry Trades in Latin America*, Bank for International Settlements.
-]
-
-
 ---
 
-# Aim of the paper
+# Econometric model
 
-We address two questions, by comparing both PI and NI periods: 
+- Structural vector-autoregressive (SVAR) model with Cholesky identification
 
-The .blue[first] refers to the determination of the financial factors that hold important roles in explaining the Swiss franc carry trade.
+  + Ordering: <span style=" font-size: medium;" > $IRD_{i}$ $\rightarrow$ $VIX$ $\rightarrow$ $CT$ $\rightarrow$ $ER_{i}$ $\rightarrow$ $FSM_{i}$ $\rightarrow$ $SM$ </span>
 
 --
 
-.blue[Second], we reflect on the consequences of the unwind of Swiss franc carry trade activities. Specifically, we are interested in how carry trade shocks the related financial variables.
+- Toda-Yamamoto approach to capture long-term effects (non-stationary variables stay in levels)
+
+```{r Table2, echo=FALSE, message=FALSE, warning=FALSE}
+
+tab2 <- data.frame(Text_0 = c("USD", "EUR", "JPY", "GBP"),
+                 Text_1 = c("2", "2", "2", "1"),
+                 Text_2 = c("\\(USME\\), \\(IRD^{USD}_{t-3}\\), \\(CT_{t-3}\\), \\(FSM^{USD}_{t-3}\\), \\(SM_{t-3}\\)",
+                            "\\(IRD^{EUR}_{t-3}\\), \\(CT_{t-3}\\), \\(ER^{EUR}_{t-3}\\), \\(FSM^{EUR}_{t-3}\\), \\(SM_{t-3}\\)",
+                            "\\(NIJPY\\), \\(IRD^{JPY}_{t-3}\\), \\(CT_{t-3}\\), \\(ER^{JPY}_{t-3}\\), \\(FSM^{JPY}_{t-3}\\), \\(SM_{t-3}\\)",
+                            "\\(BREXIT\\), \\(CT_{t-2}\\), \\(FSM^{GBP}_{t-2}\\), \\(SM_{t-2}\\)"))
+
+
+tab2 %>%
+  mutate(
+    Text_2 = cell_spec(Text_2, "html", font_size = "medium", escape = F)
+  ) %>%
+  kable("html", caption = "Table 2. Exogenous variables for each model", booktabs = T, escape = F, align = "c", 
+  col.names = c("Model", "VAR lag length", "Exogenous variables"), position = "!ht") %>%
+  kable_styling(full_width = F) %>%
+  row_spec(0:0, align = "c") %>%
+  row_spec(0, color = "white", background = "black")
+```
+
+<br>
+.right[*PDF and slides (ASAP also dataset and Stata do-file):* .highlight[[https://bttomio.github.io](https://bttomio.github.io)]]
 
 ---
 
-# .center[Methodology]
+count: false
 
-### Data specification
+class: inverse, center, middle
 
-- CT ratio: weekly released (each Tuesday)
-
-- Other variables: daily (Tuesday)
-
---
-
-### Econometric method
-
-- Structural vector-autoregressive (SVAR) model to infer strong causation
-
-- Toda-Yamamoto approach to capture long-term effects and to avoid unit root testing biases
-
---
-
-<br><br><br>
-.right[*PDF, slides, dataset, and code (do-file, Stata) are available at* .highlight[[https://bttomio.github.io](https://bttomio.github.io)].]
-
----
-
-# .center[Results]
-
-### Forecast-error variance decompositions (FEVDs)
-
-- How much of the carry trade fluctuations are explained by the financial variables?
-
-### Graphics of impulse response functions (IRFs)
-
-- How the carry trade responds to shocks in the financial variables?
-
-- How the financial variables respond to shocks in the carry trade activity?
+# Results for the Impulse Response Functions (IRFs)
 
 ---
 
 class: center
 
-#### FEVDs - Responses of the .highlight[carry trade] to one std. dev. shocks 
-```{css, echo=F}
-    /* Table width = 100% max-width */
+**Swiss franc carry trade activity is .highlight[impacted]...**
 
-    .remark-slide table{
-        width: 100%;
-    }
-```
-
-```{r results="asis", echo=F}
-cat("
-<style>
-caption {
-      color: black;
-      font-weight: bold;
-      font-size: 1.0em;
-    }
-</style>
-")
-```
-
-```{r Table1PI, echo=FALSE, message=FALSE, warning=FALSE}
-library("readxl")
-library("kableExtra")
-library("dplyr")
-
-tab1PI <- read.table("c:/Portfolio/my site/public/slides/Table1PI.csv", header = TRUE, sep = ";")
-
-tab1PI [ , ] %>%
-  mutate(
-    Step = ifelse(Step > 200,
-                cell_spec(Step, "html", color = "#64b9d3", bold = T, background = "black"),
-                cell_spec(Step, "html", color = "black")),
-    IRD = ifelse(IRD > 8,
-                 cell_spec(IRD, "html", color = "#64b9d3", bold = T, background = "black"),
-                 cell_spec(IRD, "html", color = "black")),
-    VIX = ifelse(VIX > 8,
-                 cell_spec(VIX, "html", color = "#64b9d3", bold = T, background = "black"),
-                 cell_spec(VIX, "html", color = "black")),
-    CT = ifelse(CT > 200,
-                cell_spec(CT, "html", color = "#64b9d3", bold = T, background = "black"),
-                cell_spec(CT, "html", color = "black")),
-    ER = ifelse(ER > 8,
-                cell_spec(ER, "html", color = "#64b9d3", bold = T, background = "black"),
-                cell_spec(ER, "html", color = "black")),
-    SMUS = ifelse(SMUS > 8,
-                  cell_spec(SMUS, "html", color = "#64b9d3", bold = T, background = "black"),
-                  cell_spec(SMUS, "html", color = "black")),
-    SM = ifelse(SM > 8,
-                cell_spec(SM, "html", color = "#64b9d3", bold = T, background = "black"),
-                cell_spec(SM, "html", color = "black"))
-  ) %>%
-  select(Step, everything()) %>%
-  kable("html", linesep = "", align = "c", caption = "PI period", escape = F) %>%
-  row_spec(0, color = "white", background = "black")
-```
-
---
-<br>
-
-```{r Table1NI, echo=FALSE, message=FALSE, warning=FALSE}
-library("readxl")
-library("kableExtra")
-
-tab1NI <- read.table("c:/Portfolio/my site/public/slides/Table1NI.csv", header = TRUE, sep = ";")
-
-tab1NI [ , ] %>%
-  mutate(
-    Step = ifelse(Step > 200,
-                cell_spec(Step, "html", color = "#64b9d3", bold = T, background = "black"),
-                cell_spec(Step, "html", color = "black")),
-    IRD = ifelse(IRD > 8,
-                 cell_spec(IRD, "html", color = "#64b9d3", bold = T, background = "black"),
-                 cell_spec(IRD, "html", color = "black")),
-    VIX = ifelse(VIX > 8,
-                 cell_spec(VIX, "html", color = "#64b9d3", bold = T, background = "black"),
-                 cell_spec(VIX, "html", color = "black")),
-    CT = ifelse(CT > 200,
-                cell_spec(CT, "html", color = "#64b9d3", bold = T, background = "black"),
-                cell_spec(CT, "html", color = "black")),
-    ER = ifelse(ER > 8,
-                cell_spec(ER, "html", color = "#64b9d3", bold = T, background = "black"),
-                cell_spec(ER, "html", color = "black")),
-    SMUS = ifelse(SMUS > 8,
-                  cell_spec(SMUS, "html", color = "#64b9d3", bold = T, background = "black"),
-                  cell_spec(SMUS, "html", color = "black")),
-    SM = ifelse(SM > 8,
-                cell_spec(SM, "html", color = "#64b9d3", bold = T, background = "black"),
-                cell_spec(SM, "html", color = "black"))
-  ) %>%
-  select(Step, everything()) %>%
-  kable("html", linesep = "", align = "c", caption = "NI period", escape = F) %>%
-  row_spec(0, color = "white", background = "black")
-```
-
----
-
-class: top
-
-.center[.small[Structural Impulse Responses of CT]
-
-.highlight[ The financial variables impact the carry trade... ]]
-
-.pull-left[
-.center[.small[Figure 2 - PI period]]
 ```{r, cache=FALSE, echo=FALSE}
-knitr::include_graphics("./Figure2.jpg")
+knitr::include_graphics("./gCOIRF40_RESP40_PRESENTATION.png")
 ```
-
-```{r R1, echo=FALSE, message=FALSE, warning=FALSE}
-library(kableExtra)
-
-r1 <- data.frame(mathexpr = c("\\(+\\)", "\\(-\\)", "\\(+\\)"),
-                 Text_1 = c("ER", "SMUS", "VIX"))
-knitr::kable(r1, "html", align = "c",
-  col.names = c(".small[Impact]", ".small[Shock/Impulse]"))%>%
-  row_spec(0, color = "white", background = "black")
-```
-
-]
+.center[.small[Figure 1. Cumulative structural carry trade (*CT*) responses to variables impulses in each model]]
 
 --
 
-.pull-right[
-.center[.small[Figure 3 - NI period]]
-```{r, cache=FALSE, echo=FALSE}
-knitr::include_graphics("./Figure3.jpg")
+```{r Table3, echo=FALSE, message=FALSE, warning=FALSE}
+
+tab3 <- data.frame(Variables = c("\\(IRD_i\\)", "\\(VIX\\)", "\\(ER_i\\)", "\\(FSM_i\\)", "\\(SM\\)"),
+                 Text_1 = c("EUR (-)", "EUR (+)", "EUR (+)", "EUR (+, SR)", ""),
+                 Text_2 = c("JPY (+)", "JPY (+)", "JPY (-)", "JPY (+)", "JPY (-)"),
+                 Text_3 = c("", "USD (+)", "USD (+)", "USD (+)", "")) %>%
+  mutate(
+    Variables = cell_spec(Variables, "html", font_size = "small", escape = F),
+    Text_1 = cell_spec(Text_1, "html", font_size = "small", escape = F),
+    Text_2 = cell_spec(Text_2, "html", font_size = "small", escape = F),
+    Text_3 = cell_spec(Text_3, "html", font_size = "small", escape = F))
+
+tab3 <- as.data.frame(t(tab3))
+colnames(tab3) <- tab3[1,]
+tab3 <- tab3[-1,]
+rownames(tab3) <- NULL
+
+tab3[1,1] <- cell_spec(tab3[1,1], "html", escape = F, color = "white", background = "red")
+tab3[2,1] <- cell_spec(tab3[2,1], "html", escape = F, color = "white", background = "green")
+tab3[1:3,2] <- cell_spec(tab3[1:3,2], "html", escape = F, color = "white", background = "green")
+tab3[c(1,3),3] <- cell_spec(tab3[c(1,3),3], "html", escape = F, color = "white", background = "green")
+tab3[2,3] <- cell_spec(tab3[2,3], "html", escape = F, color = "white", background = "red")
+tab3[1:3,4] <- cell_spec(tab3[1:3,4], "html", escape = F, color = "white", background = "green")
+tab3[2,5] <- cell_spec(tab3[2,5], "html", escape = F, color = "white", background = "red")
+
+tab3 %>%
+  kable("html", escape = F, align = "c",position = "!ht") %>%
+  kable_styling(full_width = F) %>%
+  row_spec(0:0, align = "c") %>%
+  row_spec(0, color = "white", background = "black") %>%
+  row_spec(2, background = "#E5E5E5") %>%
+  row_spec(1:3, bold = T)
 ```
-
-```{r R2, echo=FALSE, message=FALSE, warning=FALSE}
-library(kableExtra)
-
-r2 <- data.frame(mathexpr = c("\\(+\\)", "\\(+\\)", "\\(-\\)", "\\(+\\)", "\\(-\\)"),
-                 Text_1 = c("ER (0-12 weeks)", "IRD (1 week)", "IRD (12-20 weeks)", 
-                            "SMUS (8-... weeks)", "SM (8-... weeks)"))
-knitr::kable(r2, "html", align = "c",
-  col.names = c(".small[Impact]", ".small[Shock/Impulse]"))%>%
-  row_spec(0, color = "white", background = "black")
-```
-
-]
 
 ---
 
 class: center
 
-#### FEVDs - Responses of the .highlight[financial variables] to one std. dev. shocks 
+**An .highlight[increased] Swiss franc carry trade activity...**
 
-```{css, echo=F}
-    /* Table width = 100% max-width */
-
-    .remark-slide table{
-        width: 100%;
-    }
+```{r, cache=FALSE, echo=FALSE}
+knitr::include_graphics("./gCOIRF40_PRESENTATION.png")
 ```
-
-```{r results="asis", echo=F}
-cat("
-<style>
-caption {
-      color: black;
-      font-weight: bold;
-      font-size: 1.0em;
-    }
-</style>
-")
-```
-
-```{r Table2PI, echo=FALSE, message=FALSE, warning=FALSE}
-library("readxl")
-library("kableExtra")
-library("dplyr")
-
-tab2PI <- read.table("c:/Portfolio/my site/public/slides/Table2PI.csv", header = TRUE, sep = ";")
-
-tab2PI [ , ] %>%
-  mutate(
-    Step = ifelse(Step > 200,
-                cell_spec(Step, "html", color = "#64b9d3", bold = T, background = "black"),
-                cell_spec(Step, "html", color = "black")),
-    IRD = ifelse(IRD > 8,
-                 cell_spec(IRD, "html", color = "#64b9d3", bold = T, background = "black"),
-                 cell_spec(IRD, "html", color = "black")),
-    VIX = ifelse(VIX > 8,
-                 cell_spec(VIX, "html", color = "#64b9d3", bold = T, background = "black"),
-                 cell_spec(VIX, "html", color = "black")),
-    CT = ifelse(CT > 200,
-                cell_spec(CT, "html", color = "#64b9d3", bold = T, background = "black"),
-                cell_spec(CT, "html", color = "black")),
-    ER = ifelse(ER > 8,
-                cell_spec(ER, "html", color = "#64b9d3", bold = T, background = "black"),
-                cell_spec(ER, "html", color = "black")),
-    SMUS = ifelse(SMUS > 8,
-                  cell_spec(SMUS, "html", color = "#64b9d3", bold = T, background = "black"),
-                  cell_spec(SMUS, "html", color = "black")),
-    SM = ifelse(SM > 8,
-                cell_spec(SM, "html", color = "#64b9d3", bold = T, background = "black"),
-                cell_spec(SM, "html", color = "black"))
-  ) %>%
-  select(Step, everything()) %>%
-  kable("html", linesep = "", align = "c", caption = "PI period", escape = F) %>%
-  row_spec(0, color = "white", background = "black")
-```
+.center[.small[Figure 2. Cumulative structural variables responses to carry trade (*CT*) impulses in each model]]
 
 --
-<br>
 
-```{r Table2NI, echo=FALSE, message=FALSE, warning=FALSE}
-library("readxl")
-library("kableExtra")
+```{r Table4, echo=FALSE, message=FALSE, warning=FALSE}
 
-tab2NI <- read.table("c:/Portfolio/my site/public/slides/Table2NI.csv", header = TRUE, sep = ";")
-
-tab2NI [ , ] %>%
+tab4 <- data.frame(Variables = c("\\(IRD_i\\)", "\\(VIX\\)", "\\(ER_i\\)", "\\(FSM_i\\)", "\\(SM\\)"),
+                 Text_1 = c("EUR (-)", "EUR (+)", "EUR (-)", "EUR (-)", "EUR (-)"),
+                 Text_2 = c("JPY (-)", "", "", "JPY (-)", "JPY (-)"),
+                 Text_3 = c("", "", "", "USD (-)", "USD (-)")) %>%
   mutate(
-    Step = ifelse(Step > 200,
-                cell_spec(Step, "html", color = "#64b9d3", bold = T, background = "black"),
-                cell_spec(Step, "html", color = "black")),
-    IRD = ifelse(IRD > 8,
-                 cell_spec(IRD, "html", color = "#64b9d3", bold = T, background = "black"),
-                 cell_spec(IRD, "html", color = "black")),
-    VIX = ifelse(VIX > 8,
-                 cell_spec(VIX, "html", color = "#64b9d3", bold = T, background = "black"),
-                 cell_spec(VIX, "html", color = "black")),
-    CT = ifelse(CT > 200,
-                cell_spec(CT, "html", color = "#64b9d3", bold = T, background = "black"),
-                cell_spec(CT, "html", color = "black")),
-    ER = ifelse(ER > 8,
-                cell_spec(ER, "html", color = "#64b9d3", bold = T, background = "black"),
-                cell_spec(ER, "html", color = "black")),
-    SMUS = ifelse(SMUS > 8,
-                  cell_spec(SMUS, "html", color = "#64b9d3", bold = T, background = "black"),
-                  cell_spec(SMUS, "html", color = "black")),
-    SM = ifelse(SM > 8,
-                cell_spec(SM, "html", color = "#64b9d3", bold = T, background = "black"),
-                cell_spec(SM, "html", color = "black"))
-  ) %>%
-  select(Step, everything()) %>%
-  kable("html", linesep = "", align = "c", caption = "NI period", escape = F) %>%
-  row_spec(0, color = "white", background = "black")
+    Variables = cell_spec(Variables, "html", font_size = "small", escape = F),
+    Text_1 = cell_spec(Text_1, "html", font_size = "small", escape = F),
+    Text_2 = cell_spec(Text_2, "html", font_size = "small", escape = F),
+    Text_3 = cell_spec(Text_3, "html", font_size = "small", escape = F))
+
+tab4 <- as.data.frame(t(tab4))
+colnames(tab4) <- tab4[1,]
+tab4 <- tab4[-1,]
+rownames(tab4) <- NULL
+
+tab4[1:2,1] <- cell_spec(tab4[1:2,1], "html", escape = F, color = "white", background = "red")
+tab4[1,2] <- cell_spec(tab4[1,2], "html", escape = F, color = "white", background = "green")
+tab4[1,3] <- cell_spec(tab4[1,3], "html", escape = F, color = "white", background = "red")
+tab4[1:3,4] <- cell_spec(tab4[1:3,4], "html", escape = F, color = "white", background = "red")
+tab4[1:3,5] <- cell_spec(tab4[1:3,5], "html", escape = F, color = "white", background = "red")
+
+tab4 %>%
+  kable("html", escape = F, align = "c",position = "!ht") %>%
+  kable_styling(full_width = F) %>%
+  row_spec(0:0, align = "c") %>%
+  row_spec(0, color = "white", background = "black") %>%
+  row_spec(2, background = "#E5E5E5")%>%
+  row_spec(1:3, bold = T)
 ```
 
 ---
 
-class: top
+count: false
 
-.center[.small[Structural Impulse Responses to the CT shocks]
+class: inverse, center, middle
 
-.highlight[The carry trade impacts the financial variables...]]
-
-.pull-left[
-.center[.small[Figure 4 - PI period]]
-```{r, cache=FALSE, echo=FALSE}
-knitr::include_graphics("./Figure4.jpg")
-```
-
-```{r R3, echo=FALSE, message=FALSE, warning=FALSE}
-library(kableExtra)
-
-r3 <- data.frame(mathexpr = c("\\(+\\)", "\\(+\\)", "\\(+\\)"),
-                 Text_1 = c("ER", "SMUS (2-16 weeks)", "SM (4-... weeks)"))
-knitr::kable(r3, "html", align = "c",
-  col.names = c(".small[Impact]", ".small[Response]"))%>%
-  row_spec(0, color = "white", background = "black")
-```
-
-]
-
---
-
-.pull-right[
-.center[.small[Figure 5 - NI period]]
-```{r, cache=FALSE, echo=FALSE}
-knitr::include_graphics("./Figure5.jpg")
-```
-
-```{r R4, echo=FALSE, message=FALSE, warning=FALSE}
-library(kableExtra)
-
-r4 <- data.frame(mathexpr = c("\\(-\\)", "\\(+\\)", "\\(+\\)", "\\(+\\)"),
-                 Text_1 = c("IRD (10-... weeks)", "SMUS (4-12 weeks)", "SM (2-6 weeks)", "VIX (14-... weeks)"))
-knitr::kable(r4, "html", align = "c",
-  col.names = c(".small[Impact]", ".small[Response]"))%>%
-  row_spec(0, color = "white", background = "black")
-```
-
-]
+# Concluding remarks
 
 ---
 
-# Conclusions
+.large[Contribution]
 
-- NIRP (Negative interest rate policy) seems to be strengthening the Swiss carry trade activity. 
+- The paper extends the carry trade literature by investigating the effects of the Swiss NIRP 
 
-- The contribution of IRD is more substantial in the NI period.
+- Four Swiss-major currency models are explored ($, €, ¥, £)
 
-- Weak evidence of the impact of carry trade in the financial variables. Nonetheless, in the NI period, the unwind of carry trade activity would impact negatively VIX and stock markets (US and Swiss).
+- With an **increased** carry trade activity in Switzerland (due to NIRP), the **CHF** is **appreciating** (€ model) and **financial markets activities** (domestic, abroad) is being **harmed**
 
-- It seems to be a source of systemic risk (caution: small contribution - FEVDs).
+--
 
-- For the Swiss National Bank (SNB), increased macro-prudential supervision is needed (through new instruments that take into account the evolution of financial variables into its monetary reaction function).
+.large[Policy implications]
+
+- We find evidence of an appreciation of the EURCHF (drawback of the NIRP) and an increased systemic risk (VIX and stock market)
+
+- Massive asset-purchasing programs, targeting government bonds in particular, participate in the reduction of the “safe asset trap” between bond yields
+
+- Central banks' non-coordinated/cooperative measures could make things worse (increased uncertainty generated by the COVID-crisis)
 
 ---
 
@@ -526,8 +373,11 @@ class: inverse, center
 
 .center[
 # Thank you!
+`r icon::fa("cog", size = 1, animate = "spin", color = "white")` [bttomio@furb.br](bttomio@furb.br)
+
+`r icon::fa("twitter", size = 1, color = "white")` [@bttomio](https://twitter.com/bttomio)
 ]
 
-<br><br><br><br><br><br><br>Slides created with [xaringan](https://github.com/yihui/xaringan) and [xaringanthemer](https://github.com/gadenbuie/xaringanthemer).
+<br><br><br><br>Slides created with [{xaringan}](https://github.com/yihui/xaringan) and [{xaringanthemer}](https://github.com/gadenbuie/xaringanthemer).
 
 <br>![Logos](all-ok.PNG)

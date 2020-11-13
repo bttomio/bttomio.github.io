@@ -1,4 +1,7 @@
 /* Extra CSS */
+.whitey {
+  color: #FFFFFF;
+}
 .blue {
   color: #6490d3;
 }
@@ -11,6 +14,9 @@
 .small {
   font-size: 80%;
   font-weight: bold;
+}
+.smallok {
+  font-size: 70%;
 }
 .large {
   font-size: 200%;
@@ -26,4 +32,7 @@
   background: black;
   font-weight: bold;
   border-radius: 5px;
+}
+.center { 
+  text-align: center;
 }
