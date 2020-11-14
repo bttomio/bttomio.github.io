@@ -10,10 +10,12 @@ output:
     css: ["xaringan-themer.css", "custom.css"]
     lib_dir: libs
     nature:
-      countdown: 120000
+      #countdown: 120000
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+    includes:
+      after_body: timer.html
 # PRINT OK = xaringan::decktape("C:/Portfolio/my site/public/slides/carrytradetomiovallet.html", "C:/Portfolio/my site/public/slides/test.pdf", docker = F)
 # PRINT = pagedown::chrome_print("C:/Portfolio/my site/public/slides/carrytradetomiovallet.html")
 header-includes:
@@ -48,9 +50,11 @@ library(knitr)
 
 ```{r xaringan-themer, include = FALSE}
 library(xaringanthemer)
+style_xaringan()
 mono_light(
   link_color = "#64b9d3",
   base_color = "#000000",
+  code_inline_color = "#64b9d3",
   header_font_google = google_font("Josefin Sans"),
   text_font_google   = google_font("Montserrat", "300", "300i"),
   code_font_google   = google_font("Source Code Pro"),
@@ -373,7 +377,7 @@ class: inverse, center
 
 .center[
 # Thank you!
-`r icon::fa("cog", size = 1, animate = "spin", color = "white")` [bttomio@furb.br](bttomio@furb.br)
+`r icon::fa("cog", size = 1, animate = "spin", color = "white")` [`bttomio@furb.br`](bttomio@furb.br)
 
 `r icon::fa("twitter", size = 1, color = "white")` [@bttomio](https://twitter.com/bttomio)
 ]
