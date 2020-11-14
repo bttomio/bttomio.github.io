@@ -98,6 +98,8 @@ In the context of the NIRP in Switzerland...
 
 1. We analyse the **determinants** of the Swiss franc carry trade
 
+  + Four major currencies: US dollar, euro, Japanese yen, and British pound
+
   + Financial variables: interest rate differential between Switzerland and major currency, global market sentiment, nominal exchange rates, Swiss stock market index, and major currency stock market index
   
   .highlight[Hypothesis 1] The Swiss franc carry trade is impacted differently by the major currencies
@@ -113,8 +115,6 @@ In the context of the NIRP in Switzerland...
 3. Analysis setting 
 
   + Weekly data; December 23, 2014 to September 15, 2020
-
-  + Four major currencies: US dollar, euro, Japanese yen, and British pound
 
 ???
 
@@ -135,7 +135,7 @@ Talk about the intuition behind the questions. Notably, the SNB seeks to foster 
   
 --
 
-2. How the carry trade activity in Swiss francs **impact** the financial variables in the model?
+2. How the carry trade activity in Swiss francs **impacts** the financial variables in the model?
 
   .highlight[Hypothesis 2] **cannot** be confirmed
 
@@ -175,7 +175,7 @@ df %>%
 
 --
 
-- All variables are in natural logarithms, except the interest rate differentials. 
+- All variables are in natural logarithms, except the interest rate differentials
 
 - Yahoo Finance data was obtained and checked/cleaned with `r  icon::fa_r_project(colour = "#384CB7")` packages `quantmod` and `BatchGetSymbols` 
 
@@ -189,7 +189,7 @@ df %>%
 
 > II. Trades identified as speculative may not result from carry trades
 
-> III. Only a small proportion of foreign exchange market activity is executed through exchanges (mostly OTC).
+> III. Only a small proportion of foreign exchange market activity is executed through exchanges (mostly OTC)
 
 > --- Galati, Heath and McGuire (2007)<sup>3</sup>
 
@@ -355,13 +355,13 @@ class: inverse, center, middle
 
 - Four Swiss-major currency models are explored ($, €, ¥, £)
 
-- With an **increased** carry trade activity in Switzerland (due to NIRP), the **CHF** is **appreciating** (€ model) and **financial markets activities** (domestic, abroad) is being **harmed**
+- With an **increased** carry trade activity in Switzerland (due to the NIRP), the **CHF** is **appreciating** (€ model) and **financial markets activities** (domestic, abroad) are being **harmed**
 
 --
 
 .large[Policy implications]
 
-- We find evidence of an appreciation of the EURCHF (**drawback** of the NIRP) and an increased systemic risk (VIX and stock market)
+- We find evidence of an appreciation of the EURCHF (**drawback** of the NIRP) and an increased systemic risk (VIX and stock market indices)
 
 - Massive asset-purchasing programs, targeting government bonds in particular, participate in the **reduction** of the “safe asset trap” between bond yields
 
