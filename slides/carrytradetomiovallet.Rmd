@@ -382,6 +382,6 @@ class: inverse, center
 `r icon::fa("twitter", size = 1, color = "white")` [@bttomio](https://twitter.com/bttomio)
 ]
 
-<br><br><br><br>Slides created with [{xaringan}](https://github.com/yihui/xaringan) and [{xaringanthemer}](https://github.com/gadenbuie/xaringanthemer).
+<br><br><br><br>Slides created with [`xaringan`](https://github.com/yihui/xaringan) and [`xaringanthemer`](https://github.com/gadenbuie/xaringanthemer).
 
 <br>![Logos](all-ok.PNG)
