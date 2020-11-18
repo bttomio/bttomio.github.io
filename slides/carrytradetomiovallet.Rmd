@@ -16,7 +16,7 @@ output:
       countIncrementalSlides: false
     includes:
       after_body: timer.html
-# PRINT OK = xaringan::decktape("C:/Portfolio/my site/public/slides/carrytradetomiovallet.html", "C:/Portfolio/my site/public/slides/test.pdf", docker = F)
+# PRINT OK = xaringan::decktape("C:/Portfolio/my site/public/slides/carrytradetomiovallet.html", "C:/Portfolio/my site/public/slides/YSI Virtual Plenary - 2020.pdf", docker = F)
 # PRINT = pagedown::chrome_print("C:/Portfolio/my site/public/slides/carrytradetomiovallet.html")
 header-includes:
 - \usepackage{subfig}
@@ -177,7 +177,7 @@ df %>%
 
 - All variables are in natural logarithms, except the interest rate differentials
 
-- Yahoo Finance data was obtained and checked/cleaned with `r  icon::fa_r_project(colour = "#384CB7")` packages `quantmod` and `BatchGetSymbols` 
+- Yahoo Finance data was obtained and checked/cleaned with `r icon::fa_r_project(colour = "#384CB7")` packages `quantmod` and `BatchGetSymbols` 
 
 ---
 
