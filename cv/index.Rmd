@@ -1,5 +1,5 @@
 ---
-title: "CV - bttomio"
+title: "CV | Bruno Thiago Tomio"
 first: "ok"
 date: "Updated `r Sys.Date()`"
 output:
@@ -544,7 +544,7 @@ knitr::kable(conf_tbl[seq(1, 4), ])
 
 ## Peer Reviewer {.nohead}
 
-<span style= 'color: #5F6A6A;'>I have served as an <i>ad hoc</i> peer reviewer for the following journals:</span> Review of Keynesian Economics, Emerging Markets Finance and Trade, Revista de Economia Contemporânea, and Revista Brasileira de Desenvolvimento Regional.
+<span style= 'color: #5F6A6A;'>I have served as an <i>ad hoc</i> peer reviewer for the following journals:</span> Review of Keynesian Economics; Emerging Markets Finance and Trade; Revista de Economia Contemporânea; Revista Brasileira de Desenvolvimento Regional; Brazilian Keynesian Review; European Journal of Economics and Economic Policies: Intervention; Economics Bulletin; and Revue de la régulation.
 
 ## Skills {.nohead}
 
