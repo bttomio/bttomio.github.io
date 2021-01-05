@@ -5,7 +5,7 @@
     <link>/authors/</link>
       <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Bruno Thiago Tomio, 2021</copyright><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Bruno Thiago Tomio, 2021</copyright><lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Authors</title>
@@ -15,18 +15,10 @@
     <item>
       <title></title>
       <link>/authors/admin/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       <guid>/authors/admin/</guid>
       <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;/static/css/academicons.min.css&#34;/&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Guillaume Vallet</title>
-      <link>/authors/guillaume-vallet/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>/authors/guillaume-vallet/</guid>
-      <description></description>
     </item>
     
     <item>
