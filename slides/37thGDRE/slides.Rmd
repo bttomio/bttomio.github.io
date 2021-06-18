@@ -66,13 +66,13 @@ mono_light(
 
 # Motivation
 
-- International spillovers of negative interest rate policy (NIRP) is a **`very recent`** strand in the literature (e.g. Arteta, Kose, Stocker and Taskin, 2016<sup>1</sup>)
+- International spillovers of negative interest rate policy (NIRP) is a **`very recent`** strand in the literature (e.g. Arteta, Kose, Stocker and Taskin 2016<sup>1</sup>)
 
 - Twofold interest in the Swiss franc:
 
-  1. In times of turmoil, it is a major **`safe haven currency`**. Overall, also a **`funding currency`** of carry trade activities
+  1. In times of turmoil, it is a major **`safe haven currency`**. Overall, also a **`funding currency`** of carry trade activities.
 
-  2. Due to the "interest rate bonus" (Kugler and Weder, 2002)<sup>2</sup> and the NIRP, the impacts of the Swiss National Bank's actions resonate **`far beyond`** Switzerland
+  2. Due to the "interest rate bonus" (Kugler and Weder 2002<sup>2</sup>) and the NIRP, the impacts of the Swiss National Bank's actions resonate **`far beyond`** Switzerland
 
 .footnote[<span style='font-size: 12px'>
 [1] Arteta, Carlos, Ayhan Kose, Marc Stocker, and Temel Taskin. 2016. “Negative Interest Rate Policies: Sources and Implications.” *Policy Research Working Paper Series* 7791. The World Bank.<span style>
@@ -365,7 +365,7 @@ class: inverse, center, middle
 
   + Higher IRD shocks negatively CT (EUR)
   + Higher VIX shocks positively CT (USD and EUR)
-  + Higher FSM impacts negatively FSM (USD and GBP)
+  + Higher FSM impacts negatively CT (USD and GBP)
 
 --
 
