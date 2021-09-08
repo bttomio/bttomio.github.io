@@ -14,8 +14,8 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-    includes:
-      after_body: timer.html
+#    includes:
+#      after_body: timer.html
 # PRINT OK = xaringanBuilder::build_pdf("https://bttomio.github.io/slides/23rdINFER/slides.html", complex_slides = T, partial_slides = T)
 header-includes:
 - \usepackage{subfig}
@@ -386,8 +386,6 @@ class: inverse, center, middle
 # Concluding remarks
 
 ---
-
-# Concluding remarks
 
 - The paper extends the carry trade literature by investigating empirically the effects of the Swiss NIRP 
 
