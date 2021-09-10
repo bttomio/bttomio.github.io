@@ -111,7 +111,7 @@ In the context of the NIRP in Switzerland...
 
 # What do we find?
 
-Using **`all available data`** at the time (Dec 23, 2014 to Nov 24, 2020), excluding the selection bias...
+Using **`all available data`** at the time (Dec 23, 2014 to Nov 24, 2020), excluding the sample-selection bias...
 
 - Major findings:
 
@@ -413,7 +413,9 @@ class: inverse, center, middle
   
 --
 
-- Additionally, for **`all models`**, there is also evidence that CT **`increases systemic risk`** (higher CT increases VIX) and **`moves asset prices`** (higher CT increases FSM and SM)
+- Notably, for **`all models`**, there is also evidence that CT **`increases systemic risk`** (higher CT increases VIX) and **`moves asset prices`** (higher CT increases FSM and SM)
+
+- Coordinated monetary policies are needed to tame these negative spillovers 
 
 ---
 
