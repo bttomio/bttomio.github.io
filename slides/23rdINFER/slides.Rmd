@@ -14,8 +14,8 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-    includes:
-      after_body: timer.html
+#    includes:
+#      after_body: timer.html
 # PRINT OK = xaringanBuilder::build_pdf("https://bttomio.github.io/slides/23rdINFER/slides.html", complex_slides = T, partial_slides = T)
 header-includes:
 - \usepackage{subfig}
@@ -117,7 +117,7 @@ Using **`all available data`** at the time (Dec 23, 2014 to Nov 24, 2020), exclu
 
   + Distinctive behavior for the Swiss franc as **`funding`** and **`safe have`** currency
 
-  + The UIP is **`violated`** for the Euro model
+  + The UIP is **`violated`** for the USD, EUR and JPY models
   
   + Hedge funds **`are able`** to move asset prices
   
