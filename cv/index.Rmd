@@ -44,8 +44,7 @@ if(PDF) {
 } else {
   header <- '
   Download PDF
-  <a href="
-bttomio.github.io/CV_PDF/bttomio.pdf" class="icon-block">
+  <a href="https://bttomio.github.io/CV_PDF/bttomio.pdf" class="icon-block">
       <i class="fas fafooter fa-download"></i>
   </a>
   '
