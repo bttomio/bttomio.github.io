@@ -581,5 +581,6 @@ df1 <- data.frame(Text_0 = c("Guillaume Vallet", "Université Grenoble Alpes, Fr
 df1 %>%
   kable(format = "html",align = c("l")) %>%
   kable_styling(font_size = 15) %>%
-  row_spec(c(1:1), bold = T)
+  row_spec(c(1:1), bold = T) %>%
+  column_spec(c(1,3,5), width = "6.5cm")
 ```
