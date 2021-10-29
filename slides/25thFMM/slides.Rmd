@@ -14,9 +14,9 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-#    includes:
-#      after_body: timer.html
-# PRINT OK = xaringanBuilder::build_pdf("https://bttomio.github.io/slides/23rdINFER/slides.html", complex_slides = T, partial_slides = T)
+    includes:
+      after_body: timer.html
+# PRINT OK = xaringanBuilder::build_pdf("https://bttomio.github.io/slides/25thFMM/slides.html", complex_slides = T, partial_slides = T)
 header-includes:
 - \usepackage{subfig}
 - \usepackage{booktabs}
