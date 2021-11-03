@@ -71,7 +71,7 @@ mono_light(
   
   1. In times of turmoil, it is a major **`safe haven currency`**. Overall, also a **`funding currency`** of carry trade activities.
 
-2. Due to the "interest rate bonus" (Kugler and Weder 2002<sup>2</sup>) and the NIRP, the impacts of the Swiss National Bank's actions resonate **`far beyond`** Switzerland
+  2. Due to the "interest rate bonus" (Kugler and Weder 2002<sup>2</sup>) and the NIRP, the impacts of the Swiss National Bank's actions resonate **`far beyond`** Switzerland
 
 .footnote[<span style='font-size: 12px'>
 [1] Arteta, Carlos, Ayhan Kose, Marc Stocker, and Temel Taskin. 2016. “Negative Interest Rate Policies: Sources and Implications.” *Policy Research Working Paper Series* 7791. The World Bank.<span style>
