@@ -393,12 +393,12 @@ conf_tbl <- conf_tbl %>%
 
 conf_tbl <- dplyr::select(conf_tbl, cites)
 
-knitr::kable(conf_tbl[seq(1, 2), ])
+conf_tbl <- sapply(conf_tbl,function(x) {x <- gsub("?*.", "?*",x, fixed = T)})
+
+knitr::kable(conf_tbl[seq(1, 3), ])
 ```
 
 </div>
-
-\pagebreak
 
 ## Working Papers {.nohead}
 
@@ -541,6 +541,8 @@ pubs_wp <- pubs_wp #%>%
   #select(-count_within_year)
 
 pubs_wp <- dplyr::select(pubs_wp, cites)
+
+pubs_wp <- sapply(pubs_wp,function(x) {x <- gsub("?*.", "?*",x, fixed = T)})
   
 knitr::kable(pubs_wp[1:6, ])
 ```
