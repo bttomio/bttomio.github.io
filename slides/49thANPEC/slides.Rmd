@@ -1,5 +1,5 @@
 ---
-title: "Carry trade and negative policy rates in Switzerland<br/><span style='font-size: 32px'>Low-lying fog or storm?</style>"
+title: "Carry trade and negative policy rates in Switzerland<br/><span style='font-size: 32px'>Low-lying fog or storm?</style><span style='font-size: 22px'>[Latest version](https://bit.ly/bttomioJPM)</style>"
 subtitle: 
 author: "[Bruno Thiago Tomio](https://bttomio.github.io)<br/><br/>[Guillaume Vallet](mailto:guillaume.vallet@univ-grenoble-alpes.fr)"
 institute: "<span style='font-size: 22px'>49<sup>o</sup> Encontro Nacional de Economia</style>"
