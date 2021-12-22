@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Franklin C. Zummach | Bruno Thiago Tomio</title>
+    <link>/authors/franklin-c.-zummach/</link>
+      <atom:link href="/authors/franklin-c.-zummach/index.xml" rel="self" type="application/rss+xml" />
+    <description>Franklin C. Zummach</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Bruno Thiago Tomio, 2021</copyright><lastBuildDate>Thu, 02 Feb 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Franklin C. Zummach</title>
+      <link>/authors/franklin-c.-zummach/</link>
+    </image>
+    
+    <item>
+      <title>Determinantes da mortalidade de empresas em Santa Catarina: o papel da inadimplência</title>
+      <link>/publication/article2/</link>
+      <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
+      <guid>/publication/article2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
