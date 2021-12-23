@@ -185,8 +185,8 @@ p, li {
 }
 
 .extratrain td {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 .inote {
@@ -203,8 +203,8 @@ p, li {
   padding-bottom: 3px;
 }
 
-.hangingindent {
-  margin-left: 24px ;
+.hangingindent td {
+  padding-left: 24px ;
   text-indent: -24px ;
 }
 
