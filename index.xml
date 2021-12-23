@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Bruno Thiago Tomio</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Bruno Thiago Tomio, 2021</copyright><lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Bruno Thiago Tomio, 2021</copyright><lastBuildDate>Fri, 01 Oct 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Bruno Thiago Tomio</title>
@@ -497,6 +497,14 @@ Université Grenoble Alpes, France
 Université Grenoble Alpes, France
 &lt;/code&gt;&lt;/pre&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Carry trade and negative interest rate policy in Switzerland: Low-lying fog or storm?</title>
+      <link>/publication/jmp/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/jmp/</guid>
+      <description></description>
     </item>
     
     <item>
