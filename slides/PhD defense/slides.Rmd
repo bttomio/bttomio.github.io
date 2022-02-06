@@ -1,0 +1,286 @@
+---
+title: "Carry trade effects in developed and developing countries<br/><span style='font-size: 32px'>The cases of Switzerland and Brazil</style>"
+subtitle: 
+author: "<span style='font-size: 32px'>[Bruno Thiago Tomio](https://bttomio.github.io)</style><span style='font-size: 22px; font-weight: bold'>Supervisor</style> <br/><span style='font-size: 22px; font-weight: bold'>[Guillaume Vallet](mailto:guillaume.vallet@univ-grenoble-alpes.fr)</style>"
+institute: "<span style='font-size: 22px'>PhD defense | Grenoble, 15<sup>th</sup> February</style>"
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML"
+    text-decoration: none
+    css: ["xaringan-themer.css", "custom.css"]
+    lib_dir: libs
+    nature:
+      #countdown: 120000
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    includes:
+      after_body: timer.html
+# PRINT OK = xaringanBuilder::build_pdf("https://bttomio.github.io/slides/23rdINFER/slides.html", complex_slides = T, partial_slides = T)
+header-includes:
+- \usepackage{subfig}
+- \usepackage{booktabs}
+- \usepackage{longtable}
+- \usepackage{array}
+- \usepackage{multirow}
+- \usepackage{wrapfig}
+- \usepackage{float}
+- \usepackage{colortbl}
+- \usepackage{pdflscape}
+- \usepackage{tabu}
+- \usepackage{threeparttable}
+- \usepackage{threeparttablex}
+- \usepackage[normalem]{ulem}
+- \usepackage{makecell}
+- \usepackage{xcolor}
+- \usepackage{caption}
+- \usepackage{soul}
+- \usepackage{multirow}
+---
+
+count: false
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
+library(dplyr)
+library(kableExtra)
+library(knitr)
+```
+
+```{r xaringan-themer, include = FALSE}
+library(xaringanthemer)
+style_xaringan()
+mono_light(
+  link_color = "#2541b2",
+  base_color = "#000000",
+  code_inline_color = "#2541b2",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Montserrat", "300", "300i"),
+  title_slide_background_image = "all-ok.PNG",
+  title_slide_background_size = "95%",
+  title_slide_background_position = "bottom"
+)
+```
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
+```
+
+```{r xaringan-panelset, echo=FALSE}
+xaringanExtra::use_panelset()
+```
+
+```{r echo=FALSE}
+xaringanExtra::style_panelset_tabs(active_foreground  = "#2541b2")
+```
+
+## Introduction and research design
+
+.panelset.sideways[
+.panel[.panel-name[Motivation|1]
+**`Financialization of FX markets`**
+```{r, cache=FALSE, echo=FALSE, out.width="100%"}
+knitr::include_graphics("./Motivation-1.png")
+```
+]
+
+.panel[.panel-name[Motivation|2]
+Two main currencies involved in the carry trade: **`Swiss franc`** (**`funding`** currency) and **`Brazilian real`** (**`target`** currency)
+```{r, cache=FALSE, echo=FALSE, out.width="100%"}
+knitr::include_graphics("./Motivation-2.png")
+```
+]
+
+.panel[.panel-name[Motivation|3]
+Increased interest on the topic, but with **`a lack of empirical studies investigating the carry trade effects on the real economy`**
+```{r, cache=FALSE, echo=FALSE, out.width="100%"}
+knitr::include_graphics("./Motivation-3.png")
+```
+]
+
+.panel[.panel-name[Carry trade definition]
+
+> “There is no generally accepted definition of what constitutes a carry trade.”
+
+> --- Gagnon and Chaboud (2007, p. 2)<sup>1</sup>
+
+In the canonical definition,
+
+> “[c]urrency carry trade strategies involve borrowing in countries with low interest rates and investing in the currencies of countries that offer high interest rates.”
+
+> --- Bakshi and Panayotov (2013, p. 139)<sup>2</sup>
+
+In this thesis, the carry trade is a **`leveraged`** transaction in the **`futures`** market with a **`short position`** in a **`funding`** currency and a **`long`** position in the **`target currency`**.
+
+<br/><br/><br/><br/><br/><br/><br/>
+
+.footnote[<span style='font-size: 12px'>[1] Gagnon, J., & Chaboud, A. (2007). *What can the data tell us about carry trades in Japanese yen?* (Number 889). Board of Governors of the Federal Reserve System.<span style><br/>
+<span style='font-size: 12px'>[2] Bakshi, G., & Panayotov, G. (2013). Predictability of currency carry trades and asset pricing implications. *Journal of Financial Economics*, 110 (1), 139–163.<span style>]
+
+]
+
+.panel[.panel-name[Research question]
+<span style="color:red; font-weight: bold">How does carry trade impact the real economy activity?</span>
+
+Along with an initial chapter on the **`research design`**, this question is also pursued throughout the three main chapters.
+
+Overall, it follows a sort of **`chronological order of my development as an economist`**.
+
+]
+
+.panel[.panel-name[Methodology]
+
+Three main points: 
+
+  1. The epistemology considered is rooted in **`realism, skepticism, empiricism and the principle of parsimony`**
+  
+  2. Mix of **`reductionism`** (Chapters 2 and 3) and **`holism`** (Chapter 4) as the methodological core
+  
+  3. **`Reproducible`** research (**`Stata`** codes for Chapters 2 and 3; **`R`** code for Chapter 4 and the whole thesis)
+
+]
+
+.panel[.panel-name[Data]
+
+Instead of carry trade excess returns (prices), a **`volume`** approach is implemented using **`weekly`** CFTC (Commodity and Futures Trading Commission) data
+
+Three papers served as inspiration for each chapter:
+
+  **`Chapter 2.`** Nishigaki (2007)<sup>3</sup>
+  
+  **`Chapter 3.`** Fong (2013)<sup>4</sup>
+  
+  **`Chapter 4.`** Brunnermeier, Nagel, and Pedersen (2008)<sup>5</sup>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+.footnote[<span style='font-size: 12px'>[2] Nishigaki, H. (2007). Relationship between the yen carry trade and the related financial variables. *Economics Bulletin*, 13 (2), 1–7.<span style><br/>
+<span style='font-size: 12px'>[4] Fong, W. M. (2013). Footprints in the market: Hedge funds and the carry trade. *Journal of International Money and Finance*, 33, 41–59.<span style><br/>
+<span style='font-size: 12px'>[5]Brunnermeier, M. K., Nagel, S., & Pedersen, L. H. (2008). Carry Trades and Currency Crashes. *NBER Macroeconomics Annual*, 23, 313–348.<span style>]
+
+]
+]
+
+---
+
+## Overview and main results
+
+.panelset.sideways.right[
+.panel[.panel-name[Chapter 2]
+<span style='font-size: 22px; font-weight: bold'> **`Carry trade in developing and developed countries`** <br/> <span style='font-size: 18px; font-weight: bold'>**`A Granger causality analysis with the Toda-Yamamoto approach`**
+
+- Published empirical investigation of the carry trade in developed and developing countries during **`different U.S. monetary policy periods`**
+
+- Toda-Yamamoto approach captures the **`long-term`** Granger causality (carry trade | financial variables)
+
+- Significant differences between **`funding`** (developed) and **`target`** (developing)
+
+- Common evidence between different currencies: **`market instability and systemic risk spillovers`** from the carry trade activity
+]
+
+.panel[.panel-name[Chapter 3]
+<span style='font-size: 22px; font-weight: bold'> **`Carry trade and negative interest rate policy in Switzerland`** <br/> <span style='font-size: 16px; font-weight: bold'>**`Low-lying fog or storm? (with Guillaume Vallet | under review, JBF)`**
+
+- Using hedge funds data (CFTC), this chapter investigates the **`Swiss franc carry trade with four major currencies`** ($, €, ¥, £) during the period of negative interest rate policy
+
+- Bilateral analysis with **`all available data`** (no sample-selection bias) using structural vector-autoregressive (**`SVAR`**) models (Cholesky identification)
+
+-  Evidence of the franc as a **`funding`**|**`safe haven`** currency
+  
+- **`UIP violated`** for the USD, EUR and JPY models
+
+- Hedge funds **`are able`** to move asset prices
+
+- Higher Swiss franc carry trade activity contributes to an **`increased systemic risk`**
+
+]
+
+.panel[.panel-name[Chapter 4]
+<span style='font-size: 22px; font-weight: bold'> **`The political economy of carry trade`** <br/> <span style='font-size: 18px; font-weight: bold'>**`The real economy got carried away in Switzerland and Brazil`**
+
+- An innovative Bayesian global vector autoregressive model (**`BGVAR`**) is estimated to analyze the carry trade effects
+in Switzerland and Brazil
+
+- Main hypothesis tested is that there are **`negative`** carry trade effects on the Swiss and Brazilian economies
+
+- With an **`initial`** development of a political economy approach to the subject, there are two major findings:
+
+  + In the Swiss case, there is a **`crowding out`** effect, where carry trade **`displaces`** real economy activity
+  
+  + For Brazil, the results **`reinforce`** the evidence for the subordinated position of the Brazilian currency in the actual international monetary system
+
+]
+]
+
+---
+
+## General conclusion
+
+.panelset.sideways[
+.panel[.panel-name[Final remarks]
+
+- In general, this thesis **`contributes to a better understanding`** of the carry trade effects in developed and developing countries (notably, Switzerland and Brazil)
+
+- By making all econometric procedures **`reproducible`**, there is a contribution for **`enhanced transparency and ethics`** in Economics
+
+- The **`macro-financial linkages`** remain a field widely open for new developments, wherein this thesis aimed to contribute on exploring the carry trade
+
+- Central banks need more research to **`tame the negative spillovers`** of monetary policy
+
+]
+
+.panel[.panel-name[Limitations]
+
+- **`Data availability`** is a huge problem for studying the carry trade activity
+
+- CFTC is the **`best public available`** data, but there are **`several caveats`** on using it as a carry trade proxy
+
+- Notably, the CFTC **`data range`** is too short for Brazil and other developing countries
+
+- Central banks could **`follow`** the CFTC and create better datasets on futures market
+
+]
+
+.panel[.panel-name[Future research]
+
+- More research using the **`political economy`** approach is needed
+
+- In this sense, the relationship between carry and functional distribution of income seems adequate
+
+- In addition, the **`social responsibility`** of central banks is underestimated
+
+]
+]
+
+---
+
+count: false
+
+class: inverse, center
+
+.pull-left[
+<br>
+# Thank you!
+# Merci !
+# Obrigado!
+```{r icon-style, echo=FALSE, include=FALSE}
+library(icons)
+icon1 <- icon_style(fontawesome("cog", style = "solid"), size = 1, animate = "spin", fill = "white")
+
+icon2 <- icon_style(fontawesome("twitter", style = "brands"), size = 1, fill = "white")
+```
+
+`r icon1` [**`bttomio@furb.br`**](bttomio@furb.br)
+
+`r icon2` [**`@bttomio`**](https://twitter.com/bttomio)
+]
+
+.pull-right[
+```{r, cache=FALSE, echo=FALSE, out.width="75%"}
+knitr::include_graphics("./AI art.jpg")
+```
+]
+
+Slides created with [`xaringan`](https://github.com/yihui/xaringan) and [`xaringanthemer`](https://github.com/gadenbuie/xaringanthemer).
+![Logos](all-ok.PNG)
