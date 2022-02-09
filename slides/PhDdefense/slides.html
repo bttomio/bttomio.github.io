@@ -8,8 +8,6 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
     <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
-    <link href="libs/panelset/panelset.css" rel="stylesheet" />
-    <script src="libs/panelset/panelset.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="custom.css" type="text/css" />
   </head>
@@ -31,189 +29,361 @@ class: center, middle, inverse, title-slide
 ---
 
 
+
+
+
+
+
+
 count: false
 
+class: inverse, center, middle
 
+# General introduction
 
+---
 
+# Financialization of FX markets
 
+&lt;img src="./Motivation-1.png" width="80%" style="display: block; margin: auto;" /&gt;
 
+---
 
+# Two key currencies involved
 
-
-<style>.panelset{--panel-tab-active-foreground: #2541b2;}</style>
-
-## Introduction and research design
-
-.panelset.sideways[
-.panel[.panel-name[Motivation|1]
-**`Financialization of FX markets`**
-&lt;img src="./Motivation-1.png" width="100%" /&gt;
-]
-
-.panel[.panel-name[Motivation|2]
-Two main currencies involved in the carry trade: **`Swiss franc`** (**`funding`** currency) and **`Brazilian real`** (**`target`** currency)
 &lt;img src="./Motivation-2.png" width="100%" /&gt;
-]
 
-.panel[.panel-name[Motivation|3]
-Increased interest on the topic, but with **`a lack of empirical studies investigating the carry trade effects on the real economy`**
+---
+
+# Lack of empirical studies
+
 &lt;img src="./Motivation-3.png" width="100%" /&gt;
-]
-
-.panel[.panel-name[Carry trade definition]
-
-&gt; “There is no generally accepted definition of what constitutes a carry trade.”
-
-&gt; --- Gagnon and Chaboud (2007, p. 2)&lt;sup&gt;1&lt;/sup&gt;
-
-In the canonical definition,
-
-&gt; “[c]urrency carry trade strategies involve borrowing in countries with low interest rates and investing in the currencies of countries that offer high interest rates.”
-
-&gt; --- Bakshi and Panayotov (2013, p. 139)&lt;sup&gt;2&lt;/sup&gt;
-
-In this thesis, the carry trade is a **`leveraged`** transaction in the **`futures`** market with a **`short position`** in a **`funding`** currency and a **`long`** position in the **`target currency`**.
-
-&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
-
-.footnote[&lt;span style='font-size: 12px'&gt;[1] Gagnon, J., &amp; Chaboud, A. (2007). *What can the data tell us about carry trades in Japanese yen?* (Number 889). Board of Governors of the Federal Reserve System.&lt;span style&gt;&lt;br/&gt;
-&lt;span style='font-size: 12px'&gt;[2] Bakshi, G., &amp; Panayotov, G. (2013). Predictability of currency carry trades and asset pricing implications. *Journal of Financial Economics*, 110 (1), 139–163.&lt;span style&gt;]
-
-]
-
-.panel[.panel-name[Research question]
-&lt;span style="color:red; font-weight: bold"&gt;How does carry trade impact the real economy activity?&lt;/span&gt;
-
-Along with an initial chapter on the **`research design`**, this question is also pursued throughout the three main chapters.
-
-Overall, it follows a sort of **`chronological order of my development as an economist`**.
-
-]
-
-.panel[.panel-name[Methodology]
-
-Three main points: 
-
-  1. The epistemology considered is rooted in **`realism, skepticism, empiricism and the principle of parsimony`**
-  
-  2. Mix of **`reductionism`** (Chapters 2 and 3) and **`holism`** (Chapter 4) as the methodological core
-  
-  3. **`Reproducible`** research (**`Stata`** codes for Chapters 2 and 3; **`R`** code for Chapter 4 and the whole thesis)
-
-]
-
-.panel[.panel-name[Data]
-
-Instead of carry trade excess returns (prices), a **`volume`** approach is implemented using **`weekly`** CFTC (Commodity and Futures Trading Commission) data
-
-Three papers served as inspiration for each chapter:
-
-  **`Chapter 2.`** Nishigaki (2007)&lt;sup&gt;3&lt;/sup&gt;
-  
-  **`Chapter 3.`** Fong (2013)&lt;sup&gt;4&lt;/sup&gt;
-  
-  **`Chapter 4.`** Brunnermeier, Nagel, and Pedersen (2008)&lt;sup&gt;5&lt;/sup&gt;
-
-&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
-
-.footnote[&lt;span style='font-size: 12px'&gt;[2] Nishigaki, H. (2007). Relationship between the yen carry trade and the related financial variables. *Economics Bulletin*, 13 (2), 1–7.&lt;span style&gt;&lt;br/&gt;
-&lt;span style='font-size: 12px'&gt;[4] Fong, W. M. (2013). Footprints in the market: Hedge funds and the carry trade. *Journal of International Money and Finance*, 33, 41–59.&lt;span style&gt;&lt;br/&gt;
-&lt;span style='font-size: 12px'&gt;[5]Brunnermeier, M. K., Nagel, S., &amp; Pedersen, L. H. (2008). Carry Trades and Currency Crashes. *NBER Macroeconomics Annual*, 23, 313–348.&lt;span style&gt;]
-
-]
-]
 
 ---
 
-## Overview and main results
+class: center, middle
 
-.panelset.sideways.right[
-.panel[.panel-name[Chapter 2]
-&lt;span style='font-size: 22px; font-weight: bold'&gt; **`Carry trade in developing and developed countries`** &lt;br/&gt; &lt;span style='font-size: 18px; font-weight: bold'&gt;**`A Granger causality analysis with the Toda-Yamamoto approach`**
-
-- Published empirical investigation of the carry trade in developed and developing countries during **`different U.S. monetary policy periods`**
-
-- Toda-Yamamoto approach captures the **`long-term`** Granger causality (carry trade | financial variables)
-
-- Significant differences between **`funding`** (developed) and **`target`** (developing)
-
-- Common evidence between different currencies: **`market instability and systemic risk spillovers`** from the carry trade activity
-]
-
-.panel[.panel-name[Chapter 3]
-&lt;span style='font-size: 22px; font-weight: bold'&gt; **`Carry trade and negative interest rate policy in Switzerland`** &lt;br/&gt; &lt;span style='font-size: 16px; font-weight: bold'&gt;**`Low-lying fog or storm? (with Guillaume Vallet | under review, JBF)`**
-
-- Using hedge funds data (CFTC), this chapter investigates the **`Swiss franc carry trade with four major currencies`** ($, €, ¥, £) during the period of negative interest rate policy
-
-- Bilateral analysis with **`all available data`** (no sample-selection bias) using structural vector-autoregressive (**`SVAR`**) models (Cholesky identification)
-
--  Evidence of the franc as a **`funding`**|**`safe haven`** currency
-  
-- **`UIP violated`** for the USD, EUR and JPY models
-
-- Hedge funds **`are able`** to move asset prices
-
-- Higher Swiss franc carry trade activity contributes to an **`increased systemic risk`**
-
-]
-
-.panel[.panel-name[Chapter 4]
-&lt;span style='font-size: 22px; font-weight: bold'&gt; **`The political economy of carry trade`** &lt;br/&gt; &lt;span style='font-size: 18px; font-weight: bold'&gt;**`The real economy got carried away in Switzerland and Brazil`**
-
-- An innovative Bayesian global vector autoregressive model (**`BGVAR`**) is estimated to analyze the carry trade effects
-in Switzerland and Brazil
-
-- Main hypothesis tested is that there are **`negative`** carry trade effects on the Swiss and Brazilian economies
-
-- With an **`initial`** development of a political economy approach to the subject, there are two major findings:
-
-  + In the Swiss case, there is a **`crowding out`** effect, where carry trade **`displaces`** real economy activity
-  
-  + For Brazil, the results **`reinforce`** the evidence for the subordinated position of the Brazilian currency in the actual international monetary system
-
-]
-]
+# &lt;span style="color:#2541b2; font-weight: bold"&gt; How does carry trade impact the real economy activity?&lt;/span&gt;
 
 ---
 
-## General conclusion
+count: false
 
-.panelset.sideways[
-.panel[.panel-name[Final remarks]
+class: inverse, center, middle
+
+# Research design
+
+---
+
+# Carry trade definition
+
+- No generally accepted definition 
+
+--
+
+- Borrowing and investing (canonical definition)
+
+--
+
+- In this thesis, the carry trade is 
+
+  + Leveraged
+
+--
+
+  + Futures market
+
+--
+
+  + Short (funding) and Long (target)
+
+---
+
+# Methodology
+
+- Core is a mix of 
+
+  + Reductionism (Chapters 2 and 3) 
+  
+  + Holism (Chapter 4)
+
+--
+
+- Epistemology rooted in 
+  
+  + Realism
+
+--
+
+  + Skepticism
+
+--
+
+  + Empiricism
+
+--
+
+  + Principle of parsimony 
+
+--
+
+- Reproducible research 
+
+  + Stata (Chapters 2 and 3)
+  
+  + R (Chapter 4 and manuscript/presentation)
+
+---
+
+# Data
+
+- Volume approach, instead of prices 
+
+--
+
+- Weekly CFTC data
+
+--
+
+- Best public data
+
+--
+
+- Limitations
+
+  + Small proportion
+
+--
+
+  + Classify traders, not activity
+  
+--
+
+  + Short data range for Brazil
+
+---
+
+# Structure
+
+- Three papers/articles (could be read separately)
+
+--
+
+- Inspired on (data and carry trade measure)
+
+  + **`Chapter 2.`**, Nishigaki (2007)
+
+--
+
+  + **`Chapter 3.`**, Fong (2013)
+
+--
+
+  + **`Chapter 4.`**, Brunnermeier, Nagel, and Pedersen (2008)
+
+--
+
+- My own development as an economist
+
+---
+
+count: false
+
+class: inverse, center, middle
+
+# &lt;span style="color:#2541b2; font-weight: bold"&gt; Three articles&lt;/span&gt; &lt;br/&gt; Overview and main results
+
+---
+
+# Chapter 2
+&lt;span style='font-size: 22px; font-weight: bold'&gt; **`Carry trade in developing and developed countries`**&lt;/style&gt; &lt;br/&gt; &lt;span style='font-size: 16px; font-weight: bold'&gt;**`A Granger causality analysis with the Toda-Yamamoto approach (Economics Bulletin, 2020)`**&lt;/style&gt;
+
+- Ten currencies
+
+--
+
+- Monetary easing and tightening in the U.S. (12/2008 - 06/2019)
+
+--
+
+- Granger causality with the Toda-Yamamoto approach (long-term relationship, carry trade | financial variables)
+
+--
+
+- Common evidence
+
+  + Exchange rate as a carry trade predictor
+
+--
+
+  + Carry trade Granger causes market sentiment (systemic risk spillovers)
+
+---
+
+# Chapter 3
+&lt;span style='font-size: 22px; font-weight: bold'&gt; **`Carry trade and negative interest rate policy in Switzerland`**&lt;/style&gt; &lt;br/&gt; &lt;span style='font-size: 16px; font-weight: bold'&gt;**`Low-lying fog or storm? (with Guillaume Vallet | under review, JBF)`**&lt;/style&gt;
+
+- Swiss franc carry trade with $, €, ¥, and £ as targets (bilateral analysis)
+
+--
+
+- Period of negative interest rate policy (12/2014 - 11/2020)
+
+--
+
+- No sample-selection bias
+
+--
+
+- Structural vector-autoregressive (SVAR) model with Cholesky identification
+
+--
+
+- Evidence of the franc as a **`funding`** currency
+
+--
+
+  + a higher market sentiment -&gt; increase in the Swiss franc carry trade (EUR)
+
+--
+
+  + foreign stock market index shocks positively the Swiss franc carry trade (EUR) 
+
+--
+
+  + uncovered interest rate parity (UIP) does not hold (USD, EUR and JPY)
+
+---
+
+# Chapter 3
+&lt;span style='font-size: 22px; font-weight: bold'&gt; **`Carry trade and negative interest rate policy in Switzerland`**&lt;/style&gt; &lt;br/&gt; &lt;span style='font-size: 16px; font-weight: bold'&gt;**`Low-lying fog or storm? (with Guillaume Vallet | under review, JBF)`**&lt;/style&gt;
+
+- Evidence of the franc as a **`safe haven`** currency
+
+--
+
+  + Swiss franc carry trade responds **`positively`** to
+  
+  (i) an increase in VIX (GBP)
+
+--
+
+  (ii) a Swiss franc depreciation (USD, EUR and JPY)
+
+--
+
+  + Swiss franc carry trade is **`inversely`** related with the
+  
+  (i) foreign stock market index (USD) 
+
+--
+
+  (ii) Swiss stock market index (JPY and GBP)
+
+--
+
+- Hedge funds are able to move asset prices
+
+--
+
+- Higher Swiss franc carry trade activity contributes to an increased systemic risk
+
+---
+
+# Chapter 4
+&lt;span style='font-size: 22px; font-weight: bold'&gt; **`The political economy of carry trade`**&lt;/style&gt; &lt;br/&gt; &lt;span style='font-size: 18px; font-weight: bold'&gt;**`The real economy got carried away in Switzerland and Brazil`**&lt;/style&gt;
+
+- World economy is proxied with 21 countries and the Euro area (84% of global nominal output)
+
+--
+
+- Monthly and quarterly models (roughly)
+
+  + Switzerland (2006 to 2021)
+  
+  + Brazil (2012 to 2021)
+
+--
+
+- Two measures of global risk
+
+  + Market sentiment (VIX)
+  
+  + Global common factor (GCF), created by Miranda-Agrippino
+
+--
+
+- Bayesian global vector autoregressive model (**`BGVAR`**)
+
+--
+
+- Negative carry trade effects in both countries (main hypothesis)
+
+---
+
+# Chapter 4
+&lt;span style='font-size: 22px; font-weight: bold'&gt; **`The political economy of carry trade`**&lt;/style&gt; &lt;br/&gt; &lt;span style='font-size: 18px; font-weight: bold'&gt;**`The real economy got carried away in Switzerland and Brazil`**&lt;/style&gt;
+
+&lt;span style='font-size: 30px; font-weight: bold'&gt;Switzerland&lt;/style&gt;
+&lt;img src="./Ch4-CH.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Chapter 4
+&lt;span style='font-size: 22px; font-weight: bold'&gt; **`The political economy of carry trade`**&lt;/style&gt; &lt;br/&gt; &lt;span style='font-size: 18px; font-weight: bold'&gt;**`The real economy got carried away in Switzerland and Brazil`**&lt;/style&gt;
+
+&lt;span style='font-size: 30px; font-weight: bold'&gt;Brazil&lt;/style&gt;
+&lt;img src="./Ch4-BR.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+
+count: false
+
+class: inverse, center, middle
+
+# General conclusion
+
+---
+
+# Final remarks
 
 - In general, this thesis **`contributes to a better understanding`** of the carry trade effects in developed and developing countries (notably, Switzerland and Brazil)
 
+--
+
 - By making all econometric procedures **`reproducible`**, there is a contribution for **`enhanced transparency and ethics`** in Economics
+
+--
 
 - The **`macro-financial linkages`** remain a field widely open for new developments, wherein this thesis aimed to contribute on exploring the carry trade
 
-- Central banks need more research to **`tame the negative spillovers`** of monetary policy
+--
 
-]
+- Central banks...
 
-.panel[.panel-name[Limitations]
+  + need more research to **`tame the negative spillovers`** of monetary policy
 
-- **`Data availability`** is a huge problem for studying the carry trade activity
+--
 
-- CFTC is the **`best public available`** data, but there are **`several caveats`** on using it as a carry trade proxy
+  + could **`follow`** the CFTC to create better datasets on futures market
 
-- Notably, the CFTC **`data range`** is too short for Brazil and other developing countries
+---
 
-- Central banks could **`follow`** the CFTC and create better datasets on futures market
+# Future research
 
-]
+- Political economy approach
 
-.panel[.panel-name[Future research]
+--
 
-- More research using the **`political economy`** approach is needed
+- Functional distribution of income
 
-- In this sense, research on the relationship between carry and **`functional distribution of income`** is an interesting project
+--
 
-- In addition, the **`social responsibility`** of central banks is underestimated
+- Social responsibility of central banks
 
-]
-]
+--
+
+- Microstructure and regulation
 
 ---
 
@@ -234,10 +404,9 @@ class: inverse, center
 ]
 
 .pull-right[
-&lt;img src="./AI art.jpg" width="75%" /&gt;
+&lt;img src="./AI art.jpg" width="80%" /&gt;
 ]
 
-Slides created with [`xaringan`](https://github.com/yihui/xaringan) and [`xaringanthemer`](https://github.com/gadenbuie/xaringanthemer).
 ![Logos](all-ok.PNG)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
