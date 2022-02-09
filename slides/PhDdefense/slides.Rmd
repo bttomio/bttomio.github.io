@@ -349,7 +349,7 @@ class: inverse, center, middle
 
 --
 
-- Bayesian global vector autoregressive model (**`BGVAR`**)
+- Bayesian global vector autoregressive model (BGVAR)
 
 --
 
