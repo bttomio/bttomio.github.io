@@ -107,17 +107,17 @@ count: false
 
 class: inverse, center, middle
 
-# Research design
+# <span style="color:#2541b2; font-weight: bold"> Chapter 1</span> <br/> Research design
 
 ---
 
 # Carry trade definition
 
-- No generally accepted definition 
+- No generally accepted 
 
 --
 
-- Borrowing and investing (canonical definition)
+- Borrowing and investing (canonical)
 
 --
 
@@ -360,7 +360,7 @@ class: inverse, center, middle
 # Chapter 4
 <span style='font-size: 22px; font-weight: bold'> **`The political economy of carry trade`**</style> <br/> <span style='font-size: 18px; font-weight: bold'>**`The real economy got carried away in Switzerland and Brazil`**</style>
 
-<span style='font-size: 30px; font-weight: bold'>Switzerland</style>
+<span style='font-size: 30px; font-weight: bold'>Switzerland, negative shock on carry trade</style>
 ```{r, cache=FALSE, echo=FALSE, out.width="80%", fig.align='center'}
 knitr::include_graphics("./Ch4-CH.png")
 ```
@@ -370,8 +370,8 @@ knitr::include_graphics("./Ch4-CH.png")
 # Chapter 4
 <span style='font-size: 22px; font-weight: bold'> **`The political economy of carry trade`**</style> <br/> <span style='font-size: 18px; font-weight: bold'>**`The real economy got carried away in Switzerland and Brazil`**</style>
 
-<span style='font-size: 30px; font-weight: bold'>Brazil</style>
-```{r, cache=FALSE, echo=FALSE, out.width="80%", fig.align='center'}
+<span style='font-size: 30px; font-weight: bold'>Brazil, positive shock on carry trade</style>
+```{r, cache=FALSE, echo=FALSE, out.width="85%", fig.align='center'}
 knitr::include_graphics("./Ch4-BR.png")
 ```
 
@@ -409,21 +409,21 @@ class: inverse, center, middle
 
 ---
 
-# Future research
+# Future research on carry trade
 
-- Political economy approach
-
---
-
-- Functional distribution of income
+- Further investigation on the monetary policy spillovers (e.g. add unemployment)
 
 --
 
-- Social responsibility of central banks
+- Political economy approach, as conducted by Gabor on repo markets (2016) and Ban and Gabor on shadow banking (2016)
 
 --
 
-- Microstructure and regulation
+- Functional distribution of income and monetary policy and social responsibility of central banks, in line with the Elgar Edward book series edited by (Vallet, Rochon and Kappes)
+
+--
+
+- Microstructure and regulation, followin Mehrling's Money View 
 
 ---
 
