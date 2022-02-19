@@ -1,0 +1,31 @@
+---
+title: ""
+image: "data/images/avatar.jpg"
+links:
+  - label: '<i class="far fa-envelope fa-2x"></i>'
+    url: "mailto:bttomio@furb.br"
+  - label: '<i class="fab fa-twitter fa-2x"></i>'
+    url: "https://twitter.com/bttomio"
+  - label: '<i class="fab fa-github fa-2x"></i>'
+    url: "https://github.com/bttomio"
+  - label: '<i class="fab fa-linkedin-in fa-2x"></i>'
+    url: "https://www.linkedin.com/in/bttomio/"
+  - label: '<i class="ai ai-google-scholar fa-2x"></i>'
+    url: "https://scholar.google.com.br/citations?user=wrMYaNUAAAAJ&hl"
+  - label: '<i class="ai ai-researchgate fa-2x"></i>'
+    url: "https://www.researchgate.net/profile/Bruno_Tomio"
+  - label: '<i class="ai ai-lattes fa-2x"></i>'
+    url: "http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4486821T7"
+  - label: '<i class="fab fa-stack-overflow fa-2x"></i>'
+    url: "https://stackoverflow.com/users/13249862/bttomio?tab=profile"
+    
+output: postcards::jolla
+  
+site: distill::distill_website
+---
+
+<font size="+3">Bruno T. Tomio</font>
+<br>
+Assistant Professor of Economics 
+<br>
+[Universidade de Blumenau (FURB)](https://www.furb.br/)
