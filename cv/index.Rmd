@@ -33,7 +33,7 @@ pubs <- map_df(pubs, ~gsub("\\.$", "", .x))
 
 
 ```{r}
-PDF <- FALSE # Set to TRUE when rendering to PDF via pagedown::chrome_print("/home/bttomio/Documents/GitHub/bttomio.github.io/cv/index.html", format = "pdf")
+PDF <- FALSE # Set to TRUE when rendering to PDF via pagedown::chrome_print("/home/bttomio/Documents/GitHub/bttomio.github.io/cv/index.html", format = "pdf") or pagedown::chrome_print("C:/Users/bttom/OneDrive - FURB/Documentos/GitHub/bttomio.github.io/cv/index.html", format = "pdf")
 if(PDF) {
   header <- '
   View online
@@ -60,7 +60,8 @@ cat(header)
 </div>
 
 ```{r}
-back <- FALSE # Set to TRUE when rendering to PDF via pagedown::chrome_print("/home/bttomio/Documents/GitHub/bttomio.github.io/cv/index.html", format = "pdf")
+back <- FALSE # Set to TRUE when rendering to PDF via pagedown::chrome_print("/home/bttomio/Documents/GitHub/bttomio.github.io/cv/index.html", format = "pdf") or pagedown::chrome_print("C:/Users/bttom/OneDrive - FURB/Documentos/GitHub/bttomio.github.io/cv/index.html", format = "pdf")
+
 if(back) {
   backto <- ''
 } else {
@@ -305,31 +306,6 @@ knitr::kable(pubs_tbl[1:5, ])
 
 </div>
 
-## Book Chapter {.nohead}
-
-<div class = "hangingindent">
-
-```{r}
-chapters <- pubs %>% 
-  filter(type == "book-chapter") %>% 
-  select(-type)
-
-each_cite <- split(chapters, seq_len(nrow(chapters)))
-empties <- map(each_cite, ~map_lgl(.x, is.na))
-
-cites <- map2(each_cite, empties, ~.x[ ,!.y])
-formatted_cites <- map(cites, ~do.call(make_cite, .x)) 
-
-chapters_tbl <- tibble(count = paste0(seq(length(formatted_cites), 1), "."),
-                        cites = unlist(formatted_cites)) 
-
-chapters_tbl <- dplyr::select(chapters_tbl, cites)
-  
-kable(chapters_tbl)
-```
-
-</div>
-
 ## Conference Presentations (Latest) {.prpa .nohead}
 
 <div class = "hangingindent">
@@ -395,6 +371,33 @@ conf_tbl <- dplyr::select(conf_tbl, cites)
 conf_tbl <- sapply(conf_tbl,function(x) {x <- gsub("?*.", "?*",x, fixed = T)})
 
 knitr::kable(conf_tbl[seq(1, 3), ])
+```
+
+</div>
+
+\newpage
+
+## Book Chapter {.nohead}
+
+<div class = "hangingindent">
+
+```{r}
+chapters <- pubs %>% 
+  filter(type == "book-chapter") %>% 
+  select(-type)
+
+each_cite <- split(chapters, seq_len(nrow(chapters)))
+empties <- map(each_cite, ~map_lgl(.x, is.na))
+
+cites <- map2(each_cite, empties, ~.x[ ,!.y])
+formatted_cites <- map(cites, ~do.call(make_cite, .x)) 
+
+chapters_tbl <- tibble(count = paste0(seq(length(formatted_cites), 1), "."),
+                        cites = unlist(formatted_cites)) 
+
+chapters_tbl <- dplyr::select(chapters_tbl, cites)
+  
+kable(chapters_tbl)
 ```
 
 </div>
