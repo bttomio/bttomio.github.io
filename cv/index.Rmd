@@ -116,8 +116,7 @@ cat(backto)
 </div>
 
 <div id = "position", class = "position">
-<a href="https://goo.gl/maps/AMsFNFoCnSwF7ymu6"> <span style="color: #454545"><i class="fas fa-map-marker-alt"></i></span> <span style= 'color: #5F6A6A'> Grenoble, France </a></span>
-| <a href="mailto:bttomio@furb.br"> <span style="color: #454545"><i class="fas fa-envelope"></i></span> <span style= 'color: #5F6A6A'>bttomio@furb.br </a></span>
+<a href="mailto:bttomio@furb.br"> <span style="color: #454545"><i class="fas fa-envelope"></i></span> <span style= 'color: #5F6A6A'>bttomio@furb.br </a></span>
 | <a href="https://bttomio.github.io"> <span style="color: #454545"><i class="fas fa-globe"></i></span> <span style= 'color: #5F6A6A'>https://bttomio.github.io </a></span>
 </div>
 
