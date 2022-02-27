@@ -1,0 +1,12 @@
+---
+output: html_document_base
+---
+
+```{r, echo=FALSE}
+
+countdown::countdown(20, 0, top = "1.5%", style = "z-index:100", update_every = 5,
+                     font_size = "100%", warn_when = 300,
+                     color_running_background = "#E5E5E5")
+```
+
+

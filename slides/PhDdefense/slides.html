@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>slides.knit</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Carry trade effects in developed and developing countries<br/><span style='font-size: 32px'>The cases of Switzerland and Brazil
+</style>
+### <span style='font-size: 32px'><a href="https://bttomio.github.io">Bruno Thiago Tomio</a>
+</style>
+<span style='font-size: 22px; font-weight: bold'>Supervisor
+</style>
+<br/><span style='font-size: 22px; font-weight: bold'><a href="mailto:guillaume.vallet@univ-grenoble-alpes.fr">Guillaume Vallet</a>
+</style>
+### <span style='font-size: 22px'>PhD defense | Grenoble, 15<sup>th</sup> February
+</style>
+
+---
+
+
+
+
+
+
+
+
+count: false
+
+class: inverse, center, middle
+
+# General introduction
+
+---
+
+# Financialization of FX markets
+
+&lt;img src="./Motivation-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Two key currencies involved
+
+&lt;img src="./Motivation-2.png" width="100%" /&gt;
+
+---
+
+# Lack of empirical studies
+
+&lt;img src="./Motivation-3.png" width="100%" /&gt;
+
+---
+
+class: center, middle
+
+# &lt;span style="color:#2541b2; font-weight: bold"&gt; How does carry trade impact the real economy activity?&lt;/span&gt;
+
+---
+
+count: false
+
+class: inverse, center, middle
+
+# &lt;span style="color:#2541b2; font-weight: bold"&gt; Chapter 1&lt;/span&gt; &lt;br/&gt; Research design
+
+---
+
+# Carry trade definition
+
+- No generally accepted 
+
+--
+
+- Borrowing and investing (canonical)
+
+--
+
+- In this thesis, the carry trade is 
+
+  + Leveraged
+
+--
+
+  + Futures market
+
+--
+
+  + Short (funding) and Long (target)
+
+---
+
+# Methodology
+
+- Core is a mix of 
+
+  + Reductionism (Chapters 2 and 3) 
+  
+  + Holism (Chapter 4)
+
+--
+
+- Epistemology rooted in 
+  
+  + Realism
+
+--
+
+  + Skepticism
+
+--
+
+  + Empiricism
+
+--
+
+  + Principle of parsimony 
+
+--
+
+- Reproducible research 
+
+  + Stata (Chapters 2 and 3)
+  
+  + R (Chapter 4 and manuscript/presentation)
+
+---
+
+# Data
+
+- Volume approach, instead of prices 
+
+--
+
+- Weekly CFTC data
+
+--
+
+- Best public data
+
+--
+
+- Limitations
+
+  + Small proportion
+
+--
+
+  + Classify traders, not activity
+  
+--
+
+  + Short data range for Brazil
+
+---
+
+# Structure
+
+- Three papers/articles (could be read separately)
+
+--
+
+- Inspired on (data and carry trade measure)
+
+  + **`Chapter 2.`**, Nishigaki (2007)
+
+--
+
+  + **`Chapter 3.`**, Fong (2013)
+
+--
+
+  + **`Chapter 4.`**, Brunnermeier, Nagel, and Pedersen (2008)
+
+--
+
+- My own development as an economist
+
+---
+
+count: false
+
+class: inverse, center, middle
+
+# &lt;span style="color:#2541b2; font-weight: bold"&gt; Three articles&lt;/span&gt; &lt;br/&gt; Overview and main results
+
+---
+
+# Chapter 2
+&lt;span style='font-size: 22px; font-weight: bold'&gt; **`Carry trade in developing and developed countries`**&lt;/style&gt; &lt;br/&gt; &lt;span style='font-size: 16px; font-weight: bold'&gt;**`A Granger causality analysis with the Toda-Yamamoto approach (Economics Bulletin, 2020)`**&lt;/style&gt;
+
+- Ten currencies
+
+--
+
+- Monetary easing and tightening in the U.S. (12/2008 - 06/2019)
+
+--
+
+- Granger causality with the Toda-Yamamoto approach (long-term relationship, carry trade | financial variables)
+
+--
+
+- Common evidence
+
+  + Exchange rate as a carry trade predictor
+
+--
+
+  + Carry trade Granger causes market sentiment (systemic risk spillovers)
+
+---
+
+# Chapter 3
+&lt;span style='font-size: 22px; font-weight: bold'&gt; **`Carry trade and negative interest rate policy in Switzerland`**&lt;/style&gt; &lt;br/&gt; &lt;span style='font-size: 16px; font-weight: bold'&gt;**`Low-lying fog or storm? (with Guillaume Vallet | under review, JBF)`**&lt;/style&gt;
+
+- Swiss franc carry trade with $, €, ¥, and £ as targets (bilateral analysis)
+
+--
+
+- Period of negative interest rate policy (12/2014 - 11/2020)
+
+--
+
+- Structural vector-autoregressive (SVAR) model with Cholesky identification
+
+--
+
+- Main evidence of the franc as a 
+
+1. **`funding`** currency
+
+--
+
+  + uncovered interest rate parity (UIP) does not hold (USD, EUR and JPY)
+
+2. **`safe haven`** currency
+
+--
+
+  + Swiss franc carry trade responds positively to an increase in VIX (GBP)
+  
+--
+
+- Hedge funds are able to move asset prices
+
+--
+
+- Higher Swiss franc carry trade activity contributes to an increased systemic risk
+
+---
+
+# Chapter 4
+&lt;span style='font-size: 22px; font-weight: bold'&gt; **`The political economy of carry trade`**&lt;/style&gt; &lt;br/&gt; &lt;span style='font-size: 18px; font-weight: bold'&gt;**`The real economy got carried away in Switzerland and Brazil`**&lt;/style&gt;
+
+- World economy is proxied with 21 countries and the Euro area (84% of global nominal output)
+
+--
+
+- Monthly and quarterly models (roughly)
+
+  + Switzerland (2006 to 2021)
+  
+  + Brazil (2012 to 2021)
+
+--
+
+- Two measures of global risk
+
+  + Market sentiment (VIX)
+  
+  + Global common factor (GCF), created by Miranda-Agrippino
+
+--
+
+- Bayesian global vector autoregressive model (BGVAR)
+
+--
+
+- Negative carry trade effects in both countries (main hypothesis)
+
+---
+
+# Chapter 4
+&lt;span style='font-size: 22px; font-weight: bold'&gt; **`The political economy of carry trade`**&lt;/style&gt; &lt;br/&gt; &lt;span style='font-size: 18px; font-weight: bold'&gt;**`The real economy got carried away in Switzerland and Brazil`**&lt;/style&gt;
+
+&lt;span style='font-size: 30px; font-weight: bold'&gt;Switzerland, negative shock on carry trade&lt;/style&gt;
+&lt;img src="./Ch4-CH.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Chapter 4
+&lt;span style='font-size: 22px; font-weight: bold'&gt; **`The political economy of carry trade`**&lt;/style&gt; &lt;br/&gt; &lt;span style='font-size: 18px; font-weight: bold'&gt;**`The real economy got carried away in Switzerland and Brazil`**&lt;/style&gt;
+
+&lt;span style='font-size: 30px; font-weight: bold'&gt;Brazil, positive shock on carry trade&lt;/style&gt;
+&lt;img src="./Ch4-BR.png" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+count: false
+
+class: inverse, center, middle
+
+# General conclusion
+
+---
+
+# Final remarks
+
+- In general, this thesis **`contributes to a better understanding`** of the carry trade effects in developed and developing countries (notably, Switzerland and Brazil)
+
+--
+
+- By making all econometric procedures **`reproducible`**, there is a contribution for **`enhanced transparency and ethics`** in Economics
+
+--
+
+- The **`macro-financial linkages`** remain a field widely open for new developments, wherein this thesis aimed to contribute on exploring the carry trade
+
+--
+
+- Central banks...
+
+  + need more research to **`tame the negative spillovers`** of monetary policy
+
+--
+
+  + could **`follow`** the CFTC to create better datasets on futures market
+
+---
+
+# Future research on carry trade
+
+- Further investigation on the monetary policy spillovers (e.g. add unemployment)
+
+--
+
+- Political economy approach, as conducted by Gabor on repo markets (2016) and Ban and Gabor on shadow banking (2016)
+
+--
+
+- Functional distribution of income and monetary policy and social responsibility of central banks, in line with Elgar Edward's book series edited by Vallet, Rochon and Kappes
+
+--
+
+- Microstructure and regulation, following Mehrling's Money View 
+
+---
+
+count: false
+
+class: inverse, center
+
+.pull-left[
+&lt;br&gt;
+# Thank you!
+# Merci !
+# Obrigado!
+
+
+&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:white;size:1;animate:spin;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"&gt;&lt;/path&gt;&lt;/svg&gt; [**`bttomio@furb.br`**](bttomio@furb.br)
+
+&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:white;size:1;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"&gt;&lt;/path&gt;&lt;/svg&gt; [**`@bttomio`**](https://twitter.com/bttomio)
+]
+
+.pull-right[
+&lt;img src="./AI art.jpg" width="80%" /&gt;
+]
+
+![Logos](all-ok.PNG)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
