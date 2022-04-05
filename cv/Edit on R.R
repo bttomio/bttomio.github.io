@@ -2,7 +2,7 @@ library(readxl)
 cv_entries <- read_excel("data/cv_entries.xlsx")
 View(cv_entries)
 
-cv_entries[1,5] <- "Université Grenoble Alpes, France"
+cv_entries[1,5] <- "Univ. Grenoble Alpes, France | **[<i class=\"fab falink0 fa-github\"></i>](https://github.com/bttomio/UGA_thesisdown)[Reproducibility repository]{.smaller-font}**"
 
 cv_entries <- cv_entries[c(1:3,4,4:10),]
 

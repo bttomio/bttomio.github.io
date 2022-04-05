@@ -1,5 +1,5 @@
 ---
-title: "CV | Bruno Thiago Tomio"
+title: "CV | Bruno T. Tomio"
 first: "ok"
 date: "Updated `r Sys.Date()`"
 output:
@@ -111,7 +111,7 @@ cat(backto)
 
 <div id = "block_container">
 
-<div class = "first", id="bloc1">Bruno Thiago</div>  
+<div class = "first", id="bloc1">Bruno T.</div>  
 <div class = "last", id="bloc2">Tomio</div>
 
 </div>
@@ -575,15 +575,17 @@ df %>%
 
 ```{r echo=FALSE, message=FALSE}
 library(kableExtra)
-df1 <- data.frame(Text_0 = c("Guillaume Vallet", "Université Grenoble Alpes, France", "guillaume.vallet@univ-grenoble-alpes.fr"),
-                  textspace1 = c(" ", " ", " "),
-                  Text_1 = c("Eckhard Hein", "Berlin School of Economics and Law, Germany", "eckhard.hein@hwr-berlin.de"),
-                  textspace3 = c(" ", " ", " "),
-                  Text_2 = c("Mohamed Amal", "Universidade de Blumenau, Brazil", "amal@furb.br"))
+df1 <- data.frame(Text_0 = c("Robert Pittam", "Bank of England, United Kingdom", "Robert.Pittam@bankofengland.co.uk", " ", "Guillaume Vallet", "Université Grenoble Alpes, France", "guillaume.vallet@univ-grenoble-alpes.fr"),
+                  space = c(" ", " ", " ", " ", " ", " ", " "),
+                  Text_1 = c("Eckhard Hein", "Berlin School of Economics and Law, Germany", "eckhard.hein@hwr-berlin.de", " ", "Mohamed Amal", "Universidade de Blumenau, Brazil", "amal@furb.br"))
 
 df1 %>%
   kable(format = "html",align = c("l")) %>%
   kable_styling(font_size = 15) %>%
   row_spec(c(1:1), bold = T) %>%
-  column_spec(c(1,3,5), width = "6.5cm")
+  row_spec(c(5:5), bold = T) %>%
+  column_spec(1, width = "8cm") %>%
+  column_spec(2, width = "2cm") %>%
+  column_spec(3, width = "13cm")
+  #column_spec(c(1,2), width = "6.5cm")
 ```

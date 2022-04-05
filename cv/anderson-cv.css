@@ -267,6 +267,17 @@ a:hover {
   color: #649FD3;
 }
 
+.falink0 {
+  color: #8C9196;
+  text-align: right;
+  padding-left: 0px;
+  padding-right: 5px;
+}
+
+.falink0:hover {
+  color: #649FD3;
+}
+
 .falink {
   color: #8C9196;
   text-align: right;
@@ -374,7 +385,7 @@ tr {
 }
 
 .smaller-font {
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 td {
@@ -412,4 +423,12 @@ td {
 
 .prof td:nth-child(2) {
   padding-left: 15px;
+}
+
+.skill-bar {
+  color: white;
+  padding: 0.1rem 0.25rem;
+  margin-top: 3px;
+  position: relative;
+  width: 100%;
 }
