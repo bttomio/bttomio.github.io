@@ -20,3 +20,23 @@ cv_entries[3,4] <- "B.Sc. in Economics"
 library(openxlsx)
 write.xlsx(cv_entries, 'data/cv_entries.xlsx',
            overwrite = T)
+
+
+###########
+
+library(readxl)
+pubs_entries <- read_excel("data/pubs.xlsx")
+
+#pubs_entries[] <- pubs_entries[c(1:10, 12, 11, 14, 15, 13),]
+
+pubs_entries[11,2] <- 2 
+pubs_entries[12,2] <- 3 
+pubs_entries[13,2] <- 4 
+pubs_entries[14,2] <- 5
+pubs_entries[15,2] <- 6
+
+pubs_entries[10,5] <- "Carry Trade and Negative Policy Rates in Switzerland"
+ 
+library(openxlsx)
+write.xlsx(pubs_entries, 'data/pubs.xlsx',
+           overwrite = T)
