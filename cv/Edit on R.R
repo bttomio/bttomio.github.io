@@ -24,18 +24,28 @@ write.xlsx(cv_entries, 'data/cv_entries.xlsx',
 
 ###########
 
+library(tidyverse)
 library(readxl)
 pubs_entries <- read_excel("data/pubs.xlsx")
 
 #pubs_entries[] <- pubs_entries[c(1:10, 12, 11, 14, 15, 13),]
 
+pubs_entries <- pubs_entries %>% 
+  add_row(.before = 10)
+
+pubs_entries[10,1] <- 'wp' 
+
+pubs_entries[10,2] <- 1 
 pubs_entries[11,2] <- 2 
 pubs_entries[12,2] <- 3 
 pubs_entries[13,2] <- 4 
 pubs_entries[14,2] <- 5
 pubs_entries[15,2] <- 6
+pubs_entries[16,2] <- 7
 
-pubs_entries[10,5] <- "Carry Trade and Negative Policy Rates in Switzerland"
+pubs_entries[10,3] <- 'Tomio, B. T., Cañón, C. S and Gerba, E.' 
+
+pubs_entries[10,5] <- "British pound carry trade activity"
  
 library(openxlsx)
 write.xlsx(pubs_entries, 'data/pubs.xlsx',
