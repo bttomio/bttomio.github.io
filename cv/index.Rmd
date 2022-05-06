@@ -33,7 +33,7 @@ pubs <- map_df(pubs, ~gsub("\\.$", "", .x))
 
 
 ```{r}
-PDF <- TRUE # Set to TRUE when rendering to PDF via pagedown::chrome_print("/home/bttomio/Documents/GitHub/bttomio.github.io/cv/index.html", format = "pdf") or pagedown::chrome_print("C:/Users/bttom/OneDrive - FURB/Documentos/GitHub/bttomio.github.io/cv/index.html", format = "pdf")
+PDF <- FALSE # Set to TRUE when rendering to PDF via pagedown::chrome_print("/home/bttomio/Documents/GitHub/bttomio.github.io/cv/index.html", format = "pdf") or pagedown::chrome_print("C:/Users/bttom/OneDrive - FURB/Documentos/GitHub/bttomio.github.io/cv/index.html", format = "pdf")
 if(PDF) {
   header <- '
   View online
@@ -60,7 +60,7 @@ cat(header)
 </div>
 
 ```{r}
-back <- TRUE # Set to TRUE when rendering to PDF via pagedown::chrome_print("/home/bttomio/Documents/GitHub/bttomio.github.io/cv/index.html", format = "pdf") or pagedown::chrome_print("C:/Users/bttom/OneDrive - FURB/Documentos/GitHub/bttomio.github.io/cv/index.html", format = "pdf")
+back <- FALSE # Set to TRUE when rendering to PDF via pagedown::chrome_print("/home/bttomio/Documents/GitHub/bttomio.github.io/cv/index.html", format = "pdf") or pagedown::chrome_print("C:/Users/bttom/OneDrive - FURB/Documentos/GitHub/bttomio.github.io/cv/index.html", format = "pdf")
 
 if(back) {
   backto <- ''
