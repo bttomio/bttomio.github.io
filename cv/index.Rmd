@@ -38,7 +38,7 @@ if(PDF) {
   header <- '
   View online
   <a href="https://bttomio.github.io/cv/" class="icon-block">
-      <i class="fas fafooter fa-globe"></i>
+      <i class="fa fafooter fa-passport"></i>
   </a>
   '
 } else {
@@ -82,14 +82,6 @@ cat(backto)
 </div>
 
 <div class = "footer",>
-  <a href="mailto:bttomio@furb.br" class="icon-block">
-      <i class="fas fafooter fa-envelope"> </i>
-  </a>
-  |
-  <a href="https://bttomio.github.io" class="icon-block">
-      <i class="fas fafooter fa-globe"> </i>
-  </a>
-  |
   <a href="https://scholar.google.com.br/citations?user=wrMYaNUAAAAJ&hl" class="icon-block">
       <i class="ai fafooter ai-google-scholar-square"> </i>
   </a>
@@ -105,7 +97,11 @@ cat(backto)
   <a href="https://www.researchgate.net/profile/Bruno_Tomio" class="icon-block">
       <i class="ai fafooter ai-researchgate-square"> </i>
   </a>
-  
+  |
+  <a href="https://stackoverflow.com/users/13249862/bttomio?tab=profile" class="icon-block">
+      <i class="fab fafooter fa-stack-overflow"> </i>
+  </a>
+
 </div>
 
 
@@ -117,8 +113,8 @@ cat(backto)
 </div>
 
 <div id = "position", class = "position">
-<a href="mailto:bttomio@furb.br"> <span style="color: #454545"><i class="fas fa-envelope"></i></span> <span style= 'color: #5F6A6A'>bttomio@furb.br </a></span>
-| <a href="https://bttomio.github.io"> <span style="color: #454545"><i class="fas fa-globe"></i></span> <span style= 'color: #5F6A6A'>https://bttomio.github.io </a></span>
+<a href="mailto:bttomio@furb.br"> <span style="color: #454545"><i class="fas fafooter fa-envelope"></i></span> <span style= 'color: #5F6A6A'>bttomio@furb.br </a></span>
+| <a href="https://bttomio.github.io"> <span style="color: #454545"><i class="fas fafooter fa-globe"></i></span> <span style= 'color: #5F6A6A'>https://bttomio.github.io </a></span>
 </div>
 
 ## Education {.education .nohead}
@@ -571,13 +567,34 @@ df %>%
   column_spec(3, width = "10cm")
 ```
 
+## Knowledge sharing {.history .nohead}
+
+```{r}
+cv_entries %>% 
+  filter(type == 'sharing') %>% 
+  mutate(what = paste0(paste0("<span style= 'font-weight: 500'>",
+                       what, 
+                       "</span>"), ", ", where),
+         what = gsub("NA", "", what),
+         what = gsub(", $", "", what),
+         what = ifelse(!is.na(url), 
+                       paste0("[", what, "](", url, ")"), 
+                       what)
+         ) %>% 
+  mutate(year = str_c(year_begin, 
+                      " ", 
+                      ifelse(is.na(year_end), "", year_end))) %>% 
+  select(year, what) %>% 
+  kable()
+```
+
 ## References {.nohead}
 
 ```{r echo=FALSE, message=FALSE}
 library(kableExtra)
 df1 <- data.frame(Text_0 = c("Robert Pittam", "Bank of England, United Kingdom", "Robert.Pittam@bankofengland.co.uk", " ", "Carlos Cañon", "Bank of England, United Kingdom", "Carlos.Canon@bankofengland.co.uk"),
                   space = c(" ", " ", " ", " ", " ", " ", " "),
-                  Text_1 = c("Max Esser", "Bank of England, United Kingdom", "Max.Esser@bankofengland.co.uk", " ", "Eckhard Hein", "Berlin School of Economics and Law, Germany", "eckhard.hein@hwr-berlin.de"))
+                  Text_1 = c("Max Esser", "Bank of England, United Kingdom", "Max.Esser@bankofengland.co.uk", " ", "Alberto Pambira", "Bank of England, United Kingdom", "Alberto.Pambira@bankofengland.co.uk"))
 
 df1 %>%
   kable(format = "html",align = c("l")) %>%
