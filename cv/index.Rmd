@@ -575,9 +575,9 @@ df %>%
 
 ```{r echo=FALSE, message=FALSE}
 library(kableExtra)
-df1 <- data.frame(Text_0 = c("Robert Pittam", "Bank of England, United Kingdom", "Robert.Pittam@bankofengland.co.uk", " ", "Guillaume Vallet", "Université Grenoble Alpes, France", "guillaume.vallet@univ-grenoble-alpes.fr"),
+df1 <- data.frame(Text_0 = c("Robert Pittam", "Bank of England, United Kingdom", "Robert.Pittam@bankofengland.co.uk", " ", "Carlos Cañon", "Bank of England, United Kingdom", "Carlos.Canon@bankofengland.co.uk"),
                   space = c(" ", " ", " ", " ", " ", " ", " "),
-                  Text_1 = c("Eckhard Hein", "Berlin School of Economics and Law, Germany", "eckhard.hein@hwr-berlin.de", " ", "Mohamed Amal", "Universidade de Blumenau, Brazil", "amal@furb.br"))
+                  Text_1 = c("Max Esser", "Bank of England, United Kingdom", "Max.Esser@bankofengland.co.uk", " ", "Eckhard Hein", "Berlin School of Economics and Law, Germany", "eckhard.hein@hwr-berlin.de"))
 
 df1 %>%
   kable(format = "html",align = c("l")) %>%
