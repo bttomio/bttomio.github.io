@@ -547,10 +547,6 @@ knitr::kable(pubs_wp[1:6, ])
 
 </div>
 
-## Peer Reviewer {.nohead}
-
-<span style= 'color: #5F6A6A;'>I have served as an <i>ad hoc</i> peer reviewer for the following journals:</span> Review of Keynesian Economics; Emerging Markets Finance and Trade; Revista de Economia Contemporânea; Revista Brasileira de Desenvolvimento Regional; Brazilian Keynesian Review; European Journal of Economics and Economic Policies: Intervention; Economics Bulletin; Revue de la régulation; and Revista de Economia (UFPR).
-
 ## Skills {.nohead}
 
 ```{r message=FALSE}
@@ -567,7 +563,7 @@ df %>%
   column_spec(3, width = "10cm")
 ```
 
-## Knowledge sharing {.history .nohead}
+## Knowledge sharing {.coding .nohead}
 
 ```{r}
 cv_entries %>% 
