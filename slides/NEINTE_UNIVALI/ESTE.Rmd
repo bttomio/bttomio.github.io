@@ -1,8 +1,7 @@
 ---
 title: "Carry trade <br/>and the real economy<br/><span style='font-size: 32px'>Switzerland and Brazil got carried away?</style>"
-subtitle: 
 author: "<span style='font-size: 32px'>[Bruno Thiago Tomio](https://bttomio.github.io)</style><span style='font-size: 22px; font-weight: bold'>"
-institute: "<span style='font-size: 22px'>Núcleo de Estudos em Internacionalização e Estratégia [NEINTE] <br/>Univali <br/>Itajaí, 4<sup>th</sup> October 2022</style>"
+institute: "<span style='font-size: 22px'>20th Time Series and Econometrics Meeting [ESTE] <br/>Florianópolis, 31<sup>st</sup> July 2023</style>"
 output:
   xaringan::moon_reader:
     mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML"
@@ -135,44 +134,6 @@ class: inverse, center, middle
 
 ---
 
-# Methodology
-
-- Holism as the core
-
---
-
-- Epistemology rooted in 
-  
-  + Realism
-
---
-
-  + Skepticism
-
---
-
-  + Empiricism
-
---
-
-  + Principle of parsimony 
-
---
-
-```{r iconR, echo=FALSE, include=FALSE}
-library(icons)
-#download_simple_icons() # AFTER FIRST INTALL
-iconR <- icon_style(simple_icons("r"), size = 2)
-```
-
-- Reproducible research 
-
-  + `r iconR` (manuscript, presentation and econometric procedures)
-  
-  + Check https://github.com/bttomio/UGA_thesisdown
-
----
-
 # Data
 
 - Volume approach, instead of prices 
@@ -202,6 +163,18 @@ iconR <- icon_style(simple_icons("r"), size = 2)
 ---
 
 # Main results
+
+```{r iconR, echo=FALSE, include=FALSE}
+library(icons)
+#download_simple_icons() # AFTER FIRST INTALL
+iconR <- icon_style(simple_icons("r"), size = 2)
+```
+
+- Reproducible research 
+
+  + `r iconR` (manuscript, presentation and econometric procedures)
+  
+  + Check https://github.com/bttomio/UGA_thesisdown
 
 ---
 
@@ -300,24 +273,6 @@ class: inverse, center, middle
 --
 
   + could **`follow`** the CFTC to create better datasets on futures market
-
----
-
-# Future research on carry trade
-
-- Further investigation on the monetary policy spillovers (e.g. add unemployment)
-
---
-
-- Political economy approach, as conducted by Gabor on repo markets (2016) and Ban and Gabor on shadow banking (2016)
-
---
-
-- Functional distribution of income and monetary policy and social responsibility of central banks, in line with Elgar Edward's book series edited by Vallet, Rochon and Kappes (2022)
-
---
-
-- Microstructure and regulation, following Perry Mehrling's Money View 
 
 ---
 
