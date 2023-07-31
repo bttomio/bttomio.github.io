@@ -120,7 +120,7 @@ class: inverse, center, middle
 
 --
 
-- In this thesis, the carry trade is 
+- In this article, the carry trade is 
 
   + Leveraged
 
@@ -289,12 +289,12 @@ library(icons)
 #download_fontawesome() # AFTER FIRST INTALL
 icon1 <- icon_style(fontawesome("cog", style = "solid"), size = 1, animate = "spin", fill = "white")
 
-icon2 <- icon_style(fontawesome("twitter", style = "brands"), size = 1, fill = "white")
+icon2 <- icon_style(fontawesome("globe", style = "solid"), size = 1, fill = "white")
 ```
 
 `r icon1` [**`bttomio@furb.br`**](bttomio@furb.br)
 
-`r icon2` [**`@bttomio`**](https://twitter.com/bttomio)
+`r icon2` [**`bttomio.github.io`**](https://bttomio.github.io)
 ]
 
 .pull-right[
