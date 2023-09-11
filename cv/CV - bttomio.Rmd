@@ -542,7 +542,7 @@ cv_entries %>%
 library(kableExtra)
 df1 <- data.frame(Text_0 = c("Robert Pittam", "Bank of England, United Kingdom", "Robert.Pittam@bankofengland.co.uk", " ", "Carlos Cañon", "Bank of England, United Kingdom", "Carlos.Canon@bankofengland.co.uk"),
                   space = c(" ", " ", " ", " ", " ", " ", " "),
-                  Text_1 = c("Max Esser", "Bank of England, United Kingdom", "Max.Esser@bankofengland.co.uk", " ", "Alberto Pambira", "Bank of England, United Kingdom", "Alberto.Pambira@bankofengland.co.uk"))
+                  Text_1 = c("Mohamed Amal", "University of Blumenau, Brazil", "amal@furb.br", " ", "Guillaume Vallet", "Univ. Grenoble Alpes, France", "guillaume.vallet@univ-grenoble-alpes.fr"))
 
 df1 %>%
   kable(format = "html",align = c("l")) %>%
