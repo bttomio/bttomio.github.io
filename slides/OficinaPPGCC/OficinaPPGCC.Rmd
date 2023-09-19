@@ -1,0 +1,157 @@
+---
+title: "Introdução à<br/> programação R<br/>"
+author: "<span style='font-size: 32px'>[Bruno Thiago Tomio](https://bttomio.github.io)</style><span style='font-size: 22px; font-weight: bold'>"
+institute: "<span style='font-size: 22px'>Oficina <br/>Blumenau, 19/09/2023</style>"
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML"
+    text-decoration: none
+    css: ["xaringan-themer.css"]
+    lib_dir: libs
+    nature:
+      #countdown: 120000
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    #includes:
+      #after_body: timer.html
+# PRINT OK = xaringanBuilder::build_pdf("https://bttomio.github.io/slides/23rdINFER/slides.html", complex_slides = T, partial_slides = T)
+header-includes:
+- \usepackage{subfig}
+- \usepackage{booktabs}
+- \usepackage{longtable}
+- \usepackage{array}
+- \usepackage{multirow}
+- \usepackage{wrapfig}
+- \usepackage{float}
+- \usepackage{colortbl}
+- \usepackage{pdflscape}
+- \usepackage{tabu}
+- \usepackage{threeparttable}
+- \usepackage{threeparttablex}
+- \usepackage[normalem]{ulem}
+- \usepackage{makecell}
+- \usepackage{xcolor}
+- \usepackage{caption}
+- \usepackage{soul}
+- \usepackage{multirow}
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
+library(dplyr)
+library(kableExtra)
+library(knitr)
+```
+
+```{r xaringan-themer, include = FALSE}
+library(xaringanthemer)
+style_xaringan()
+mono_light(
+  link_color = "#2541b2",
+  base_color = "#000000",
+  code_inline_color = "#2541b2",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Montserrat", "300", "300i"),
+  title_slide_background_image = "all-ok.PNG",
+  title_slide_background_size = "95%",
+  title_slide_background_position = "bottom"
+)
+```
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
+```
+
+count: false
+
+class: inverse, center, middle
+
+```{r iconRok, echo=FALSE, include=FALSE}
+library(icons)
+#download_simple_icons() # AFTER FIRST INTALL
+iconRok <- icon_style(simple_icons("r"), size = 2, fill = 'white')
+```
+
+# `r iconRok`?
+
+---
+
+# Definição
+
+- Linguagem computacional, disponibilizada como software livre
+
+--
+
+# Por que usar?
+
+- Amplamento usado em ambientes acadêmicos (e coorporativos...)
+
+--
+
+- Reprodutibilidade
+
+--
+
+- Comunidade de desenvolvimento global e aberta
+
+---
+
+count: false
+
+class: inverse, center, middle
+
+# Instalando `r iconRok`!
+
+---
+
+# Software
+
+- [Windows](https://cran.r-project.org/bin/windows/base/) | [Outros sistemas operacionais](https://cran.r-project.org/)
+
+--
+
+# Ambiente virtual
+
+- [RStudio](https://posit.co/download/rstudio-desktop/)
+
+- Existem outros: e.g. Visual Studio Code
+
+--
+
+.center[![](./kid.gif)]
+
+---
+
+count: false
+
+class: inverse, center
+
+<br>
+<br>
+<br>
+<br>
+# Muito obrigado!
+```{r icon-style, echo=FALSE, include=FALSE}
+library(icons)
+#download_fontawesome() # AFTER FIRST INTALL
+icon1 <- icon_style(fontawesome("cog", style = "solid"), size = 1, animate = "spin", fill = "white")
+
+icon2 <- icon_style(fontawesome("globe", style = "solid"), size = 1, fill = "white")
+```
+<br>
+<br>
+
+`r icon1` [**`bttomio@furb.br`**](bttomio@furb.br)
+
+`r icon2` [**`bttomio.github.io`**](https://bttomio.github.io)
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+![Logos](all-ok.PNG)

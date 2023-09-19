@@ -18,25 +18,25 @@
  *  Version: 0.4.2
  *
  * ------------------------------------------------------- */
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,300i&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:600&display=swap);
-@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i&display=swap);
 
 
 :root {
   /* Fonts */
-  --text-font-family: 'Work Sans';
+  --text-font-family: Montserrat;
   --text-font-is-google: 1;
   --text-font-family-fallback: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial;
   --text-font-base: sans-serif;
-  --header-font-family: 'Josefin Slab';
+  --header-font-family: 'Josefin Sans';
   --header-font-is-google: 1;
   --header-font-family-fallback: Georgia, serif;
-  --code-font-family: 'IBM Plex Mono';
+  --code-font-family: Montserrat;
   --code-font-is-google: 1;
   --base-font-size: 20px;
   --text-font-size: 1rem;
-  --code-font-size: 0.7em;
+  --code-font-size: 0.9rem;
   --code-inline-font-size: 1em;
   --header-h1-font-size: 2.75rem;
   --header-h2-font-size: 2.25rem;
@@ -46,13 +46,13 @@
   --text-color: #000000;
   --header-color: #000000;
   --background-color: #E5E5E5;
-  --link-color: #13A10E;
+  --link-color: #2541b2;
   --text-bold-color: #000000;
   --code-highlight-color: rgba(255,255,0,0.5);
   --inverse-text-color: #E5E5E5;
   --inverse-background-color: #000000;
   --inverse-header-color: #E5E5E5;
-  --inverse-link-color: #13A10E;
+  --inverse-link-color: #2541b2;
   --title-slide-background-color: #000000;
   --title-slide-text-color: #E5E5E5;
   --header-background-color: #000000;
@@ -100,7 +100,7 @@ h1, h2, h3 {
 }
 .remark-inline-code {
   font-size: var(--code-inline-font-size);
-  color: #13A10E;
+  color: #2541b2;
 }
 .remark-slide-number {
   color: #000000;
