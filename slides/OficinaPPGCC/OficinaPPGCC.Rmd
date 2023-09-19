@@ -86,7 +86,7 @@ iconRok <- icon_style(simple_icons("r"), size = 2, fill = 'white')
 
 # Por que usar?
 
-- Amplamento usado em ambientes acadêmicos (e coorporativos...)
+- Amplamento usado em ambientes acadêmicos (e corporativos...)
 
 --
 
