@@ -1,0 +1,39 @@
+---
+title: "Oficina PPGCC - Programação em R"
+author: "Seu nome"
+date: "`r Sys.Date()`"
+output: pdf_document
+bibliography: references.bib
+link-citations: true
+linkcolor: green
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Trazendo informações da base de dados
+
+## Exemplo da Karsten
+
+No ano de `r painelmoeda$ano[[991]]`, a empresa `r painelmoeda$nome[[991]]` (`r painelmoeda$Identifier[[991]]`) teve receita total igual a `r painelmoeda$RT[[991]]` milhões.
+
+Por outro lado, as empresas do seu setor *`r painelmoeda$setor[[991]]`* tiveram receita total média de `r mediasetor$RT[[18]]` milhões.
+
+Segundo @matsumoto2012, ...
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+# References
