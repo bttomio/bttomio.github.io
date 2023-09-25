@@ -1,15 +1,15 @@
 ###### PRIMEIRA PARTE ######
 
-#### INSTALAR/CARREGAR AS BIBLIOTECAS NECESSÁRIAS
+#### INSTALAR/CARREGAR AS BIBLIOTECAS NECESSÁRIAS #### 
 ## REMOVA "#" E EXECUTE A LINHA (CTRL + ENTER)
 ## APÓS A INSTALAÇÃO, ADICIONE NOVAMENTE "#" PARA EVITAR REFAZER A INSTALAÇÃO
 
 install.packages(c("tidyverse", "readxl", "vctrs", 
-                   "scales"))
+                   "scales", "stargazer"))
 
 #tinytex::install_tinytex()
 
-#### CARREGAR OS DADOS
+#### CARREGAR OS DADOS #### 
 # BASE FORNECIDA PELO ADHMIR R. V. GOMES
 # MODIFICADA MANUALMENTE
 
@@ -56,3 +56,8 @@ mediasetor <-
                          big.mark = ".",
                          accuracy = 1))
 
+#### ESTATÍSTICA DESCRITIVA #### 
+
+library(stargazer)
+
+stargazer(painel)

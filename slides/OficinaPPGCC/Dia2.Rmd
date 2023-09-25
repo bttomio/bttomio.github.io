@@ -2,10 +2,19 @@
 title: "Oficina PPGCC - Programação em R"
 author: "Seu nome"
 date: "`r Sys.Date()`"
-output: pdf_document
+output:
+  pdf_document:
+    keep_tex: yes
+    fig_caption: yes
+    highlight: haddock
+    number_sections: yes
+#    toc: yes
+#    toc_depth: 2
+    citation_package: natbib
 bibliography: references.bib
 link-citations: true
-linkcolor: green
+#linkcolor: green
+biblio-style: apalike
 ---
 
 ```{r setup, include=FALSE}
@@ -22,11 +31,20 @@ Por outro lado, as empresas do seu setor *`r painelmoeda$setor[[991]]`* tiveram 
 
 Segundo @matsumoto2012, ...
 
-```{r cars}
-summary(cars)
+# Análise de dados
+
+Segundo a Tabela 1 
+
+```{r estdesc, echo=FALSE, warning = FALSE, results='asis'}
+library(stargazer)
+stargazer(painel, 
+          type = 'latex', 
+          header = FALSE,
+          title = "Estatísticas descritivas",
+          label = FALSE)
 ```
 
-## Including Plots
+
 
 You can also embed plots, for example:
 
