@@ -3,18 +3,33 @@ title: "Oficina PPGCC - Programação em R"
 author: "Seu nome"
 date: "`r Sys.Date()`"
 output:
-  pdf_document:
+  bookdown::pdf_document2:
     keep_tex: yes
     fig_caption: yes
     highlight: haddock
     number_sections: yes
-#    toc: yes
+    toc: no
 #    toc_depth: 2
     citation_package: natbib
 bibliography: references.bib
 link-citations: true
 #linkcolor: green
 biblio-style: apalike
+header-includes:
+- \usepackage{booktabs}
+- \usepackage{longtable}
+- \usepackage{array}
+- \usepackage{multirow}
+- \usepackage{wrapfig}
+- \usepackage{float}
+- \usepackage{colortbl}
+- \usepackage{pdflscape}
+- \usepackage{tabu}
+- \usepackage{threeparttable}
+- \usepackage{threeparttablex}
+- \usepackage[normalem]{ulem}
+- \usepackage{makecell}
+- \usepackage{xcolor}
 ---
 
 ```{r setup, include=FALSE}
@@ -33,25 +48,79 @@ Segundo @matsumoto2012, ...
 
 # Análise de dados
 
-Segundo a Tabela 1 
+Segundo a Tabela \@ref(tab:estdesc), ...
 
-```{r estdesc, echo=FALSE, warning = FALSE, results='asis'}
+```{r estdesc, echo=FALSE, warning=FALSE, message=FALSE}
+library(psych)
+library(kableExtra)
+library(tidyverse)
+estdesc <- psych::describe(painelnovo) %>%
+  mutate(across(where(is.numeric), ~ round(., 1))) %>%
+  tail(9) %>%
+  select(-c(1, 6, 13))
+
+kableExtra::kable(estdesc, 
+                  booktabs = TRUE, 
+                  format = "latex",
+                  caption = 'Estatísticas descritivas',
+                  digits = 0) %>%
+  kable_styling(latex_options = c("striped", "hold_position"))
+```
+
+Resultados para as regressões por MQO:
+
+```{r pooled, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
 library(stargazer)
-stargazer(painel, 
+pooled1 <- lm(EBITDA ~ ATC + ATR + PTC, data = painelnovo)
+pooled2 <- lm(EBITDA ~ ATC + ATR + PTC + ROA, data = painelnovo)
+pooled3 <- lm(EBITDA ~ ATC + ATR + PTC + TAM, data = painelnovo)
+pooled4 <- lm(EBITDA ~ ATC + ATR + PTC + ROA + IHH, data = painelnovo)
+pooled5 <- lm(EBITDA ~ ATC + ATR + PTC + MS + IHH, data = painelnovo)
+
+stargazer(pooled1, pooled2, pooled3, pooled4, pooled5,
           type = 'latex', 
           header = FALSE,
-          title = "Estatísticas descritivas",
-          label = FALSE)
+          omit.stat = c("f", "ser"),
+          decimal.mark = ",",
+          digit.separator = " ")
 ```
 
+Resultados para as regressões por MQO, efeitos fixos e efeitos aleatórios:
 
+```{r compare, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
+library(stargazer)
+library(plm)
 
-You can also embed plots, for example:
+# ESTRUTURAR EM PAINEL
+dfpanel <- pdata.frame(painelnovo, index=c("nome", "ano"),
+                       drop.index=FALSE, row.names=TRUE)
+#pdim(dfpanel)
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+# CRIAR BALANCED PANEL
+dfpanelbal <- make.pbalanced(dfpanel)
+#pdim(dfpanelbal)
+
+pooled <- lm(EBITDA ~ MS + IHH + TAM,
+             data = dfpanelbal)
+
+ef <- plm(EBITDA ~ MS + IHH + TAM,
+                  data = dfpanelbal,
+                  effect = "individual",
+                  index = c("nome","ano"),
+                  model = "within")
+
+ea <- plm(EBITDA ~ MS + IHH + TAM,
+                  data = dfpanelbal,
+                  model = "random")
+
+stargazer(pooled, ef, ea,
+          type = 'latex', 
+          header = FALSE,
+          omit.stat = c("f", "ser"),
+          column.labels = c("Pooled OLS", "Efeitos fixos", "Efeitos aleatórios"),
+          model.names = FALSE,
+          decimal.mark = ",",
+          digit.separator = " ")
 ```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 # References

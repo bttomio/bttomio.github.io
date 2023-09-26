@@ -37,6 +37,16 @@
 \makeatother
 \usepackage{xcolor}
 \usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -54,6 +64,20 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -70,39 +94,132 @@
 
 \title{Oficina PPGCC - Programação em R}
 \author{Seu nome}
-\date{2023-09-25}
+\date{2023-09-26}
 
 \begin{document}
 \maketitle
 
 \hypertarget{trazendo-informauxe7uxf5es-da-base-de-dados}{%
-\section{Trazendo informações da base de
-dados}\label{trazendo-informauxe7uxf5es-da-base-de-dados}}
+\section{Trazendo informações da base de dados}\label{trazendo-informauxe7uxf5es-da-base-de-dados}}
 
 \hypertarget{exemplo-da-karsten}{%
 \subsection{Exemplo da Karsten}\label{exemplo-da-karsten}}
 
-No ano de 2023, a empresa Karsten SA (CTKA4.SA) teve receita total igual
-a R\$ 380 milhões.
+No ano de 2023, a empresa Karsten SA (CTKA4.SA) teve receita total igual a R\$ 380 milhões.
 
-Por outro lado, as empresas do seu setor \emph{Consumer Cyclicals}
-tiveram receita total média de R\$ 2.665 milhões.
+Por outro lado, as empresas do seu setor \emph{Consumer Cyclicals} tiveram receita total média de R\$ 2.665 milhões.
 
 Segundo \citet{matsumoto2012}, \ldots{}
 
 \hypertarget{anuxe1lise-de-dados}{%
 \section{Análise de dados}\label{anuxe1lise-de-dados}}
 
-Segundo a Tabela 1
+Segundo a Tabela \ref{tab:estdesc}, \ldots{}
 
-\% Error: Argument `label' must be of type `character.'
+\begin{table}[!h]
 
-You can also embed plots, for example:
+\caption{\label{tab:estdesc}Estatísticas descritivas}
+\centering
+\begin{tabular}[t]{lrrrrrrrrrr}
+\toprule
+  & n & mean & sd & median & mad & min & max & range & skew & kurtosis\\
+\midrule
+\cellcolor{gray!6}{ATC} & \cellcolor{gray!6}{1703} & \cellcolor{gray!6}{4074} & \cellcolor{gray!6}{11950} & \cellcolor{gray!6}{790} & \cellcolor{gray!6}{1085} & \cellcolor{gray!6}{0} & \cellcolor{gray!6}{168607} & \cellcolor{gray!6}{168607} & \cellcolor{gray!6}{8} & \cellcolor{gray!6}{83}\\
+PTC & 1703 & 3050 & 9096 & 543 & 742 & 0 & 136287 & 136287 & 8 & 76\\
+\cellcolor{gray!6}{ATR} & \cellcolor{gray!6}{1703} & \cellcolor{gray!6}{13848} & \cellcolor{gray!6}{59612} & \cellcolor{gray!6}{2034} & \cellcolor{gray!6}{2734} & \cellcolor{gray!6}{0} & \cellcolor{gray!6}{987419} & \cellcolor{gray!6}{987419} & \cellcolor{gray!6}{12} & \cellcolor{gray!6}{168}\\
+EBITDA & 1703 & 1622 & 8018 & 176 & 268 & -5504 & 145036 & 150540 & 13 & 183\\
+\cellcolor{gray!6}{RT} & \cellcolor{gray!6}{1703} & \cellcolor{gray!6}{7491} & \cellcolor{gray!6}{25016} & \cellcolor{gray!6}{1092} & \cellcolor{gray!6}{1505} & \cellcolor{gray!6}{0} & \cellcolor{gray!6}{321638} & \cellcolor{gray!6}{321638} & \cellcolor{gray!6}{8} & \cellcolor{gray!6}{79}\\
+\addlinespace
+TAM & 1703 & 8 & 2 & 8 & 2 & -5 & 14 & 19 & 0 & 2\\
+\cellcolor{gray!6}{ROA} & \cellcolor{gray!6}{1703} & \cellcolor{gray!6}{0} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{0} & \cellcolor{gray!6}{0} & \cellcolor{gray!6}{-19} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{-25} & \cellcolor{gray!6}{760}\\
+MS & 1703 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 6 & 48\\
+\cellcolor{gray!6}{IHH} & \cellcolor{gray!6}{1703} & \cellcolor{gray!6}{1686} & \cellcolor{gray!6}{1626} & \cellcolor{gray!6}{928} & \cellcolor{gray!6}{488} & \cellcolor{gray!6}{589} & \cellcolor{gray!6}{8266} & \cellcolor{gray!6}{7677} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{6}\\
+\bottomrule
+\end{tabular}
+\end{table}
 
-\includegraphics{Dia2_files/figure-latex/pressure-1.pdf}
+Resultados para as regressões por MQO:
 
-Note that the \texttt{echo\ =\ FALSE} parameter was added to the code
-chunk to prevent printing of the R code that generated the plot.
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{5}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-6} 
+\\[-1.8ex] & \multicolumn{5}{c}{EBITDA} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5)\\ 
+\hline \\[-1.8ex] 
+ ATC & $-$0,161$^{***}$ & $-$0,162$^{***}$ & $-$0,161$^{***}$ & $-$0,162$^{***}$ & $-$0,156$^{***}$ \\ 
+  & (0,018) & (0,018) & (0,018) & (0,018) & (0,018) \\ 
+  & & & & & \\ 
+ ATR & 0,145$^{***}$ & 0,146$^{***}$ & 0,145$^{***}$ & 0,146$^{***}$ & 0,148$^{***}$ \\ 
+  & (0,002) & (0,002) & (0,002) & (0,002) & (0,003) \\ 
+  & & & & & \\ 
+ PTC & 0,092$^{***}$ & 0,092$^{***}$ & 0,092$^{***}$ & 0,090$^{***}$ & 0,095$^{***}$ \\ 
+  & (0,020) & (0,020) & (0,020) & (0,020) & (0,020) \\ 
+  & & & & & \\ 
+ ROA &  & 139,925 &  & 137,873 &  \\ 
+  &  & (98,602) &  & (98,590) &  \\ 
+  & & & & & \\ 
+ TAM &  &  & $-$2,264 &  &  \\ 
+  &  &  & (31,627) &  &  \\ 
+  & & & & & \\ 
+ MS &  &  &  &  & $-$2 978,818$^{***}$ \\ 
+  &  &  &  &  & (1 091,208) \\ 
+  & & & & & \\ 
+ IHH &  &  &  & $-$0,049 & $-$0,039 \\ 
+  &  &  &  & (0,037) & (0,037) \\ 
+  & & & & & \\ 
+ Constant & $-$14,024 & $-$21,570 & 2,014 & 58,632 & 83,887 \\ 
+  & (62,267) & (62,475) & (232,529) & (86,273) & (86,122) \\ 
+  & & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 1 703 & 1 703 & 1 703 & 1 703 & 1 703 \\ 
+R$^{2}$ & 0,912 & 0,912 & 0,912 & 0,912 & 0,912 \\ 
+Adjusted R$^{2}$ & 0,911 & 0,911 & 0,911 & 0,911 & 0,912 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{5}{r}{$^{*}$p$<$0,1; $^{**}$p$<$0,05; $^{***}$p$<$0,01} \\ 
+\end{tabular} 
+\end{table}
+
+Resultados para as regressões por MQO, efeitos fixos e efeitos aleatórios:
+
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{EBITDA} \\ 
+ & Pooled OLS & Efeitos fixos & Efeitos aleatórios \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ MS & 64 280,990$^{***}$ & $-$23 020,360$^{***}$ & 42 417,030$^{***}$ \\ 
+  & (1 853,982) & (6 621,069) & (3 545,603) \\ 
+  & & & \\ 
+ IHH & 0,197$^{**}$ & $-$1,640$^{***}$ & 0,035 \\ 
+  & (0,086) & (0,402) & (0,168) \\ 
+  & & & \\ 
+ TAM & 82,096 & 504,079$^{**}$ & 435,639$^{***}$ \\ 
+  & (71,909) & (198,816) & (124,191) \\ 
+  & & & \\ 
+ Constant & $-$1 367,725$^{**}$ &  & $-$3 060,360$^{***}$ \\ 
+  & (565,078) &  & (1 020,525) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 1 703 & 1 703 & 1 703 \\ 
+R$^{2}$ & 0,513 & 0,032 & 0,125 \\ 
+Adjusted R$^{2}$ & 0,513 & $-$0,184 & 0,123 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0,1; $^{**}$p$<$0,05; $^{***}$p$<$0,01} \\ 
+\end{tabular} 
+\end{table}
 
 \renewcommand\refname{References}
   \bibliography{references.bib}

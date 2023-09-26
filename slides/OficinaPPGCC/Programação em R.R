@@ -61,3 +61,18 @@ mediasetor <-
 library(stargazer)
 
 stargazer(painel)
+
+#### CRIANDO NOVAS VARIÁVEIS ####
+
+# Tamanho (TAM) e ROA
+painelnovo <- painel %>%
+  drop_na() %>%
+  mutate(TAM = log(ATR)) %>%
+  mutate(ROA = (EBITDA/ATR))
+
+# Market share (MS) e grau de concentração do setor - Herfindahl-Hirschman Index (IHH) 
+painelnovo <- painelnovo %>%
+  group_by(ano, setor) %>% 
+  mutate(MS = ATR/sum(ATR)) %>%
+  mutate(IHH = (sum(((ATR/sum(ATR)*100)^2))))
+  
