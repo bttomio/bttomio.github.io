@@ -4,9 +4,9 @@
 ## REMOVA "#" E EXECUTE A LINHA (CTRL + ENTER)
 ## APÓS A INSTALAÇÃO, ADICIONE NOVAMENTE "#" PARA EVITAR REFAZER A INSTALAÇÃO
 
-install.packages(c("tidyverse", "readxl", "vctrs", 
-                   "scales", "stargazer"))
-
+#install.packages(c("tidyverse", "readxl", "vctrs", 
+#                   "scales", "stargazer", "psych",
+#                   "kableExtra", "plm"))
 #tinytex::install_tinytex()
 
 #### CARREGAR OS DADOS #### 
@@ -17,7 +17,7 @@ install.packages(c("tidyverse", "readxl", "vctrs",
 # FILE -> IMPORT DATASET -> FROM EXCEL...
 
 library(readxl)
-#exemplo <- read_excel("exemplo.xlsx")
+exemplo <- read_excel("exemplo.xlsx")
 
 # AJUSTAR A BASE PARA FORMATO EM PAINEL
 
@@ -56,11 +56,32 @@ mediasetor <-
                          big.mark = ".",
                          accuracy = 1))
 
+mediasetorEBITDA <- 
+  group_by(painel, setor, ano) %>% 
+  summarize(EBITDA = mean(EBITDA, na.rm = TRUE)) %>%
+  mutate_at(c("EBITDA"), 
+            label_dollar(prefix = "R$ ", 
+                         decimal.mark = ",",
+                         big.mark = ".",
+                         accuracy = 1))
+
+mediasetorPTC <- 
+  group_by(painel, setor, ano) %>% 
+  summarize(PTC = mean(PTC, na.rm = TRUE)) %>%
+  mutate_at(c("PTC"), 
+            label_dollar(prefix = "R$ ", 
+                         decimal.mark = ",",
+                         big.mark = ".",
+                         accuracy = 1))
+
 #### ESTATÍSTICA DESCRITIVA #### 
 
 library(stargazer)
 
-stargazer(painel)
+painel.df <- 
+  as.data.frame(painel) %>%
+  stargazer(type = "text")
+summary(painel)
 
 #### CRIANDO NOVAS VARIÁVEIS ####
 

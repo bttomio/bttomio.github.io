@@ -44,7 +44,7 @@ No ano de `r painelmoeda$ano[[991]]`, a empresa `r painelmoeda$nome[[991]]` (`r 
 
 Por outro lado, as empresas do seu setor *`r painelmoeda$setor[[991]]`* tiveram receita total média de `r mediasetor$RT[[18]]` milhões.
 
-Segundo @matsumoto2012, ...
+Segundo @matsumoto2012 e @dias2023balancing, ...
 
 # Análise de dados
 
