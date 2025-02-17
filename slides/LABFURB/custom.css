@@ -1,0 +1,6 @@
+.reveal .slide-background {
+  background-image: url("FURB_logo.png") !important;
+  background-size: 20% !important; /* Reduz o tamanho da imagem */
+  background-repeat: no-repeat !important;
+  background-position: center bottom !important; /* Posiciona no rodapé */
+}
