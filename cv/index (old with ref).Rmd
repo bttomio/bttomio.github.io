@@ -586,4 +586,19 @@ cv_entries %>%
 
 ## References {.nohead}
 
-Available upon request.
+```{r echo=FALSE, message=FALSE}
+library(kableExtra)
+df1 <- data.frame(Text_0 = c("Robert Pittam", "Bank of England, United Kingdom", "Robert.Pittam@bankofengland.co.uk", " ", "Carlos Cañon", "Bank of England, United Kingdom", "Carlos.Canon@bankofengland.co.uk"),
+                  space = c(" ", " ", " ", " ", " ", " ", " "),
+                  Text_1 = c("Max Esser", "Bank of England, United Kingdom", "Max.Esser@bankofengland.co.uk", " ", "Alberto Pambira", "Bank of England, United Kingdom", "Alberto.Pambira@bankofengland.co.uk"))
+
+df1 %>%
+  kable(format = "html",align = c("l")) %>%
+  kable_styling(font_size = 15) %>%
+  row_spec(c(1:1), bold = T) %>%
+  row_spec(c(5:5), bold = T) %>%
+  column_spec(1, width = "8cm") %>%
+  column_spec(2, width = "2cm") %>%
+  column_spec(3, width = "13cm")
+  #column_spec(c(1,2), width = "6.5cm")
+```
