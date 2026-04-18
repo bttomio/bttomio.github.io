@@ -1,0 +1,23 @@
+---
+title: "Bruno Thiago Tomio"
+#image: "data/images/avatar.jpg"
+links:
+  - label: '<i class="far fa-envelope fa-2x"></i>'
+    url: "mailto:brunottomio@protonmail.com"
+  - label: '<i class="fab fa-github fa-2x"></i>'
+    url: "https://github.com/bttomio"
+  - label: '<i class="fab fa-linkedin-in fa-2x"></i>'
+    url: "https://www.linkedin.com/in/bttomio/"
+
+output: postcards::jolla
+  
+site: distill::distill_website
+---
+
+<details>
+  <summary><font size="-1">Latest publications</font></summary>
+  <font size="-1">Dashboard for the project "Cidadania Financeira no Vale do Itajaí", `University of Blumenau (FURB)`, [ShinyApps.io](https://bttomio.shinyapps.io/cidadaniafinanceira/)</font><br>
+    <font size="-1">Carry trade effects in developed and developing countries: the cases of Switzerland and Brazil, `PhD thesis repository [Reproducible research]`, [GitHub](https://github.com/bttomio/UGA_thesisdown)</font><br>
+    <font size="-1">Carry trade in developing and developed countries: A Granger causality analysis with the Toda-Yamamoto approach, `Economics Bulletin`, [PDF](https://bit.ly/bttomio-EC-2020-pdf)</font><br>
+    <font size="-1">Understanding the Brazilian demand regime: a Kaleckian approach, `Review of Keynesian Economics`, [DOI](https://doi.org/10.4337/roke.2020.02.08)</font>
+</details> 

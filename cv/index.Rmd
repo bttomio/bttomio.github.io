@@ -101,7 +101,7 @@ cat(backto)
 </div>
 
 <div id = "position", class = "position">
-<a href="mailto:bttomio@gmail.com"> <span style="color: #454545"><i class="fas fafooter fa-envelope"></i></span> <span style= 'color: #5F6A6A'>bttomio@gmail.com </a></span>
+<a href="mailto:brunottomio@protonmail.com"> <span style="color: #454545"><i class="fas fafooter fa-envelope"></i></span> <span style= 'color: #5F6A6A'>brunottomio@protonmail.com </a></span>
 | <a href="https://bttomio.github.io"> <span style="color: #454545"><i class="fas fafooter fa-globe"></i></span> <span style= 'color: #5F6A6A'>https://bttomio.github.io </a></span>
 </div>
 
